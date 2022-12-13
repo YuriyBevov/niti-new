@@ -1784,7 +1784,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 @media (max-width: 959px) {
   .catalog-grid__title {
-    padding: 10px;
+    padding: 15px;
   }
 }
 .catalog-grid__title h3 {
