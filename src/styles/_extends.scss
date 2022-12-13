@@ -1,7 +1,27 @@
 /*section*/
 
-.section-mb {
-  margin-bottom: 20px;
+.section {
+  margin-bottom: 60px;
+
+  @include m-b-laptop-down {
+    margin-bottom: 50px;
+  }
+
+  @include m-b-tablet-lg-down {
+    margin-bottom: 40px;
+  }
+
+  @include m-b-mobile-lg-down {
+    margin-bottom: 30px;
+  }
+}
+
+.section-title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: var(--dark);
 }
 
 .section-padding {
@@ -17,11 +37,6 @@
 }
 
 /* flex*/
-
-.flex-wrap {
-  display: flex;
-  flex-wrap: wrap;
-}
 
 .flex-centered-content {
   display: flex;
@@ -44,16 +59,10 @@
 
 /*text*/
 
-.text-nowrap {
+.text-truncate {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.text-overflow {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 /*img*/

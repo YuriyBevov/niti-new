@@ -4,22 +4,25 @@
 :root {
     // base
     --font-family: "Inter", sans-serif;
-    --content-width: 1160px;
+    --content-width: 1290px;
     --content-fluid-width: 1790px;
     --container-offset: 15px;
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
     --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
 
     // colors
-    --light-color: #fff;
-    --accent-color: #d52027;
-    --dark-color: #141024;
-    --text-color: rgba(20, 16, 36, 0.7);
+    --white: #fff;
+    --light: #ebebeb;
+    --basic-gray: #8c8c8c;
+    --accent: #d52027;
+    --dark: #353434;
+    --discount: #a4a4a4;
+    --basic-text: rgba(20, 16, 36, 0.7);
 
-    --main-bg-color: var(--light-color);
+    --main-bg-color: var(--white);
 
     // scrollbar
     --main-scrollbar-width: 6px;
-    --main-scrollbar-color: var(--light-color);
-    --main-scrollbar-thumb-color: var(--accent-color);
+    --main-scrollbar-color: var(--white);
+    --main-scrollbar-thumb-color: var(--accent);
   }

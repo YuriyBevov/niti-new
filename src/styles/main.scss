@@ -8,8 +8,13 @@
 @import "common";
 
 /* Компоненты */
-@import "./components/modal";
+@import "./components/swiper-custom";
+@import "./components/slider-section";
+@import "./components/main-slider";
+@import "./components/mini-card";
 /* Секции */
+
+@import "./sections/index-page/catalog-grid";
 
 /* Модальные окна */
 

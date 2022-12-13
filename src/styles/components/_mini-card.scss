@@ -1,0 +1,65 @@
+.mini-card {
+    width: 235px;
+
+    &__preview {
+        position: relative;
+        margin-bottom: 20px;
+
+        .badge {
+            position: absolute;
+            top: 0;
+            right: 20px;
+            width: 24px;
+            height: 60px;
+
+            background-image: url("../assets/img/badge-bg.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            span {
+                position: relative;
+                display: inline-block;
+
+                top: 17px;
+                right: 8px;
+                color: var(--white);
+                transform: rotate(90deg);
+                z-index: 2;
+            }
+        }
+    }
+
+    &__footer {
+        h3 {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+
+            color: var(--basic-gray);
+
+            @extend .text-truncate;
+            padding-right: 20px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__price {
+        span {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            margin-right: 10px;
+        }
+
+        &-current {
+            font-size: 14px;
+            line-height: 17px;
+            color: var(--dark);
+        }
+
+        &-old {
+            color: var(--discount);
+            text-decoration: line-through;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+mixin mini-card(data)
+  .mini-card
+    a(href="catalog.html")
+      .mini-card__preview
+        img(src= `./assets/img/${data.img}.png` alt= data.title width="235" height="300")
+        if data.isSale
+          .badge
+            span= data.discount
+      .mini-card__footer
+        h3= data.title
+        .mini-card__price
+          span.mini-card__price-current= data.price
+          span.mini-card__price-old= data.oldPrice

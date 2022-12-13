@@ -1,0 +1,30 @@
+include ./mini-card
+//-{
+    title: String,
+    class: String | null,
+    items: [
+        {
+            isSale: Boolean,
+            discount: String,
+            title: String,
+            price: String,
+            oldPrice: String
+        }
+    ]
+  }
+
+mixin main-slider-section(data)
+  section.section.slider-section(class= data.class ? data.class : null)
+    .container
+      .slider-section__header
+        h2= data.title
+        .slider-section__controls
+          .swiper-button-prev.main-slider-button-prev
+          .swiper-button-next.main-slider-button-next
+      .swiper.main-slider
+        .swiper-wrapper
+          each item in data.items
+            .swiper-slide
+              +mini-card(item)
+
+

@@ -1,0 +1,19 @@
+.slider-section {
+    &__header {
+        position: relative;
+        @extend .flex-wrap;
+        align-items: center;
+
+        margin-bottom: 35px;
+        padding-right: 20px;
+
+        h2 {
+            @extend .section-title;
+        }
+    }
+
+    &__controls {
+        @extend .flex-wrap;
+        margin-left: auto;
+    }
+}
