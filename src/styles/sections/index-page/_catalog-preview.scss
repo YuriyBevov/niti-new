@@ -1,0 +1,82 @@
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(10,7vw);
+  grid-gap: 2vw;
+
+  outline: 1px solid black;
+
+  &__item {
+    outline: 1px solid red;
+
+    &:nth-child(1) {
+      grid-column: 1/8;
+      grid-row: 1/5;
+
+      background-color: red;
+    }
+
+    &:nth-child(2) {
+      grid-column: 8/13;
+      grid-row: 1/5;
+
+      background-color: maroon;
+    }
+
+    &:nth-child(3) {
+      grid-column: 1/4;
+      grid-row: 5/9;
+
+      background-color: green;
+    }
+
+    &:nth-child(4) {
+      grid-column: 4/10;
+      grid-row: 5/9;
+
+      background-color: lightblue;
+    }
+
+    &:nth-child(5) {
+      grid-column: 10/13;
+      grid-row: 5/9;
+
+      background-color: lightgray;
+    }
+
+    &:nth-child(6) {
+      grid-column: 1/5;
+      grid-row: 9/14;
+
+      background-color: rgb(44, 33, 33);
+    }
+
+    &:nth-child(7) {
+      grid-column: 5/9;
+      grid-row: 9/26;
+
+      background-color: rgb(69, 107, 104);
+    }
+
+    &:nth-child(8) {
+      grid-column: 1/5;
+      grid-row: 14/26;
+
+      background-color: rgb(216, 160, 193);
+    }
+
+    &:nth-child(9) {
+      grid-column: 9/13;
+      grid-row: 9/14;
+
+      background-color: rgb(95, 70, 85);
+    }
+
+    &:nth-child(10) {
+      grid-column: 9/13;
+      grid-row: 14/26;
+
+      background-color: rgb(199, 216, 101);
+    }
+  }
+}

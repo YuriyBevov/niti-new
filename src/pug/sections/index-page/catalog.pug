@@ -19,11 +19,11 @@ section.section
       each item,index in grid
         .catalog-grid__item
 
-          picture
+          //picture
             source(srcset=`./assets/img/cp-${index+1}@1x.webp 1x, ./assets/img/cp-${index+1}@2x.webp 2x` type="image/webp")
             img(src=`./assets/img/cp-${index+1}@1x.png" srcset="./assets/img/cp-${index+1}@2x.png 2x` alt= item.title width= item.width height= item.height)
 
-          .catalog-grid__title
+          //.catalog-grid__title
             h3!= item.title
             //a(href="catalog.html") Подробнее
 
