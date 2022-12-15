@@ -3,13 +3,13 @@
     { title: 'Поварская одежда', width: 630, height: 300 },
     { title: 'Фартуки', width: 300, height: 300 },
     { title: 'Одежда <br/>для&nbsp;моряков', width: 300, height: 630 },
-    { title: 'Футболки <br/>и&nbsp;поло', width: 300, height: 300 },
-    { title: 'Рабочая одежда', width: 630, height: 300 },
-    { title: 'Официанты', width: 300, height: 630 },
-    { title: 'Брендирование', width: 300, height: 300 },
-    { title: 'Столовый текстиль', width: 300, height: 630 },
-    { title: 'Клининг', width: 300, height: 630 },
-    { title: 'Одежда для маркетплейсов', width: 300, height: 300 },
+    { title: 'Футболки <br/>и&nbsp;поло', width: 630, height: 300 },
+    { title: 'Рабочая одежда', width: 300, height: 300 },
+    //{ title: 'Официанты', width: 300, height: 630 },
+    //{ title: 'Брендирование', width: 300, height: 300 },
+    //{ title: 'Столовый текстиль', width: 300, height: 630 },
+    //{ title: 'Клининг', width: 300, height: 630 },
+   // { title: 'Одежда для маркетплейсов', width: 300, height: 300 },
   ]
 
 section.section
@@ -19,11 +19,11 @@ section.section
       each item,index in grid
         .catalog-grid__item
 
-          //picture
+          picture
             source(srcset=`./assets/img/cp-${index+1}@1x.webp 1x, ./assets/img/cp-${index+1}@2x.webp 2x` type="image/webp")
-            img(src=`./assets/img/cp-${index+1}@1x.png" srcset="./assets/img/cp-${index+1}@2x.png 2x` alt= item.title width= item.width height= item.height)
+            img(src=`./assets/img/cp-${index+1}@1x.jpg" srcset="./assets/img/cp-${index+1}@2x.jpg 2x` alt= item.title width= item.width height= item.height)
 
-          //.catalog-grid__title
+          .catalog-grid__title
             h3!= item.title
             //a(href="catalog.html") Подробнее
 
