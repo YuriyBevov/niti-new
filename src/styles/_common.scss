@@ -1,5 +1,27 @@
+.more-link {
+  @extend .flex-centered-content;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--dark);
+
+  img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
 .lw {
-  &-text-xxl {
+
+  &-text-white {
+    color: var(--white);
+  }
+
+  &-mt-auto {
+    margin-top: auto;
+  }
+
+  /*&-text-xxl {
     font-size: var(--text-xxl);
     font-weight: 400;
   }
@@ -52,5 +74,5 @@
   }
   &-fw-bold {
     font-weight: 700;
-  }
+  }*/
 }

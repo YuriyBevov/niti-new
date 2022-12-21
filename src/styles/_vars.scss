@@ -4,7 +4,7 @@
 :root {
     // base
     --font-family: "Inter", sans-serif;
-    --content-width: 1825px;
+    --content-width: 1590px;
     --content-fluid-width: 1790px;
     --container-offset: 15px;
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
@@ -20,6 +20,7 @@
     --basic-text: rgba(20, 16, 36, 0.7);
 
     --main-bg-color: var(--white);
+    --main-transition: 0.3s 0.05s ease-in;
 
     // scrollbar
     --main-scrollbar-width: 6px;

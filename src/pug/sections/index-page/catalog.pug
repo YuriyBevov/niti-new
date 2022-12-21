@@ -1,15 +1,15 @@
 -
   const grid = [
-    { title: 'Поварская одежда', width: 630, height: 300 },
-    { title: 'Фартуки', width: 300, height: 300 },
-    { title: 'Одежда <br/>для&nbsp;моряков', width: 300, height: 630 },
-    { title: 'Футболки <br/>и&nbsp;поло', width: 630, height: 300 },
-    { title: 'Рабочая одежда', width: 300, height: 300 },
-    //{ title: 'Официанты', width: 300, height: 630 },
-    //{ title: 'Брендирование', width: 300, height: 300 },
-    //{ title: 'Столовый текстиль', width: 300, height: 630 },
-    //{ title: 'Клининг', width: 300, height: 630 },
-   // { title: 'Одежда для маркетплейсов', width: 300, height: 300 },
+    { title: 'Одежда для моряков', width: 1165, height: 776, moreLinkDisabled: false },
+    { title: 'Поварская одежда', width: 351, height: 525, moreLinkDisabled: true },
+    { title: 'Футболки <br/>и&nbsp;поло', width: 552, height: 658, moreLinkDisabled: true },
+    { title: 'Рабочая одежда', width: 800, height: 681, moreLinkDisabled: true },
+    { title: 'Одежда для маркетплейсов', width: 1061, height: 510, moreLinkDisabled: false },
+    { title: 'Официанты', width: 434, height: 653, moreLinkDisabled: true },
+    { title: 'Фартуки', width: 602, height: 934, moreLinkDisabled: true },
+    { title: 'Клининг', width: 391, height: 795, moreLinkDisabled: true },
+    { title: 'Брендирование', width: 780, height: 460, moreLinkDisabled: true },
+    { title: 'Столовый текстиль', width: 780, height: 460, moreLinkDisabled: true },
   ]
 
 section.section
@@ -18,13 +18,14 @@ section.section
     .catalog-grid
       each item,index in grid
         .catalog-grid__item
+          a(href="#")
+            picture
+              source(srcset=`./assets/img/cp-${index+1}@1x.webp 1x, ./assets/img/cp-${index+1}@2x.webp 2x` type="image/webp")
+              img(src=`./assets/img/cp-${index+1}@1x.jpg" srcset="./assets/img/cp-${index+1}@2x.jpg 2x` alt= item.title width= item.width height= item.height)
 
-          picture
-            source(srcset=`./assets/img/cp-${index+1}@1x.webp 1x, ./assets/img/cp-${index+1}@2x.webp 2x` type="image/webp")
-            img(src=`./assets/img/cp-${index+1}@1x.jpg" srcset="./assets/img/cp-${index+1}@2x.jpg 2x` alt= item.title width= item.width height= item.height)
-
-          .catalog-grid__title
-            h3!= item.title
-            //a(href="catalog.html") Подробнее
+            .catalog-grid__title
+              h3!= item.title
+            span(style= item.moreLinkDisabled ? 'opacity: 0;' : null).more-link
+              img(src="./assets/img/icons/arrow.svg" alt="Подробнее" width="28" height="28")
 
 
