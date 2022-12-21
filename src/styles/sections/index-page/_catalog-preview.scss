@@ -4,6 +4,10 @@
   grid-template-rows: repeat(16, 7vw);
   grid-gap: 30px;
 
+  @include m-b-desktop-lg-up {
+    grid-template-rows: repeat(16, 134px);
+  }
+
   @include m-b-laptop-down {
     grid-gap: 20px;
   }
@@ -20,7 +24,7 @@
 
     img {
       object-fit: contain;
-      object-position: right;
+      object-position: bottom right;
     }
   }
 

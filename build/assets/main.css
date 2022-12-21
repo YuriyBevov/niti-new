@@ -1638,6 +1638,12 @@ h1, h2, h3, h4, h5, h6, p {
   grid-template-rows: repeat(16, 7vw);
   grid-gap: 30px;
 }
+@media (min-width: 1920px) {
+  .catalog-grid {
+    -ms-grid-rows: (134px)[16];
+    grid-template-rows: repeat(16, 134px);
+  }
+}
 @media (max-width: 1139px) {
   .catalog-grid {
     grid-gap: 20px;
@@ -1658,8 +1664,8 @@ h1, h2, h3, h4, h5, h6, p {
 .catalog-grid picture img {
   -o-object-fit: contain;
   object-fit: contain;
-  -o-object-position: right;
-  object-position: right;
+  -o-object-position: bottom right;
+  object-position: bottom right;
 }
 .catalog-grid__title {
   position: absolute;
