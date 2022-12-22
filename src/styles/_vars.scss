@@ -14,16 +14,18 @@
     --white: #fff;
     --light: #ebebeb;
     --basic-gray: #8c8c8c;
-    --accent: #d52027;
+    --accent: #9c150c;
     --dark: #353434;
-    --discount: #a4a4a4;
+    --lightgray: #a4a4a4;
+    --discount: var(--lightgray);
     --basic-text: rgba(20, 16, 36, 0.7);
+    --header-bg: #242424;
 
     --main-bg-color: var(--white);
-    --main-transition: 0.3s 0.05s ease-in;
+    --main-transition: 0.3s linear;
 
     // scrollbar
-    --main-scrollbar-width: 6px;
-    --main-scrollbar-color: var(--white);
+    --main-scrollbar-width: 8px;
+    --main-scrollbar-color: var(--dark);
     --main-scrollbar-thumb-color: var(--accent);
   }

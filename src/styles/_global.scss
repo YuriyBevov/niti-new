@@ -18,6 +18,10 @@ body {
   -webkit-text-size-adjust: none;
 }
 
+svg {
+  fill: var(--white);
+}
+
 body {
   position: relative;
   display: flex;

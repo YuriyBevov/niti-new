@@ -1,0 +1,33 @@
+.header-phones {
+  @extend .flex-wrap;
+  align-items: center;
+  height: 20px;
+
+  a {
+    position: relative;
+    font-size: 14px;
+    padding-left: 30px;
+    color: var(--white);
+    margin-right: 30px;
+
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-image: url("../assets/img/icons/phone.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    @extend .hover-opacity;
+  }
+
+  @include m-b-mobile-lg-down {
+    display: none;
+  }
+}

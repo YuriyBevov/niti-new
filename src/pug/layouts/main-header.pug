@@ -1,2 +1,19 @@
-header
-  p header
+header.header
+  .container
+    .header__section.header__section--top
+      a(href="index.html").header__logo
+        svg(width="73" height="54")
+          use(xlink:href="./assets/sprite.svg#icon-logo")
+      include ../components/city
+      include ../components/header-phones
+      include ../components/search-form
+      include ../components/burger
+    .header__section.header__section--bottom
+      a(href="index.html").header__logo
+        svg(width="73" height="54")
+          use(xlink:href="./assets/sprite.svg#icon-logo")
+      include ../components/nav
+
+      include ../components/search-form
+      include ../components/personal
+

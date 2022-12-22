@@ -49,6 +49,11 @@
   flex-wrap: wrap;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 /*form elements*/
 
 .fieldset-default {
@@ -109,7 +114,7 @@
   cursor: pointer;
 }
 
-.input-reset {
+.input-default {
   -webkit-appearance: none;
   appearance: none;
   border: none;
@@ -130,6 +135,18 @@
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+
+  @include m-b-desktop-lg-down {
+    padding: 0 30px;
+  }
+
+  @include m-b-tablet-down {
+    padding: 0 20px;
+  }
+
+  @include m-b-mobile-lg-down {
+    padding: 0 15px;
+  }
 }
 
 .container-fluid {
@@ -161,13 +178,13 @@
   overflow: hidden;
 }
 
-/*transitions*/
-
 .hover-opacity {
   transition: opacity var(--main-transition);
+  @include m-b-tablet-up {
 
-  &:hover,
-  &:focus {
-    opacity: 0.7;
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
   }
 }

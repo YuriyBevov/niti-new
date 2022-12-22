@@ -39,7 +39,7 @@
 }
 
 @mixin m-b-mobile-lg-down {
-  @media (max-width: (533px)) {
+  @media (max-width: (474px)) {
     @content;
   }
 }
@@ -83,7 +83,7 @@
 }
 
 @mixin m-b-mobile-lg-up {
-  @media (min-width: (534px)) {
+  @media (min-width: (475px)) {
     @content;
   }
 }

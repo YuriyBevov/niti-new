@@ -1,0 +1,33 @@
+.burger {
+  display: none;
+  flex-direction: column;
+  width: 30px;
+  height: 30px;
+
+  margin-left: auto;
+  @extend .button-default;
+
+  &__line {
+    display: block;
+    height: 3px;
+    border-radius: 3px;
+    margin: 5px 0;
+    background-color: var(--white);
+
+    &--top {
+      width: 100%;
+    }
+
+    &--middle {
+      width: 75%;
+    }
+
+    &--bottom {
+      width: 100%;
+    }
+  }
+
+  @include m-b-laptop-down {
+    display: block;
+  }
+}

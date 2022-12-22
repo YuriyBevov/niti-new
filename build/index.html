@@ -11,8 +11,63 @@
     <script defer="defer" src="./assets/bundle.js"></script>
   </head>
   <body>
-    <header>
-      <p>header</p>
+    <header class="header">
+      <div class="container">
+        <div class="header__section header__section--top"><a class="header__logo" href="index.html">
+            <svg width="73" height="54">
+              <use xlink:href="./assets/sprite.svg#icon-logo"></use>
+            </svg></a>
+          <div class="city"><span>г. Санкт-Петербург</span></div>
+          <div class="header-phones"><a href="tel:+79219810868">+7(921) 981 08 68</a><a href="tel:+79219810868">+7(921) 981 08 68</a></div>
+          <form class="search-form">
+            <input type="text" placeholder="Поиск по каталогу">
+            <button type="button" aria-label="Поиск по каталогу">
+              <svg width="24" height="24">
+                <use xlink:href="./assets/sprite.svg#icon-search"></use>
+              </svg>
+            </button>
+          </form>
+          <button class="burger" aria-label="Меню сайта"><span class="burger__line burger__line--top"></span><span class="burger__line burger__line--middle"></span><span class="burger__line burger__line--bottom"></span></button>
+        </div>
+        <div class="header__section header__section--bottom"><a class="header__logo" href="index.html">
+            <svg width="73" height="54">
+              <use xlink:href="./assets/sprite.svg#icon-logo"></use>
+            </svg></a>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list-item"><a class="active" href="#">Каталог</a></li>
+              <li class="nav__list-item"><a href="#">Брендирование</a></li>
+              <li class="nav__list-item"><a href="#">Доставка и оплата</a></li>
+              <li class="nav__list-item"><a href="#">О нас</a></li>
+              <li class="nav__list-item"><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <form class="search-form">
+            <input type="text" placeholder="Поиск по каталогу">
+            <button type="button" aria-label="Поиск по каталогу">
+              <svg width="24" height="24">
+                <use xlink:href="./assets/sprite.svg#icon-search"></use>
+              </svg>
+            </button>
+          </form>
+          <div class="personal"><a class="personal__field" href="#">
+              <div class="personal__field-icon">
+                <svg width="24" height="24">
+                  <use xlink:href="./assets/sprite.svg#icon-user"></use>
+                </svg>
+              </div><span>Войти</span></a><a class="personal__field" href="#">
+              <div class="personal__field-icon">
+                <svg width="24" height="24">
+                  <use xlink:href="./assets/sprite.svg#icon-heart"></use>
+                </svg><span class="count-badge">2</span>
+              </div><span>Избранное</span></a><a class="personal__field" href="#">
+              <div class="personal__field-icon">
+                <svg width="24" height="24">
+                  <use xlink:href="./assets/sprite.svg#icon-cart"></use>
+                </svg><span class="count-badge">99</span>
+              </div><span>Корзина</span></a></div>
+        </div>
+      </div>
     </header>
     <main>
       <section class="intro">

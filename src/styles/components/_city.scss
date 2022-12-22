@@ -1,0 +1,28 @@
+.city {
+  position: relative;
+  padding-left: 30px;
+  margin-right: 30px;
+  height: 20px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-image: url("../assets/img/icons/geo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  span {
+    font-size: 14px;
+    color: var(--white);
+  }
+
+  /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+  @include m-b-down(687px) {
+    display: none;
+  }
+}

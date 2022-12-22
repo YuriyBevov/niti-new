@@ -8,6 +8,13 @@
 @import "common";
 
 /* Компоненты */
+@import "./components/header";
+@import "./components/burger";
+@import "./components/city";
+@import "./components/header-phones";
+@import "./components/search-form";
+@import "./components/nav";
+@import "./components/personal";
 @import "./components/swiper-custom";
 @import "./components/slider-section";
 @import "./components/main-slider";
