@@ -1,15 +1,17 @@
 -
   const grid = [
-    { title: 'Одежда для моряков', width: 1165, height: 776, moreLinkDisabled: false },
-    { title: 'Поварская одежда', width: 351, height: 525, moreLinkDisabled: true },
-    { title: 'Футболки <br/>и&nbsp;поло', width: 552, height: 658, moreLinkDisabled: true },
-    { title: 'Рабочая одежда', width: 800, height: 681, moreLinkDisabled: true },
-    { title: 'Одежда для маркетплейсов', width: 1061, height: 510, moreLinkDisabled: false },
-    { title: 'Официанты', width: 434, height: 653, moreLinkDisabled: true },
-    { title: 'Фартуки', width: 602, height: 934, moreLinkDisabled: true },
-    { title: 'Клининг', width: 391, height: 795, moreLinkDisabled: true },
-    { title: 'Брендирование', width: 780, height: 460, moreLinkDisabled: true },
-    { title: 'Столовый текстиль', width: 780, height: 460, moreLinkDisabled: true },
+    { title: 'Одежда для моряков', width: 1165, height: 776, moreLinkDisabled: false, imgID: 1 },
+    { title: 'Поварская одежда', width: 351, height: 525, moreLinkDisabled: true, imgID: 2 },
+    { title: 'Футболки <br/>и&nbsp;поло', width: 552, height: 658, moreLinkDisabled: true, imgID: 3 },
+    { title: 'Рабочая одежда', width: 800, height: 681, moreLinkDisabled: true, imgID: 4 },
+    { title: 'Одежда <br/>для маркетплейсов', width: 1061, height: 510, moreLinkDisabled: false, imgID: 5 },
+    /*
+   */
+    { title: 'Брендирование', width: 780, height: 460, moreLinkDisabled: true, imgID: 9 },
+    { title: 'Столовый текстиль', width: 780, height: 460, moreLinkDisabled: true, imgID: 10 },
+    { title: 'Официанты', width: 434, height: 653, moreLinkDisabled: true, imgID: 6 },
+     { title: 'Фартуки', width: 602, height: 934, moreLinkDisabled: true, imgID: 7 },
+    { title: 'Клининг', width: 391, height: 795, moreLinkDisabled: true, imgID: 8 },
   ]
 
 section.section
@@ -20,8 +22,8 @@ section.section
         .catalog-grid__item
           a(href="#")
             picture
-              source(srcset=`./assets/img/cp-${index+1}@1x.webp 1x, ./assets/img/cp-${index+1}@2x.webp 2x` type="image/webp")
-              img(src=`./assets/img/cp-${index+1}@1x.jpg" srcset="./assets/img/cp-${index+1}@2x.jpg 2x` alt= item.title width= item.width height= item.height)
+              source(srcset=`./assets/img/cp-${item.imgID}@1x.webp 1x, ./assets/img/cp-${item.imgID}@2x.webp 2x` type="image/webp")
+              img(src=`./assets/img/cp-${item.imgID}@1x.jpg" srcset="./assets/img/cp-${item.imgID}@2x.jpg 2x` alt= item.title width= item.width height= item.height)
 
             .catalog-grid__title
               h3!= item.title
