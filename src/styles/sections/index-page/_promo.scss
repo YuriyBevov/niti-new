@@ -1,8 +1,5 @@
 .promo {
     position: relative;
-    max-width: 1920px;
-    margin: 0 auto;
-    margin-bottom: 60px;
 
     picture {
         display: flex;
@@ -13,10 +10,5 @@
         img {
             object-fit: contain;
         }
-    }
-
-    h2 {
-        position: absolute;
-
     }
 }

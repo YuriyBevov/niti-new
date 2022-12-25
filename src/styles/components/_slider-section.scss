@@ -9,6 +9,7 @@
 
         h2 {
             @extend .section-title;
+            width: calc(100% - 130px);
         }
     }
 

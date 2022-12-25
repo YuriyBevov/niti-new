@@ -1319,11 +1319,36 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
+.mini-card-width, .mini-card, .main-slider .swiper-slide {
+  width: 280px;
+  /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+}
+@media (max-width: 1439px) {
+  .mini-card-width, .mini-card, .main-slider .swiper-slide {
+    width: 250px;
+  }
+}
+@media (max-width: 959px) {
+  .mini-card-width, .mini-card, .main-slider .swiper-slide {
+    width: 235px;
+  }
+}
+
 .section-title, .slider-section__header h2 {
   font-weight: 500;
   font-size: 30px;
-  line-height: 36px;
+  line-height: 1.2;
   color: var(--dark);
+}
+@media (max-width: 767px) {
+  .section-title, .slider-section__header h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .section-title, .slider-section__header h2 {
+    font-size: 22px;
+  }
 }
 
 .section-padding {
@@ -1907,13 +1932,13 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 35px;
   padding-right: 20px;
 }
+.slider-section__header h2 {
+  width: calc(100% - 130px);
+}
 .slider-section__controls {
   margin-left: auto;
 }
 
-.main-slider .swiper-slide {
-  width: 280px;
-}
 .main-slider-button-next, .main-slider-button-prev {
   position: relative;
   top: 0;
@@ -1924,6 +1949,12 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 50%;
   background-color: var(--light);
   margin: 0 6px;
+}
+@media (max-width: 767px) {
+  .main-slider-button-next, .main-slider-button-prev {
+    width: 40px;
+    height: 40px;
+  }
 }
 .main-slider-button-next::before, .main-slider-button-prev::before {
   position: absolute;
@@ -1943,9 +1974,6 @@ h1, h2, h3, h4, h5, h6, p {
   transform: rotate(180deg);
 }
 
-.mini-card {
-  width: 280px;
-}
 .mini-card__preview {
   position: relative;
   margin-bottom: 20px;
@@ -2611,9 +2639,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 .promo {
   position: relative;
-  max-width: 1920px;
-  margin: 0 auto;
-  margin-bottom: 60px;
 }
 .promo picture {
   display: -webkit-box;
@@ -2626,9 +2651,6 @@ h1, h2, h3, h4, h5, h6, p {
 .promo picture img {
   -o-object-fit: contain;
   object-fit: contain;
-}
-.promo h2 {
-  position: absolute;
 }
 
 .callback {

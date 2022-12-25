@@ -1,31 +1,35 @@
 .main-slider {
     .swiper-slide {
-        width: 280px;
+      @extend .mini-card-width;
     }
     &-button-next,
     &-button-prev {
-        position: relative;
-        top: 0;
-        right: 0;
-        left: 0;
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background-color: var(--light);
+      position: relative;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: var(--light);
+      margin: 0 6px;
 
-        margin: 0 6px;
+      @include m-b-tablet-down {
+        width: 40px;
+        height: 40px;
+      }
 
-        &::before {
-            position: absolute;
-            top: 50%;
-            left: 50%;
+      &::before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
 
-            transform: translate(-50%, -50%);
-            content: '';
-            width: 24px;
-            height: 24px;
-            background-image: url("../assets/img/main-arrow.svg");
-        }
+          transform: translate(-50%, -50%);
+          content: '';
+          width: 24px;
+          height: 24px;
+          background-image: url("../assets/img/main-arrow.svg");
+      }
     }
 
     &-button-prev {

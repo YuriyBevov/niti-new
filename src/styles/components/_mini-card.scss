@@ -1,5 +1,5 @@
 .mini-card {
-    width: 280px;
+    @extend .mini-card-width;
 
     &__preview {
         position: relative;
