@@ -1156,7 +1156,7 @@ button.swiper-pagination-bullet {
 /* stylelint-disable color-function-notation */
 /* stylelint-disable alpha-value-notation */
 :root {
-  --font-family: "Inter", sans-serif;
+  --font-family: "Futura", sans-serif;
   --content-width: 1590px;
   --content-fluid-width: 1790px;
   --container-offset: 15px;
@@ -1232,6 +1232,13 @@ button.swiper-pagination-bullet {
   font-display: swap;
   font-style: normal;
 }
+@font-face {
+  font-family: "Futura";
+  src: url("../assets/fonts/../fonts/Futura-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
 *,
 *::before,
 *::after {
@@ -1266,6 +1273,7 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   font-family: var(--font-family, sans-serif);
+  line-height: 1.2;
   font-weight: 400;
   background-color: var(--main-bg-color);
 }
@@ -1336,18 +1344,18 @@ h1, h2, h3, h4, h5, h6, p {
 
 .section-title, .slider-section__header h2 {
   font-weight: 500;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 1.2;
   color: var(--dark);
 }
 @media (max-width: 767px) {
   .section-title, .slider-section__header h2 {
-    font-size: 24px;
+    font-size: 32px;
   }
 }
 @media (max-width: 767px) {
   .section-title, .slider-section__header h2 {
-    font-size: 22px;
+    font-size: 26px;
   }
 }
 
@@ -1809,33 +1817,27 @@ h1, h2, h3, h4, h5, h6, p {
   height: 100%;
   border-radius: 5px;
   padding: 10px 60px 12px 15px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 18px;
   color: var(--dark);
 }
 .search-form input::-webkit-input-placeholder {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 18px;
   color: var(--lightgray);
 }
 .search-form input::-moz-placeholder {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 18px;
   color: var(--lightgray);
 }
 .search-form input:-ms-input-placeholder {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 18px;
   color: var(--lightgray);
 }
 .search-form input::-ms-input-placeholder {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 18px;
   color: var(--lightgray);
 }
 .search-form input::placeholder {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 18px;
   color: var(--lightgray);
 }
 .search-form button {
@@ -2027,21 +2029,18 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .mini-card__footer h3 {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 24px;
   color: var(--basic-gray);
   padding-right: 20px;
   margin-bottom: 10px;
 }
 .mini-card__price span {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 24px;
   margin-right: 10px;
 }
 .mini-card__price-current {
   font-size: 14px;
-  line-height: 17px;
   color: var(--dark);
 }
 .mini-card__price-old {
@@ -2168,29 +2167,30 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 .hero__content h1 {
-  font-size: 36px;
+  font-size: 46px;
   font-weight: 500;
   margin-top: auto;
   margin-bottom: 20px;
+  color: var(--dark);
 }
 @media (max-width: 959px) {
   .hero__content h1 {
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 @media (max-width: 767px) {
   .hero__content h1 {
-    font-size: 26px;
+    font-size: 32px;
   }
 }
 @media (max-width: 600px) {
   .hero__content h1 {
-    font-size: 24px;
+    font-size: 30px;
   }
 }
 @media (max-width: 474px) {
   .hero__content h1 {
-    font-size: 22px;
+    font-size: 26px;
   }
 }
 .hero__content .hero__link {
@@ -2206,16 +2206,9 @@ h1, h2, h3, h4, h5, h6, p {
   text-transform: uppercase;
   margin-top: auto;
   margin-bottom: 20px;
-  /*@include m-b-down(600px) {
-    height: 40px;
-    padding-right: 55px;
-    margin-top: 0;
-
-    &::before {
-      width: 40px;
-      height: 40px;
-    }
-  }*/
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--dark);
 }
 .hero__content .hero__link::before {
   position: absolute;
@@ -2244,7 +2237,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 @media (max-width: 600px) {
   .hero__content .hero__link {
-    font-size: 14px;
+    font-size: 16px;
     height: 30px;
     padding-right: 45px;
     margin-top: 0;
@@ -2356,7 +2349,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .catalog-preview__grid-title h3 {
   position: relative;
-  font-family: "Futura";
   font-weight: 400;
   font-size: 36px;
   line-height: 1.2;

@@ -111,25 +111,26 @@
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 46px;
       font-weight: 500;
       margin-top: auto;
       margin-bottom: 20px;
+      color: var(--dark);
 
       @include m-b-tablet-lg-down {
-        font-size: 32px;
+        font-size: 36px;
       }
 
       @include m-b-tablet-down {
-        font-size: 26px;
+        font-size: 32px;
       }
 
       @include m-b-down(600px) {
-        font-size: 24px;
+        font-size: 30px;
       }
 
       @include m-b-mobile-lg-down {
-        font-size: 22px;
+        font-size: 26px;
       }
     }
 
@@ -143,6 +144,10 @@
       text-transform: uppercase;
       margin-top: auto;
       margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: 500;
+
+      color: var(--dark);
 
       &::before {
         position: absolute;
@@ -171,7 +176,7 @@
       }
 
       @include m-b-down(600px) {
-        font-size: 14px;
+        font-size: 16px;
         height: 30px;
         padding-right: 45px;
         margin-top: 0;
@@ -181,17 +186,6 @@
           height: 30px;
         }
       }
-
-      /*@include m-b-down(600px) {
-        height: 40px;
-        padding-right: 55px;
-        margin-top: 0;
-
-        &::before {
-          width: 40px;
-          height: 40px;
-        }
-      }*/
     }
   }
 }

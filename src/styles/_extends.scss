@@ -31,17 +31,17 @@
 
 .section-title {
   font-weight: 500;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 1.2;
 
   color: var(--dark);
 
   @include m-b-tablet-down {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   @include m-b-tablet-down {
-    font-size: 22px;
+    font-size: 26px;
   }
 }
 

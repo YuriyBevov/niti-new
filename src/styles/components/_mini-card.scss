@@ -32,8 +32,7 @@
     &__footer {
         h3 {
             font-weight: 400;
-            font-size: 14px;
-            line-height: 17px;
+            font-size: 24px;
 
             color: var(--basic-gray);
 
@@ -46,14 +45,12 @@
     &__price {
         span {
             font-weight: 500;
-            font-size: 14px;
-            line-height: 17px;
+            font-size: 24px;
             margin-right: 10px;
         }
 
         &-current {
             font-size: 14px;
-            line-height: 17px;
             color: var(--dark);
         }
 
