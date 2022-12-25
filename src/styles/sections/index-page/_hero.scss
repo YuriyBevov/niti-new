@@ -159,7 +159,7 @@
         background-position: center;
       }
 
-      @include m-b-down(600px) {
+      @include m-b-tablet-lg-down {
         height: 40px;
         padding-right: 55px;
         margin-top: 0;
@@ -169,6 +169,29 @@
           height: 40px;
         }
       }
+
+      @include m-b-down(600px) {
+        font-size: 14px;
+        height: 30px;
+        padding-right: 45px;
+        margin-top: 0;
+
+        &::before {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      /*@include m-b-down(600px) {
+        height: 40px;
+        padding-right: 55px;
+        margin-top: 0;
+
+        &::before {
+          width: 40px;
+          height: 40px;
+        }
+      }*/
     }
   }
 }

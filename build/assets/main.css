@@ -2206,6 +2206,16 @@ h1, h2, h3, h4, h5, h6, p {
   text-transform: uppercase;
   margin-top: auto;
   margin-bottom: 20px;
+  /*@include m-b-down(600px) {
+    height: 40px;
+    padding-right: 55px;
+    margin-top: 0;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+  }*/
 }
 .hero__content .hero__link::before {
   position: absolute;
@@ -2221,7 +2231,7 @@ h1, h2, h3, h4, h5, h6, p {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 959px) {
   .hero__content .hero__link {
     height: 40px;
     padding-right: 55px;
@@ -2230,6 +2240,18 @@ h1, h2, h3, h4, h5, h6, p {
   .hero__content .hero__link::before {
     width: 40px;
     height: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .hero__content .hero__link {
+    font-size: 14px;
+    height: 30px;
+    padding-right: 45px;
+    margin-top: 0;
+  }
+  .hero__content .hero__link::before {
+    width: 30px;
+    height: 30px;
   }
 }
 
