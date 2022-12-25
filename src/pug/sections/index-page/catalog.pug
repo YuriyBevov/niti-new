@@ -1,27 +1,24 @@
 -
   const grid = [
-    { title: 'Одежда для моряков', width: 1050, height: 460, moreLinkDisabled: false, imgID: 1 },
-    { title: 'Поварская одежда', width: 510, height: 460, moreLinkDisabled: true, imgID: 2 },
-    { title: 'Футболки <br/>и&nbsp;поло', width: 510, height: 460, moreLinkDisabled: true, imgID: 3 },
-    { title: 'Рабочая одежда', width: 1050, height: 460, moreLinkDisabled: true, imgID: 4 },
-    { title: 'Одежда <br/>для маркетплейсов', width: 1050, height: 460, moreLinkDisabled: false, imgID: 5 },
-    /*
-   */
-    { title: 'Брендирование', width: 510, height: 460, moreLinkDisabled: true, imgID: 9 },
-    { title: 'Столовый текстиль', width: 510, height: 460, moreLinkDisabled: true, imgID: 10 },
-    { title: 'Официанты', width: 510, height: 295, moreLinkDisabled: true, imgID: 6 },
-    { title: 'Фартуки', width: 510, height: 295, moreLinkDisabled: true, imgID: 7 },
-    { title: 'Клининг', width: 510, height: 295, moreLinkDisabled: true, imgID: 8 },
+    { title: 'Одежда для моряков', width: 1050, height: 460, imgID: 1 },
+    { title: 'Поварская одежда', width: 510, height: 460, imgID: 2 },
+    { title: 'Футболки <br/>и&nbsp;поло', width: 510, height: 460, imgID: 3 },
+    { title: 'Рабочая одежда', width: 1050, height: 460, imgID: 4 },
+    { title: 'Одежда <br/>для маркетплейсов', width: 1050, height: 460, imgID: 5 },
+    { title: 'Брендирование', width: 510, height: 460, imgID: 9 },
+    { title: 'Столовый текстиль', width: 510, height: 460, imgID: 10 },
+    { title: 'Официанты', width: 510, height: 295, imgID: 6 },
+    { title: 'Фартуки', width: 510, height: 295, imgID: 7 },
+    { title: 'Клининг', width: 510, height: 295, imgID: 8 },
   ]
 
-section.section
+section.section.catalog-preview
   .container
     h2.visually-hidden Каталог
-    .catalog-grid
+    .catalog-preview__grid
       each item,index in grid
-        .catalog-grid__item
+        .catalog-preview__grid-item
           a(href="#")
-
             picture
               source(media="(max-width: 600px)", srcset=`./assets/img/cp-${item.imgID}-mobile@1x.webp 1x, ./assets/img/cp-${item.imgID}-mobile@2x.webp 2x` type="image/webp")
               source(srcset=`./assets/img/cp-${item.imgID}@1x.webp 1x, ./assets/img/cp-${item.imgID}@2x.webp 2x` type="image/webp")
@@ -29,12 +26,10 @@ section.section
               source(media="(max-width: 600px)" srcset="./assets/img/cp-${item.imgID}-mobile@1x.png 1x, ./assets/img/cp-${item.imgID}-mobile@2x.png 2x")
               img(src=`./assets/img/cp-${item.imgID}@1x.png" srcset="./assets/img/cp-${item.imgID}@2x.png 2x` alt= item.title width= item.width height= item.height)
 
-            .catalog-grid__title
+            .catalog-preview__grid-title
               h3!= item.title
-            span(style= item.moreLinkDisabled ? 'opacity: 0;' : null).more-link
-              img(src="./assets/img/icons/arrow.svg" alt="Подробнее" width="28" height="28")
 
-    .promo
+    .catalog-preview__promo
       picture
         source(type="image/webp" media="(max-width: 433px)" srcset="./assets/img/banner-bg-mobile@1x.webp 1x, ./assets/img/banner-bg-mobile@2x.webp 2x")
         source(type="image/webp" media="(max-width: 959px)" srcset="./assets/img/banner-bg-tablet@1x.webp 1x, ./assets/img/banner-bg-tablet@2x.webp 2x")

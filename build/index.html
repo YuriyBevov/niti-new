@@ -70,105 +70,125 @@
       </div>
     </header>
     <main>
-      <section class="intro">
-        <p>intro</p>
+      <section class="section hero">
+        <div class="container hero__container">
+          <picture>
+            <source srcset="./assets/img/hero-img@1x.webp 1x, ./assets/img/hero-img@2x.webp 2x" type="image/webp"><img src="./assets/img/hero-img@1x.png" srcset="./assets/img/hero-img.png 2x" alt="niti-spb.ru" width="450" height="600">
+          </picture>
+          <div class="hero__content">
+            <h1>Пошив&nbsp;униформы <br/>и&nbsp;рабочей&nbsp;одежды <br/>в&nbsp;Санкт-Петербурге&nbsp;!</h1><a class="hero__link" href="catalog.html">Подробнее</a>
+            <div class="social"><a href="#" aria-label="Ozon.ru" rel="noopener nofollow noreferrer">
+                <svg width="78" height="17">
+                  <use xlink:href="./assets/sprite.svg#icon-ozon"></use>
+                </svg></a><a href="#" aria-label="Написать письмо" rel="noopener nofollow noreferrer">
+                <svg width="24" height="24">
+                  <use xlink:href="./assets/sprite.svg#icon-mail"></use>
+                </svg></a><a href="#" aria-label="В контакте" rel="noopener nofollow noreferrer">
+                <svg width="27" height="18">
+                  <use xlink:href="./assets/sprite.svg#icon-vk"></use>
+                </svg></a><a href="#" aria-label="Инстаграм" rel="noopener nofollow noreferrer">
+                <svg width="24" height="24">
+                  <use xlink:href="./assets/sprite.svg#icon-insta"></use>
+                </svg></a></div>
+          </div>
+        </div>
       </section>
-      <section class="section">
+      <section class="section catalog-preview">
         <div class="container">
           <h2 class="visually-hidden">Каталог</h2>
-          <div class="catalog-grid">
-            <div class="catalog-grid__item"><a href="#">
+          <div class="catalog-preview__grid">
+            <div class="catalog-preview__grid-item"><a href="#">
                 <picture>
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-1-mobile@1x.webp 1x, ./assets/img/cp-1-mobile@2x.webp 2x" type="image/webp">
                   <source srcset="./assets/img/cp-1@1x.webp 1x, ./assets/img/cp-1@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-${item.imgID}-mobile@1x.png 1x, ./assets/img/cp-${item.imgID}-mobile@2x.png 2x"><img src="./assets/img/cp-1@1x.png&quot; srcset=&quot;./assets/img/cp-1@2x.png 2x" alt="Одежда для моряков" width="1050" height="460">
                 </picture>
-                <div class="catalog-grid__title">
+                <div class="catalog-preview__grid-title">
                   <h3>Одежда для моряков</h3>
-                </div><span class="more-link"><img src="./assets/img/icons/arrow.svg" alt="Подробнее" width="28" height="28"></span></a></div>
-            <div class="catalog-grid__item"><a href="#">
+                </div></a></div>
+            <div class="catalog-preview__grid-item"><a href="#">
                 <picture>
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-2-mobile@1x.webp 1x, ./assets/img/cp-2-mobile@2x.webp 2x" type="image/webp">
                   <source srcset="./assets/img/cp-2@1x.webp 1x, ./assets/img/cp-2@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-${item.imgID}-mobile@1x.png 1x, ./assets/img/cp-${item.imgID}-mobile@2x.png 2x"><img src="./assets/img/cp-2@1x.png&quot; srcset=&quot;./assets/img/cp-2@2x.png 2x" alt="Поварская одежда" width="510" height="460">
                 </picture>
-                <div class="catalog-grid__title">
+                <div class="catalog-preview__grid-title">
                   <h3>Поварская одежда</h3>
-                </div><span class="more-link" style="opacity: 0;"><img src="./assets/img/icons/arrow.svg" alt="Подробнее" width="28" height="28"></span></a></div>
-            <div class="catalog-grid__item"><a href="#">
+                </div></a></div>
+            <div class="catalog-preview__grid-item"><a href="#">
                 <picture>
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-3-mobile@1x.webp 1x, ./assets/img/cp-3-mobile@2x.webp 2x" type="image/webp">
                   <source srcset="./assets/img/cp-3@1x.webp 1x, ./assets/img/cp-3@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-${item.imgID}-mobile@1x.png 1x, ./assets/img/cp-${item.imgID}-mobile@2x.png 2x"><img src="./assets/img/cp-3@1x.png&quot; srcset=&quot;./assets/img/cp-3@2x.png 2x" alt="Футболки &lt;br/&gt;и&amp;nbsp;поло" width="510" height="460">
                 </picture>
-                <div class="catalog-grid__title">
+                <div class="catalog-preview__grid-title">
                   <h3>Футболки <br/>и&nbsp;поло</h3>
-                </div><span class="more-link" style="opacity: 0;"><img src="./assets/img/icons/arrow.svg" alt="Подробнее" width="28" height="28"></span></a></div>
-            <div class="catalog-grid__item"><a href="#">
+                </div></a></div>
+            <div class="catalog-preview__grid-item"><a href="#">
                 <picture>
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-4-mobile@1x.webp 1x, ./assets/img/cp-4-mobile@2x.webp 2x" type="image/webp">
                   <source srcset="./assets/img/cp-4@1x.webp 1x, ./assets/img/cp-4@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-${item.imgID}-mobile@1x.png 1x, ./assets/img/cp-${item.imgID}-mobile@2x.png 2x"><img src="./assets/img/cp-4@1x.png&quot; srcset=&quot;./assets/img/cp-4@2x.png 2x" alt="Рабочая одежда" width="1050" height="460">
                 </picture>
-                <div class="catalog-grid__title">
+                <div class="catalog-preview__grid-title">
                   <h3>Рабочая одежда</h3>
-                </div><span class="more-link" style="opacity: 0;"><img src="./assets/img/icons/arrow.svg" alt="Подробнее" width="28" height="28"></span></a></div>
-            <div class="catalog-grid__item"><a href="#">
+                </div></a></div>
+            <div class="catalog-preview__grid-item"><a href="#">
                 <picture>
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-5-mobile@1x.webp 1x, ./assets/img/cp-5-mobile@2x.webp 2x" type="image/webp">
                   <source srcset="./assets/img/cp-5@1x.webp 1x, ./assets/img/cp-5@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-${item.imgID}-mobile@1x.png 1x, ./assets/img/cp-${item.imgID}-mobile@2x.png 2x"><img src="./assets/img/cp-5@1x.png&quot; srcset=&quot;./assets/img/cp-5@2x.png 2x" alt="Одежда &lt;br/&gt;для маркетплейсов" width="1050" height="460">
                 </picture>
-                <div class="catalog-grid__title">
+                <div class="catalog-preview__grid-title">
                   <h3>Одежда <br/>для маркетплейсов</h3>
-                </div><span class="more-link"><img src="./assets/img/icons/arrow.svg" alt="Подробнее" width="28" height="28"></span></a></div>
-            <div class="catalog-grid__item"><a href="#">
+                </div></a></div>
+            <div class="catalog-preview__grid-item"><a href="#">
                 <picture>
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-9-mobile@1x.webp 1x, ./assets/img/cp-9-mobile@2x.webp 2x" type="image/webp">
                   <source srcset="./assets/img/cp-9@1x.webp 1x, ./assets/img/cp-9@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-${item.imgID}-mobile@1x.png 1x, ./assets/img/cp-${item.imgID}-mobile@2x.png 2x"><img src="./assets/img/cp-9@1x.png&quot; srcset=&quot;./assets/img/cp-9@2x.png 2x" alt="Брендирование" width="510" height="460">
                 </picture>
-                <div class="catalog-grid__title">
+                <div class="catalog-preview__grid-title">
                   <h3>Брендирование</h3>
-                </div><span class="more-link" style="opacity: 0;"><img src="./assets/img/icons/arrow.svg" alt="Подробнее" width="28" height="28"></span></a></div>
-            <div class="catalog-grid__item"><a href="#">
+                </div></a></div>
+            <div class="catalog-preview__grid-item"><a href="#">
                 <picture>
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-10-mobile@1x.webp 1x, ./assets/img/cp-10-mobile@2x.webp 2x" type="image/webp">
                   <source srcset="./assets/img/cp-10@1x.webp 1x, ./assets/img/cp-10@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-${item.imgID}-mobile@1x.png 1x, ./assets/img/cp-${item.imgID}-mobile@2x.png 2x"><img src="./assets/img/cp-10@1x.png&quot; srcset=&quot;./assets/img/cp-10@2x.png 2x" alt="Столовый текстиль" width="510" height="460">
                 </picture>
-                <div class="catalog-grid__title">
+                <div class="catalog-preview__grid-title">
                   <h3>Столовый текстиль</h3>
-                </div><span class="more-link" style="opacity: 0;"><img src="./assets/img/icons/arrow.svg" alt="Подробнее" width="28" height="28"></span></a></div>
-            <div class="catalog-grid__item"><a href="#">
+                </div></a></div>
+            <div class="catalog-preview__grid-item"><a href="#">
                 <picture>
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-6-mobile@1x.webp 1x, ./assets/img/cp-6-mobile@2x.webp 2x" type="image/webp">
                   <source srcset="./assets/img/cp-6@1x.webp 1x, ./assets/img/cp-6@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-${item.imgID}-mobile@1x.png 1x, ./assets/img/cp-${item.imgID}-mobile@2x.png 2x"><img src="./assets/img/cp-6@1x.png&quot; srcset=&quot;./assets/img/cp-6@2x.png 2x" alt="Официанты" width="510" height="295">
                 </picture>
-                <div class="catalog-grid__title">
+                <div class="catalog-preview__grid-title">
                   <h3>Официанты</h3>
-                </div><span class="more-link" style="opacity: 0;"><img src="./assets/img/icons/arrow.svg" alt="Подробнее" width="28" height="28"></span></a></div>
-            <div class="catalog-grid__item"><a href="#">
+                </div></a></div>
+            <div class="catalog-preview__grid-item"><a href="#">
                 <picture>
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-7-mobile@1x.webp 1x, ./assets/img/cp-7-mobile@2x.webp 2x" type="image/webp">
                   <source srcset="./assets/img/cp-7@1x.webp 1x, ./assets/img/cp-7@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-${item.imgID}-mobile@1x.png 1x, ./assets/img/cp-${item.imgID}-mobile@2x.png 2x"><img src="./assets/img/cp-7@1x.png&quot; srcset=&quot;./assets/img/cp-7@2x.png 2x" alt="Фартуки" width="510" height="295">
                 </picture>
-                <div class="catalog-grid__title">
+                <div class="catalog-preview__grid-title">
                   <h3>Фартуки</h3>
-                </div><span class="more-link" style="opacity: 0;"><img src="./assets/img/icons/arrow.svg" alt="Подробнее" width="28" height="28"></span></a></div>
-            <div class="catalog-grid__item"><a href="#">
+                </div></a></div>
+            <div class="catalog-preview__grid-item"><a href="#">
                 <picture>
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-8-mobile@1x.webp 1x, ./assets/img/cp-8-mobile@2x.webp 2x" type="image/webp">
                   <source srcset="./assets/img/cp-8@1x.webp 1x, ./assets/img/cp-8@2x.webp 2x" type="image/webp">
                   <source media="(max-width: 600px)" srcset="./assets/img/cp-${item.imgID}-mobile@1x.png 1x, ./assets/img/cp-${item.imgID}-mobile@2x.png 2x"><img src="./assets/img/cp-8@1x.png&quot; srcset=&quot;./assets/img/cp-8@2x.png 2x" alt="Клининг" width="510" height="295">
                 </picture>
-                <div class="catalog-grid__title">
+                <div class="catalog-preview__grid-title">
                   <h3>Клининг</h3>
-                </div><span class="more-link" style="opacity: 0;"><img src="./assets/img/icons/arrow.svg" alt="Подробнее" width="28" height="28"></span></a></div>
+                </div></a></div>
           </div>
-          <div class="promo">
+          <div class="catalog-preview__promo">
             <picture>
               <source type="image/webp" media="(max-width: 433px)" srcset="./assets/img/banner-bg-mobile@1x.webp 1x, ./assets/img/banner-bg-mobile@2x.webp 2x">
               <source type="image/webp" media="(max-width: 959px)" srcset="./assets/img/banner-bg-tablet@1x.webp 1x, ./assets/img/banner-bg-tablet@2x.webp 2x">
