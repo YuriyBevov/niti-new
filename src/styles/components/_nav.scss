@@ -57,6 +57,7 @@
   }
 
   &-closer {
+    display: none;
     @extend .button-default;
     @extend .flex-centered-content;
 
@@ -65,11 +66,15 @@
     right: 25px;
   }
 
-  @include m-b-mobile-lg-down {
+  @include m-b-laptop-down {
+    &-closer {
+      display: flex;
+    }
+
     &.mobile-opened {
       position: fixed;
       top: 0;
-      left: 0;
+      right: 0;
       background-color: var(--dark);
       height: 100%;
       width: 100%;
@@ -110,6 +115,7 @@
         background-repeat: no-repeat;
         background-position: center;
         opacity: 0.2;
+        z-index: -1;
       }
     }
   }

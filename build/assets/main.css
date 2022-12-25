@@ -1911,15 +1911,21 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 .nav-closer {
+  display: none;
   position: absolute;
   top: 25px;
   right: 25px;
 }
-@media (max-width: 474px) {
+@media (max-width: 1139px) {
+  .nav-closer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .nav.mobile-opened {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: var(--dark);
     height: 100%;
     width: 100%;
@@ -1964,6 +1970,7 @@ h1, h2, h3, h4, h5, h6, p {
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.2;
+    z-index: -1;
   }
 }
 

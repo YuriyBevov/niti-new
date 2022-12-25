@@ -9,9 +9,9 @@
 
 var burger = document.querySelector('.burger');
 var nav = document.querySelector('nav');
-var closer = nav.querySelector('.nav-closer');
 
-if (burger && nav && closer) {
+if (true) {
+  var closer = nav.querySelector('.nav-closer');
   burger.addEventListener('click', function () {
     nav.classList.toggle('mobile-opened');
   });
