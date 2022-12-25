@@ -3,15 +3,34 @@
   align-items: center;
   margin-left: auto;
 
+
+
+  @include m-b-mobile-lg-down {
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    width: 100%;
+    left: 0;
+    justify-content: flex-end;
+    padding: 15px 30px;
+    background-color: rgba(0,0,0,.7);
+  }
+
   &__field {
     @extend .flex-column;
     @extend .flex-centered-content;
-    margin-left: 30px;
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
 
     &-icon {
       position: relative;
       @extend .flex-centered-content;
       margin-bottom: 5px;
+
+      @include m-b-mobile-lg-down {
+        margin: 0;
+      }
 
       span {
         @extend .flex-centered-content;
@@ -41,5 +60,11 @@
     }
 
     @extend .hover-opacity;
+
+    @include m-b-mobile-lg-down {
+      width: 60px;
+      border-radius: 4px;
+      background-color: rgba(245,245,245,.2);
+    }
   }
 }

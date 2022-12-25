@@ -64,7 +64,10 @@
       }
 
       @include m-b-mobile-lg-down {
-        display: none;
+        .header__logo {
+          display: none;
+        }
+        padding: 0;
       }
     }
   }
