@@ -1996,7 +1996,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .personal__field {
   margin-left: 15px;
-  width: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 40px;
   height: 40px;
 }
 .personal__field-icon {
@@ -2113,7 +2116,7 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
   display: inline-block;
   top: 17px;
-  right: 8px;
+  right: 6px;
   color: var(--white);
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);

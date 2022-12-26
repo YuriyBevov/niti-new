@@ -3,8 +3,6 @@
   align-items: center;
   margin-left: auto;
 
-
-
   @include m-b-mobile-lg-down {
     position: fixed;
     bottom: 0;
@@ -20,7 +18,8 @@
     @extend .flex-column;
     @extend .flex-centered-content;
     margin-left: 15px;
-    width: 40px;
+    width: fit-content;
+    min-width: 40px;
     height: 40px;
 
     &-icon {
