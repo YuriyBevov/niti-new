@@ -6,7 +6,7 @@
   @include m-b-mobile-lg-down {
     position: fixed;
     bottom: 0;
-    z-index: 99;
+    z-index: 98;
     width: 100%;
     left: 0;
     justify-content: flex-end;
@@ -50,7 +50,7 @@
     }
 
     & > span {
-      font-size: 14px;
+      font-size: 16px;
       color: var(--white);
 
       @include m-b-tablet-lg-down {

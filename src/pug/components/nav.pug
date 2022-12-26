@@ -1,15 +1,19 @@
 nav.nav
-  button(type="button" aria-label="Закрыть меню").nav-closer
-    svg(width="24" height="24")
-      use(xlink:href="./assets/sprite.svg#icon-close")
-  ul.nav__list
-    li.nav__list-item
-      a(href="#").active Каталог
-    li.nav__list-item
-      a(href="#") Брендирование
-    li.nav__list-item
-      a(href="#") Доставка и оплата
-    li.nav__list-item
-      a(href="#") О нас
-    li.nav__list-item
-      a(href="#") Контакты
+  .nav__container
+    button(type="button" aria-label="Закрыть меню").nav-closer
+      span.nav-closer__line.nav-closer__line--top
+      span.nav-closer__line.nav-closer__line--bottom
+
+    ul.nav__list
+      li.nav__list-item
+        a(href="#").active Каталог
+      li.nav__list-item
+        a(href="#") Брендирование
+      li.nav__list-item
+        a(href="#") Доставка и оплата
+      li.nav__list-item
+        a(href="#") О нас
+      li.nav__list-item
+        a(href="#") Контакты
+
+    include ./social

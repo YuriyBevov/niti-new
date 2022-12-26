@@ -1,5 +1,11 @@
 .nav {
-  display: flex;
+  &__container {
+    display: flex;
+  }
+
+  .social {
+    display: none;
+  }
 
   &__list {
     @extend .flex-wrap;
@@ -16,7 +22,7 @@
 
       height: inherit;
 
-      font-size: 14px;
+      font-size: 16px;
       letter-spacing: 0.05em;
       text-transform: uppercase;
 
@@ -64,6 +70,30 @@
     position: absolute;
     top: 25px;
     right: 25px;
+    width: 30px;
+    height: 30px;
+
+    transform: rotate(45deg);
+
+    &__line {
+      width: 100%;
+      height: 3px;
+      background-color: var(--white);
+      border-radius: 3px;
+
+      &--top {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &--bottom {
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+        position: absolute;
+      }
+    }
   }
 
   @include m-b-laptop-down {
@@ -72,25 +102,65 @@
     }
 
     &.mobile-opened {
+      display: block;
+
       position: fixed;
       top: 0;
-      right: 0;
-      background-color: var(--dark);
-      height: 100%;
+      left: 0;
+      background-color: rgba(245,245,245,.7);
       width: 100%;
-      z-index: 999;
-      display: block;
-      min-height: 350px;
+      height: 100vh;
+      z-index: 99;
 
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 10px;
-        height: 100%;
-        content: '';
-        background-color: var(--accent);
+      .social {
+        display: flex;
       }
+
+      .nav__container {
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        height: 100%;
+        min-height: 350px;
+        width: 100%;
+        max-width: 450px;
+
+        padding: 50px 0;
+        background-color: var(--dark);
+        z-index: 999;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 10px;
+          height: 100%;
+          content: '';
+          background-color: var(--accent);
+        }
+
+        &::after {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          content: "";
+          width: 80%;
+          height: 90%;
+          background-image: url(../assets/img/icons/hero-logo.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          opacity: 0.05;
+          z-index: -1;
+        }
+      }
+
 
       .nav__list {
         flex-direction: column;
@@ -99,23 +169,10 @@
         height: 100%;
         padding: 25px;
         margin: auto;
-      }
 
-      &::after {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        content: "";
-        width: 50%;
-        height: 80%;
-        background-image: url(../assets/img/icons/hero-logo.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        opacity: 0.2;
-        z-index: -1;
+        &-item a {
+          font-size: 18px;
+        }
       }
     }
   }

@@ -1,3 +1,37 @@
+.blue-logo {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  content: '';
+  background-image: url("../assets/img/icons/logo-blue.svg");
+  width: 80px;
+  height: 60px;
+
+  @include m-b-desktop-down {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  @include m-b-tablet-lg-down {
+    bottom: 15px;
+    left: 15px;
+  }
+
+  @include m-b-down(700px) {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  @include m-b-down(600px) {
+    top: 10px;
+    bottom: initial;
+    left: 10px;
+
+    width: 40px;
+    height: 30px;
+    background-size: contain;
+  }
+}
 .catalog-preview {
   &__grid {
     display: grid;
@@ -77,24 +111,24 @@
           position: relative;
           font-weight: 400;
           font-size: 36px;
-          line-height: 1.2;
+          line-height: 1;
           color: var(--dark);
           z-index: 2;
 
           @include m-b-desktop-down {
-              font-size: 28px;
+              font-size: 32px;
           }
 
           @include m-b-laptop-down {
-              font-size: 24px;
+              font-size: 28px;
           }
 
           @include m-b-tablet-lg-down {
-            font-size: 20px;
+            font-size: 24px;
           }
 
           @include m-b-tablet-down {
-            font-size: 18px;
+            font-size: 22px;
           }
 
           @include m-b-down(600px) {
@@ -199,38 +233,7 @@
         grid-row: 4/7;
 
         & > a::after {
-          position: absolute;
-          bottom: 40px;
-          left: 40px;
-          content: '';
-          background-image: url("../assets/img/icons/logo-blue.svg");
-          width: 80px;
-          height: 60px;
-
-          @include m-b-desktop-down {
-            bottom: 20px;
-            left: 20px;
-          }
-
-          @include m-b-tablet-lg-down {
-            bottom: 15px;
-            left: 15px;
-          }
-
-          @include m-b-down(700px) {
-            bottom: 10px;
-            left: 10px;
-          }
-
-          @include m-b-down(600px) {
-            top: 10px;
-            bottom: initial;
-            left: 10px;
-
-            width: 40px;
-            height: 30px;
-            background-size: contain;
-          }
+          @extend .blue-logo;
         }
 
         background-image: url("../assets/img/cp-4-bg@1x.png");
