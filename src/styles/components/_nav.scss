@@ -129,6 +129,13 @@
       .social {
         display: flex;
         margin-bottom: 20px;
+        a {
+          svg {
+            fill: var(--white);
+          }
+
+          border-color: var(--white);
+        }
       }
 
       .nav__logo {

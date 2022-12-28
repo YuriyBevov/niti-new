@@ -1,12 +1,18 @@
 .social {
   display: flex;
   margin-top: auto;
+
   a {
     @extend .flex-centered-content;
     width: 50px;
     height: 50px;
-    border: 2px solid var(--white);
-    background-color: rgba(245,245,245,0.2);
+
+    border: 2px solid var(--blue);
+    background-color: rgba(245,245,245,0.05);
+
+    svg {
+      fill: var(--blue);
+    }
 
     &:first-of-type {
       width: 100px;
