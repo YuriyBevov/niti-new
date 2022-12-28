@@ -1,5 +1,5 @@
 .nav {
-  &__container {
+  &__wrapper {
     display: flex;
   }
 
@@ -7,10 +7,16 @@
     display: none;
   }
 
-  span {display: none;}
+  &__city {
+    display: none;
+  }
+
+  &__logo {
+    display: none;
+  }
 
   &__list {
-    @extend .flex-wrap;
+    display: flex;
     align-items: center;
   }
 
@@ -70,8 +76,8 @@
     @extend .flex-centered-content;
 
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 10px;
+    right: 15px;
     width: 30px;
     height: 30px;
 
@@ -109,14 +115,29 @@
       position: fixed;
       top: 0;
       left: 0;
-      background-color: rgba(245,245,245,.7);
+
       width: 100%;
       height: 100vh;
+
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+
       z-index: 99;
 
       .social {
         display: flex;
         margin-bottom: 20px;
+      }
+
+      .nav__logo {
+        display: block;
+        img {
+          width: 90px;
+          margin-bottom: 20px;
+        }
+        opacity: 0.4;
       }
 
       span {
@@ -131,16 +152,10 @@
         top: 0;
         right: 0;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
         height: 100%;
-        min-height: 350px;
         width: 100%;
         max-width: 450px;
 
-        padding: 30px 0;
         background-color: var(--dark);
         z-index: 999;
 
@@ -155,6 +170,7 @@
         }
 
         &::after {
+          display: none;
           position: absolute;
           top: 50%;
           left: 50%;
@@ -168,6 +184,36 @@
           background-position: center;
           opacity: 0.05;
           z-index: -1;
+        }
+      }
+
+      .nav__wrapper {
+        overflow: hidden;
+        overflow-y: auto;
+        width: 100%;
+        height: 100%;
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @media(max-height: 419px) {
+        .social {
+          display: none;
+        }
+
+        .nav__city {
+          display: none;
+        }
+
+        .nav__logo {
+          display: none;
+        }
+
+        .nav__container:after {
+          display: block;
         }
       }
 

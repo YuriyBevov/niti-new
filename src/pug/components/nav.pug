@@ -1,21 +1,25 @@
 nav.nav
   .nav__container
-    button(type="button" aria-label="Закрыть меню").nav-closer
-      span.nav-closer__line.nav-closer__line--top
-      span.nav-closer__line.nav-closer__line--bottom
+    .nav__wrapper
+      button(type="button" aria-label="Закрыть меню").nav-closer
+        span.nav-closer__line.nav-closer__line--top
+        span.nav-closer__line.nav-closer__line--bottom
 
-    ul.nav__list
-      li.nav__list-item
-        a(href="#").active Каталог
-      li.nav__list-item
-        a(href="#") Брендирование
-      li.nav__list-item
-        a(href="#") Доставка и оплата
-      li.nav__list-item
-        a(href="#") О нас
-      li.nav__list-item
-        a(href="#") Контакты
+      ul.nav__list
+        li.nav__list-item
+          a(href="#").active Каталог
+        li.nav__list-item
+          a(href="#") Брендирование
+        li.nav__list-item
+          a(href="#") Доставка и оплата
+        li.nav__list-item
+          a(href="#") О нас
+        li.nav__list-item
+          a(href="#") Контакты
 
-    include ./social
+      .nav__logo
+        img(src="../assets/img/icons/hero-logo.svg" alt="" width="120" height="80")
 
-    span Санкт-Петербург, 2023
+      include ./social
+
+      span.nav__city Санкт-Петербург, 2023

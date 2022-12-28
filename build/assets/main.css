@@ -1386,7 +1386,7 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: center;
 }
 
-.flex-wrap, .slider-section__controls, .slider-section__header, .personal, .nav__list, .header-phones, .header__section {
+.flex-wrap, .slider-section__controls, .slider-section__header, .personal, .header-phones, .header__section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1861,7 +1861,7 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
-.nav__container {
+.nav__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1869,10 +1869,16 @@ h1, h2, h3, h4, h5, h6, p {
 .nav .social {
   display: none;
 }
-.nav span {
+.nav__city {
+  display: none;
+}
+.nav__logo {
   display: none;
 }
 .nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1918,8 +1924,8 @@ h1, h2, h3, h4, h5, h6, p {
 .nav-closer {
   display: none;
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 10px;
+  right: 15px;
   width: 30px;
   height: 30px;
   -webkit-transform: rotate(45deg);
@@ -1958,15 +1964,28 @@ h1, h2, h3, h4, h5, h6, p {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(245, 245, 245, 0.7);
     width: 100%;
     height: 100vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     z-index: 99;
   }
   .nav.mobile-opened .social {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-bottom: 20px;
+  }
+  .nav.mobile-opened .nav__logo {
+    display: block;
+    opacity: 0.4;
+  }
+  .nav.mobile-opened .nav__logo img {
+    width: 90px;
     margin-bottom: 20px;
   }
   .nav.mobile-opened span {
@@ -1979,21 +1998,9 @@ h1, h2, h3, h4, h5, h6, p {
     position: fixed;
     top: 0;
     right: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     height: 100%;
-    min-height: 350px;
     width: 100%;
     max-width: 450px;
-    padding: 30px 0;
     background-color: var(--dark);
     z-index: 999;
   }
@@ -2007,6 +2014,7 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: var(--accent);
   }
   .nav.mobile-opened .nav__container::after {
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2023,6 +2031,42 @@ h1, h2, h3, h4, h5, h6, p {
     opacity: 0.05;
     z-index: -1;
   }
+  .nav.mobile-opened .nav__wrapper {
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    padding: 30px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 1139px) and (max-height: 419px) {
+  .nav.mobile-opened .social {
+    display: none;
+  }
+  .nav.mobile-opened .nav__city {
+    display: none;
+  }
+  .nav.mobile-opened .nav__logo {
+    display: none;
+  }
+  .nav.mobile-opened .nav__container:after {
+    display: block;
+  }
+}
+@media (max-width: 1139px) {
   .nav.mobile-opened .nav__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2057,7 +2101,7 @@ h1, h2, h3, h4, h5, h6, p {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    padding: 15px 30px;
+    padding: 15px;
     background-color: rgba(0, 0, 0, 0.7);
   }
 }
@@ -2234,6 +2278,11 @@ h1, h2, h3, h4, h5, h6, p {
 @media (max-width: 600px) {
   .hero__container {
     height: 220px;
+  }
+}
+@media (max-width: 420px) {
+  .hero__container {
+    height: 120px;
   }
 }
 .hero__container picture {
