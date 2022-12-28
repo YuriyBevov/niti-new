@@ -1449,6 +1449,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .main-scroll::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb {
   background-color: var(--main-scrollbar-thumb-color);
+  border-radius: 4px;
 }
 
 /*resets*/
@@ -2003,15 +2004,15 @@ h1, h2, h3, h4, h5, h6, p {
     max-width: 450px;
     background-color: var(--dark);
     z-index: 999;
-  }
-  .nav.mobile-opened .nav__container::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10px;
-    height: 100%;
-    content: "";
-    background-color: var(--accent);
+    /*&::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 100%;
+      content: '';
+      background-color: var(--accent);
+    }*/
   }
   .nav.mobile-opened .nav__container::after {
     display: none;
@@ -2567,7 +2568,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .catalog-preview__grid-title {
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -2942,9 +2943,16 @@ h1, h2, h3, h4, h5, h6, p {
     -ms-grid-row: 5;
     -ms-grid-row-span: 1;
     grid-row: 5/6;
+    /*.catalog-preview__grid-title h3 {
+      color: var(--dark);
+    }*/
   }
-  .catalog-preview__grid-item:nth-child(6) .catalog-preview__grid-title h3 {
-    color: var(--dark);
+  .catalog-preview__grid-item:nth-child(6) .catalog-preview__grid-title {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .catalog-preview__grid-item:nth-child(6) picture img {
+    -o-object-position: center;
+    object-position: center;
   }
 }
 @media (max-width: 474px) {
@@ -2980,9 +2988,16 @@ h1, h2, h3, h4, h5, h6, p {
     -ms-grid-row: 4;
     -ms-grid-row-span: 1;
     grid-row: 4/5;
+    /*.catalog-preview__grid-title h3 {
+      color: var(--dark);
+    }*/
   }
-  .catalog-preview__grid-item:nth-child(7) .catalog-preview__grid-title h3 {
-    color: var(--dark);
+  .catalog-preview__grid-item:nth-child(7) .catalog-preview__grid-title {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .catalog-preview__grid-item:nth-child(7) picture img {
+    -o-object-position: center;
+    object-position: center;
   }
 }
 @media (max-width: 474px) {
