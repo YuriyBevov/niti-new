@@ -1627,6 +1627,23 @@ h1, h2, h3, h4, h5, h6, p {
     height: auto;
   }
 }
+@media (max-width: 474px) {
+  .header__logo {
+    display: none !important;
+  }
+  .header__logo svg {
+    width: 110px;
+    height: 32px;
+  }
+}
+.header__logo--mobile {
+  display: none;
+}
+@media (max-width: 474px) {
+  .header__logo--mobile {
+    display: block !important;
+  }
+}
 .header__section {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2273,6 +2290,12 @@ h1, h2, h3, h4, h5, h6, p {
   background-size: cover;
   background-position: center;
 }
+@media (max-width: 420px) {
+  .hero {
+    background: transparent;
+    margin-bottom: 0;
+  }
+}
 .hero__container {
   position: relative;
   height: 75vh;
@@ -2350,9 +2373,9 @@ h1, h2, h3, h4, h5, h6, p {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 420px) {
   .hero__container::before {
-    width: 75%;
+    display: none;
   }
 }
 .hero__content {
@@ -2470,14 +2493,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 @media (max-width: 420px) {
   .hero__content h1 {
-    position: absolute;
-    overflow: hidden;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    width: 1px;
-    height: 1px;
-    clip: rect(0 0 0 0);
+    text-align: center;
   }
 }
 

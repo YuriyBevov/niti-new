@@ -15,6 +15,22 @@
         height: auto;
       }
     }
+
+    @include m-b-mobile-lg-down {
+      display: none !important;
+      svg {
+        width: 110px;
+        height: 32px;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include m-b-mobile-lg-down {
+        display: block !important;
+      }
+    }
   }
 
   &__section {
@@ -27,7 +43,6 @@
     }
 
     &--top {
-
       .search-form {
         @include m-b-laptop-down {
           display: none;

@@ -3,6 +3,11 @@
   background-size: cover;
   background-position: center;
 
+  @include m-b-down(420px) {
+    background: transparent;
+    margin-bottom: 0;
+  }
+
   &__container {
     position: relative;
     height: 75vh;
@@ -74,9 +79,9 @@
       background-position: center
     }
 
-    @include m-b-down(600px) {
+    @include m-b-down(420px) {
       &::before {
-        width: 75%;
+        display: none;
       }
     }
   }
@@ -137,14 +142,7 @@
       }
 
       @include m-b-down(420px) {
-        position: absolute;
-        overflow: hidden;
-        margin: -1px;
-        border: 0;
-        padding: 0;
-        width: 1px;
-        height: 1px;
-        clip: rect(0 0 0 0);
+        text-align: center;
       }
     }
 
