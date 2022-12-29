@@ -1,1 +1,15 @@
 section.callback
+  .container
+    h2 Если у Вас остались вопросы, <br/>заполните форму и мы свяжемся с вами
+    form(action="#")
+      fieldset
+        input(type="text" placeholder="Имя")
+      fieldset
+        input(type="text" placeholder="Телефон")
+        input(type="tel" placeholder="E-mail")
+
+      fieldset
+        input(type="checkbox" id="user_accept")
+        label(for="user_accept") Я согласен с <a href="#">политикой обработки персональных данных</a>
+
+      button(type="submit") Отправить

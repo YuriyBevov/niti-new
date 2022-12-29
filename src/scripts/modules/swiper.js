@@ -11,7 +11,7 @@ if(mainSliders) {
             modules: [Navigation],
 
             slidesPerView: 'auto',
-            spaceBetween: 30,
+            spaceBetween: 15,
 
             navigation: {
                 nextEl: buttonNext,

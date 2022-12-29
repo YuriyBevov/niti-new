@@ -1,3 +1,26 @@
+/*titles*/
+
+.title-md {
+  font-size: 36px;
+  font-weight: 500;
+
+  @include m-b-desktop-down {
+    font-size: 32px;
+  }
+
+  @include m-b-laptop-down {
+    font-size: 28px;
+  }
+
+  @include m-b-tablet-lg-down {
+    font-size: 24px;
+  }
+
+  @include m-b-tablet-down {
+    font-size: 20px;
+  }
+}
+
 /*section*/
 
 .section {
@@ -17,16 +40,16 @@
 }
 
 .mini-card-width {
-  width: 280px;
+  width: 200px;
+  /*width: 280px;
 
-  /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
-  @include m-b-desktop-down {
+  /*@include m-b-desktop-down {
     width: 250px;
   }
 
   @include m-b-tablet-lg-down {
     width: 235px;
-  }
+  }*/
 }
 
 .section-title {

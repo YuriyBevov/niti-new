@@ -9,6 +9,7 @@
 
 /* Компоненты */
 @import "./components/header";
+
 @import "./components/burger";
 @import "./components/social";
 @import "./components/city";
@@ -20,6 +21,8 @@
 @import "./components/slider-section";
 @import "./components/main-slider";
 @import "./components/mini-card";
+
+@import "./components/footer";
 /* Секции */
 @import "./sections/index-page/hero";
 @import "./sections/index-page/catalog-preview";

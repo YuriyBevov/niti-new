@@ -124,6 +124,12 @@
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(5px);
 
+      /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+      @include m-b-down(450px) {
+        box-shadow: none;
+        backdrop-filter: none;
+      }
+
       z-index: 99;
 
       .social {
@@ -152,6 +158,7 @@
         font-size: 14px;
         color: var(--white);
         text-align: center;
+        margin-bottom: 50px;
       }
 
       .nav__container {
@@ -229,9 +236,12 @@
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        height: 100%;
-        padding: 25px;
+        height: auto;
+        flex-grow: 1;
+
         margin: auto;
+        margin-top: 50px;
+        padding: 25px;
 
         &-item a {
           font-size: 18px;

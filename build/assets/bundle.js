@@ -41,7 +41,7 @@ if (mainSliders) {
     new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
       modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],
       slidesPerView: 'auto',
-      spaceBetween: 30,
+      spaceBetween: 15,
       navigation: {
         nextEl: buttonNext,
         prevEl: buttonPrev
