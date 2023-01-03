@@ -55,7 +55,24 @@ if(burger && nav) {
   });
 
   closer.addEventListener('click', () => {
+    closeNav();
+  });
+
+  document.addEventListener('keydown', (evt) => {
+    if(evt.key === 'Escape') {
+      closeNav();
+    }
+  })
+
+  nav.addEventListener('click', (evt) => {
+    if(evt.target === nav) {
+      closeNav();
+    }
+  })
+
+  const closeNav = () => {
     nav.classList.remove('mobile-opened');
     timeline.progress(1);
-  });
+  }
 }
+

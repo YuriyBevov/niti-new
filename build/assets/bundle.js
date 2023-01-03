@@ -61,9 +61,23 @@ if (burger && nav) {
     }, "-=.4");
   });
   closer.addEventListener('click', function () {
+    closeNav();
+  });
+  document.addEventListener('keydown', function (evt) {
+    if (evt.key === 'Escape') {
+      closeNav();
+    }
+  });
+  nav.addEventListener('click', function (evt) {
+    if (evt.target === nav) {
+      closeNav();
+    }
+  });
+
+  var closeNav = function closeNav() {
     nav.classList.remove('mobile-opened');
     timeline.progress(1);
-  });
+  };
 }
 
 /***/ }),
