@@ -1,3 +1,19 @@
 footer.footer
   .container
-    p footer
+    .footer__top
+      a(href="index.html").footer__logo
+        svg(width="73" height="54")
+          use(xlink:href="./assets/sprite.svg#icon-logo")
+
+      nav.nav
+        include ../components/nav-list
+
+      include ../components/social
+
+    .footer__bottom
+      .law
+        p Вся представленная на сайте информация, носит исключительно информационный характер и не является публичной офертой, определяемой положениями Статьи 437(2) Гражданского кодекса РФ.
+
+      include ../components/company-info
+
+  include ../components/developer

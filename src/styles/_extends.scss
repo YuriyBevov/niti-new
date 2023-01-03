@@ -41,15 +41,6 @@
 
 .mini-card-width {
   width: 200px;
-  /*width: 280px;
-
-  /*@include m-b-desktop-down {
-    width: 250px;
-  }
-
-  @include m-b-tablet-lg-down {
-    width: 235px;
-  }*/
 }
 
 .section-title {
@@ -69,7 +60,7 @@
 }
 
 .section-padding {
-  padding-top: 100px;
+  padding-top: 60px;
 
   @include m-b-desktop-down {
     padding-top: 60px;
@@ -77,6 +68,23 @@
 
   @include m-b-laptop-down {
     padding-top: 20px;
+  }
+}
+
+.section-inner-offset {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include m-b-desktop-down {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+  }
+
+  @include m-b-laptop-down {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
   }
 }
 
