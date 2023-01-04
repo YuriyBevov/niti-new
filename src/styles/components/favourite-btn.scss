@@ -1,0 +1,26 @@
+.favourite-btn {
+  @extend .button-default;
+  @extend .flex-centered-content;
+
+  width: 40px;
+  height: 40px;
+
+  svg {
+    fill: var(--dark);
+    transition: all var(--main-transition);
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      transform: scale(1.1);
+    }
+  }
+
+  &.active {
+    svg {
+      fill:var(--accent);
+      transform: scale(1.2);
+    }
+  }
+}

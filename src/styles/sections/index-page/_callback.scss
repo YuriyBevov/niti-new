@@ -65,6 +65,8 @@
           height: 40px;
           font-size: 18px;
         }
+
+        @extend .hover-opacity;
       }
 
       input:not(input[type="checkbox"]) {
@@ -97,6 +99,31 @@
           margin-right: 0;
         }
       }
+
+      /*Кастомный чекбокс*/
+      input[type="checkbox"] + label {
+        position: relative;
+        cursor: pointer;
+
+        @extend .hover-opacity;
+      }
+      input[type="checkbox"] + label::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-color: var(--white);
+        border: 2px solid #E6EAF0;
+        border-radius: 3px;
+      }
+      input[type="checkbox"]:checked + label::before {
+        background-image: url("../assets/img/icons/checkbox-arrow.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      /*Кастомный чекбокс*/
 
       fieldset:last-of-type {
         margin-bottom: 25px;

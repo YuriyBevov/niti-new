@@ -17,7 +17,7 @@ section.section.catalog-preview
     h2.visually-hidden Каталог
     .catalog-preview__grid
       each item,index in grid
-        .catalog-preview__grid-item
+        .catalog-preview__grid-item.animated
           a(href="#")
             picture
               source(media="(max-width: 600px)", srcset=`./assets/img/cp-${item.imgID}-mobile@1x.webp 1x, ./assets/img/cp-${item.imgID}-mobile@2x.webp 2x` type="image/webp")

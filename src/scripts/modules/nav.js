@@ -33,7 +33,7 @@ if(burger && nav) {
     }, {
       opacity: 1,
       y: '0',
-      duration: 0.6,
+      duration: 1.2,
       ease: 'back',
     }, "-=.8")
     .fromTo('.nav__logo',{

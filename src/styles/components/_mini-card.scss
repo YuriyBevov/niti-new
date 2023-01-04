@@ -1,6 +1,15 @@
 .mini-card {
     @extend .mini-card-width;
 
+    position: relative;
+
+    .favourite-btn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+    }
+
     &__preview {
         position: relative;
         margin-bottom: 10px;
