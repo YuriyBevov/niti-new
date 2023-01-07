@@ -193,6 +193,25 @@ if (mainSliders) {
   });
 }
 
+var bannerSlider = document.querySelector('.banner-slider');
+
+if (bannerSlider) {
+  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](bannerSlider, {
+    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination],
+    spaceBetween: 30,
+    slidesPerView: 1,
+    pagination: {
+      el: ".banner-slider-pagination",
+      clickable: true //dynamicBullets: true,
+
+    },
+    navigation: {
+      nextEl: ".banner-slider-button-next",
+      prevEl: ".banner-slider-button-prev"
+    }
+  });
+}
+
 /***/ }),
 
 /***/ "./node_modules/gsap/CSSPlugin.js":

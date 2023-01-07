@@ -20,23 +20,14 @@ section.section.catalog-preview
         .catalog-preview__grid-item.animated
           a(href="#")
             picture
-              source(media="(max-width: 600px)", srcset=`./assets/img/cp-${item.imgID}-mobile@1x.webp 1x, ./assets/img/cp-${item.imgID}-mobile@2x.webp 2x` type="image/webp")
+              source(media="(max-width: 600px)" srcset=`./assets/img/cp-${item.imgID}-mobile@1x.webp 1x, ./assets/img/cp-${item.imgID}-mobile@2x.webp 2x` type="image/webp")
               source(srcset=`./assets/img/cp-${item.imgID}@1x.webp 1x, ./assets/img/cp-${item.imgID}@2x.webp 2x` type="image/webp")
 
-              source(media="(max-width: 600px)" srcset="./assets/img/cp-${item.imgID}-mobile@1x.png 1x, ./assets/img/cp-${item.imgID}-mobile@2x.png 2x")
-              img(src=`./assets/img/cp-${item.imgID}@1x.png" srcset="./assets/img/cp-${item.imgID}@2x.png 2x` alt= item.title width= item.width height= item.height)
+              source(media="(max-width: 600px)" srcset=`./assets/img/cp-${item.imgID}-mobile@1x.png 1x, ./assets/img/cp-${item.imgID}-mobile@2x.png 2x`)
+              img(src=`./assets/img/cp-${item.imgID}@1x.png` srcset=`./assets/img/cp-${item.imgID}@2x.png 2x` alt= item.title width= item.width height= item.height)
 
             .catalog-preview__grid-title
               h3!= item.title
 
-    .catalog-preview__promo
-      picture
-        source(type="image/webp" media="(max-width: 433px)" srcset="./assets/img/banner-bg-mobile@1x.webp 1x, ./assets/img/banner-bg-mobile@2x.webp 2x")
-        source(type="image/webp" media="(max-width: 959px)" srcset="./assets/img/banner-bg-tablet@1x.webp 1x, ./assets/img/banner-bg-tablet@2x.webp 2x")
-        source(type="image/webp" srcset="./assets/img/banner-bg@1x.webp 1x, ./assets/img/banner-bg@2x.webp 2x")
-
-        source(type="image/png" media="(max-width: 433px)" srcset="./assets/img/banner-bg-mobile@1x.png 1x, ./assets/img/banner-bg-mobile@2x.png 2x")
-        source(type="image/png" media="(max-width: 959px)" srcset="./assets/img/banner-bg-tablet@1x.png 1x, ./assets/img/banner-bg-tablet@2x.png 2x")
-        img(src="./assets/img/banner-bg@1x.png" srcset="./assets/img/banner-bg@2x.png 2x" alt="Баннер" width="1290" height="262")
 
 
