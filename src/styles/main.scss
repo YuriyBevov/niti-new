@@ -7,6 +7,10 @@
 @import "extends";
 @import "common";
 
+/*Битрикс*/
+
+@import "./components/bitrix/title-search-result";
+
 /* Компоненты */
 @import "./components/header";
 
@@ -26,11 +30,19 @@
 
 @import "./components/footer";
 @import "./components/developer";
+
+
 /* Секции */
+
+@import "./sections/common/callback-form-section";
+
 @import "./sections/index-page/hero";
 @import "./sections/index-page/catalog-preview";
 @import "./sections/index-page/promo";
-@import "./sections/index-page/callback";
+
+
+
+@import "./sections/catalog/catalog";
 
 /* Модальные окна */
 

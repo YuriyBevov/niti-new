@@ -16,12 +16,22 @@
 
 .banner-slider {
   .swiper-pagination {
+
+    @include m-b-down(534px) {
+      bottom: 2px;
+    }
+
     &-bullet {
       width: 10px;
       height: 10px;
       border-radius: 0;
       &-active {
         background-color: var(--dark);
+      }
+
+      @include m-b-down(534px) {
+        width: 8px;
+        height: 8px;
       }
     }
   }
@@ -30,11 +40,14 @@
   &-button-prev {
     width: 40px;
     height: 40px;
-    //border-radius: 50%;
     background-color: var(--dark);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include m-b-tablet-down {
+      display: none;
+    }
   }
 
   &-button-prev {

@@ -1,0 +1,216 @@
+.catalog {
+  @extend .section-inner-offset;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+    @include m-b-desktop-down {
+      grid-template-columns: repeat(3,1fr);
+    }
+
+    @include m-b-laptop-down {
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+    }
+
+    @include m-b-tablet-down {
+      grid-template-columns: repeat(2,1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+
+    @include m-b-down(614px) {
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+    }
+
+    @include m-b-down(534px) {
+      grid-template-columns: 1fr;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+    }
+
+    &-section {
+      position: relative;
+
+      background-color: var(--gray-4);
+      background-image: url("../assets/img/catalog-section-bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      overflow: hidden;
+      @extend .flex-centered-content;
+      flex-direction: column;
+      position: relative;
+
+
+      img {
+        height: auto;
+        max-height: 330px;
+        object-fit: contain;
+        object-position: bottom;
+      }
+
+      &-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 101%;
+        height: 101%;
+        display: flex;
+        margin-top: 1px;
+        clip-path: polygon(0 72%, 100% 80%, 100% 100%, 0% 100%);
+        background-color: rgba(245,245,245,.9);
+        z-index: 3;
+
+        @extend .hover-opacity;
+
+        @include m-b-laptop-down {
+          clip-path: polygon(0 76%, 100% 84%, 100% 100%, 0% 100%);
+        }
+
+        @include m-b-tablet-lg-down {
+          clip-path: polygon(0 72%, 100% 80%, 100% 100%, 0% 100%);
+        }
+
+        @include m-b-tablet-down {
+          clip-path: polygon(0 72%, 100% 80%, 100% 100%, 0% 100%);
+        }
+
+        @include m-b-down(614px) {
+          clip-path: polygon(0 72%, 100% 80%, 100% 100%, 0% 100%);
+        }
+
+        @include m-b-down(534px) {
+          clip-path: polygon(0 72%, 100% 80%, 100% 100%, 0% 100%);
+        }
+
+        h2 {
+          @extend .title-sm;
+          font-weight: 400;
+          line-height: .9;
+
+          width: 100%;
+          margin-top: auto;
+          margin-left: 20px;
+          margin-bottom: 20px;
+
+          @include m-b-laptop-down {
+            margin-left: 10px;
+            margin-bottom: 10px;
+          }
+
+          @include m-b-tablet-down {
+            font-size: 20px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+          }
+
+          @include m-b-down(614px) {
+            font-size: 22px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          }
+
+          @include m-b-down(534px) {
+            font-size: 24px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      &:hover &-inner,
+      &:focus &-inner {
+        top: 0;
+      }
+
+      &-inner {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 101%;
+        height: 101%;
+        background-color: var(--skyblue);
+        opacity: 0.9;
+
+        z-index: 2;
+        padding: 20px;
+        transition: top .3s .1s ease-in;
+
+        @include m-b-laptop-down {
+          padding: 10px;
+        }
+
+        @include m-b-tablet-down {
+          padding: 20px;
+        }
+
+        @include m-b-down(614px) {
+          padding: 10px;
+        }
+
+        @include m-b-down(534px) {
+          padding: 20px;
+        }
+
+        ul {
+          overflow: hidden;
+          overflow-y: auto;
+          height: 70%;
+
+          &::-webkit-scrollbar {
+            background-color: transparent;
+            width: 4px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+              background-color: var(--dark);
+              border-radius: 4px;
+          }
+
+          li {
+            position: relative;
+            margin-bottom: 3px;
+
+            a {
+              font-size: 18px;
+              color: var(--white);
+              transition: all 0.4s 0.1s ease-in;
+              padding: 0 15px;
+
+              &::before {
+                position: absolute;
+                top: 8px;
+                left: 0;
+                content: '';
+                width: 6px;
+                height: 6px;
+                border-radius: 10px;
+                background-color: var(--white);
+                transition: all 0.4s 0.1s ease-in;
+              }
+
+              &:hover,
+              &:focus {
+                padding-left: 20px;
+                color: var(--dark);
+              }
+
+              &:hover::before {
+                width: 10px;
+                background-color: var(--dark);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}

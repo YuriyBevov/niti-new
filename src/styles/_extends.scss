@@ -2,7 +2,6 @@
 
 .title-md {
   font-size: 36px;
-  font-weight: 500;
 
   @include m-b-desktop-down {
     font-size: 32px;
@@ -14,6 +13,26 @@
 
   @include m-b-tablet-lg-down {
     font-size: 24px;
+  }
+
+  @include m-b-tablet-down {
+    font-size: 20px;
+  }
+}
+
+.title-sm {
+  font-size: 28px;
+
+  @include m-b-desktop-down {
+    font-size: 26px;
+  }
+
+  @include m-b-laptop-down {
+    font-size: 24px;
+  }
+
+  @include m-b-tablet-lg-down {
+    font-size: 22px;
   }
 
   @include m-b-tablet-down {
