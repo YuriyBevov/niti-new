@@ -1,0 +1,36 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  padding: 20px 0 40px;
+
+  @include m-b-down(600px) {
+    display: none;
+  }
+
+  a {
+    position: relative;
+    font-weight: 500;
+    padding-right: 15px;
+    @extend .text-truncate;
+
+    &:not(:first-child) {
+      padding-left: 5px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: "/";
+    }
+
+    @extend .hover-opacity;
+  }
+
+  span {
+    font-weight: 500;
+    padding-left: 5px;
+    @extend .text-truncate;
+    color: var(--accent);
+  }
+}

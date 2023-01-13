@@ -105,6 +105,16 @@
   }
 }
 
+.section-inner-offset-md {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include m-b-laptop-down {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
 .section-inner-offset-xs {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -176,6 +186,8 @@
     cursor: pointer;
 }
 
+
+
 /*scroll*/
 
 .main-scroll {
@@ -197,6 +209,14 @@
   padding: 0;
   background: transparent;
   cursor: pointer;
+}
+
+.main-btn {
+  @extend .btn-reset;
+  padding: 7px 10px;
+  border: 2px solid var(--dark);
+  font-size: 16px;
+  color: var(--dark);
 }
 
 .input-default {
@@ -266,7 +286,6 @@
 .hover-opacity {
   transition: opacity var(--main-transition);
   @include m-b-tablet-up {
-
     &:hover,
     &:focus {
       opacity: 0.7;

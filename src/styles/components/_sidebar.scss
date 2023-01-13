@@ -1,0 +1,12 @@
+.sidebar {
+  //outline: 1px solid red;
+  background-color: var(--white);
+
+  @include m-b-down(1000px) {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}

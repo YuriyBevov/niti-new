@@ -1,0 +1,105 @@
+.catalog-filter {
+
+  &__section {
+    margin-bottom: 25px;
+    &-header {
+
+      font-size: 24px;
+      padding: 20px 10px;
+
+//      outline: 1px solid red;
+      cursor: pointer;
+
+      position: relative;
+      padding-right: 40px;
+      &::after {
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        content: '';
+        width: 30px;
+        height: 30px;
+        background-image: url("../assets/img/icons/catalog-filter-arrow-black.svg");
+        background-size: 24px;
+        background-position: center;
+      }
+    }
+  }
+
+  &__section-content {
+    //display: none;
+    &.active {
+      display: block;
+    }
+    .catalog-section {
+      padding: 10px;
+
+      &-main {
+        display: flex;
+        width: 100%;
+        font-size: 20px;
+        padding: 5px 0;
+        color: var(--lightgray);
+
+        &:not(:last-of-type) {
+          margin-bottom: 15px;
+        }
+
+        @extend .text-truncate;
+
+        position: relative;
+        padding-right: 40px;
+        &::after {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          transform: translateY(-50%);
+          content: '';
+          width: 30px;
+          height: 30px;
+          background-image: url("../assets/img/icons/catalog-filter-arrow-grey.svg");
+          background-size: 24px;
+          background-position: center;
+        }
+      }
+
+      &-inner {
+        display: flex;
+        &.active {
+          display: flex;
+        }
+        position: relative;
+        font-size: 17px;
+        margin-bottom: 5px;
+        color: var(--lightgray);
+
+        transition: all 0.3s .1s ease-in;
+        padding: 5px 15px;
+
+        &::before {
+          position: absolute;
+          top: 13px;
+          left: 0;
+          content: '';
+          width: 6px;
+          height: 6px;
+          border-radius: 10px;
+          background-color: var(--lightgray);
+          transition: all 0.3s .1s ease-in;
+        }
+
+        &:hover,
+        &:focus {
+          padding-left: 20px;
+          color: var(--dark);
+        }
+
+        &:hover::before {
+          width: 10px;
+          background-color: var(--dark);
+        }
+      }
+
+    }
+  }
+}

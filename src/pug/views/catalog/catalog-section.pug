@@ -1,0 +1,24 @@
+include ../../mixins/mini-card
+include ../../mock/catalog-items
+
+section.catalog-section
+  .container
+    include ../../components/breadcrumbs
+    .catalog-section__wrapper
+      include ../../components/sidebar
+
+      .catalog-section__content
+
+        .catalog-section__header
+          button(type="button").catalog-section__filter-btn Показать фильтр
+          span.catalog-section__header-count В разделе <span>34</span> модели
+          include ../../components/catalog-sort
+
+        ul.catalog-section__list
+          each item in items
+            li
+              +mini-card(item)
+
+        .catalog-section__footer
+          include ../../components/pagination
+
