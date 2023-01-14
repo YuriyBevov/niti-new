@@ -39,7 +39,7 @@
           <nav class="nav">
             <div class="nav__container">
               <div class="nav__wrapper">
-                <button class="nav-closer" type="button" aria-label="Закрыть меню"><span class="nav-closer__line nav-closer__line--top"></span><span class="nav-closer__line nav-closer__line--bottom"></span></button>
+                <button class="closer" type="button" aria-label="Закрыть меню"><span class="closer__line closer__line--top"></span><span class="closer__line closer__line--bottom"></span></button>
                 <ul class="nav__list">
                   <li class="nav__list-item"><a class="active" href="catalog.html">Каталог</a></li>
                   <li class="nav__list-item"><a href="#">Брендирование</a></li>
@@ -117,27 +117,101 @@
           <div class="breadcrumbs"><a href="index.html">Главная</a><a href="catalog.html">Каталог</a><a href="catalog.html">Одежда для маркетлейсов</a><span>Утепленная одежда</span></div>
           <div class="catalog-section__wrapper">
             <div class="sidebar">
-              <div class="sidebar__filter">
-                <div class="catalog-filter">
-                  <div class="catalog-filter__section">
-                    <div class="catalog-filter__section-header">Категории товаров</div>
-                    <div class="catalog-filter__section-content">
-                      <div class="catalog-section"><a class="catalog-section-main" href="#">Оджеда для маркетлейсов</a>
-                        <ul>
-                          <li><a class="catalog-section-inner" href="#">Оджеда для маркетлейсов</a></li>
-                          <li><a class="catalog-section-inner" href="#">Утепленная Оджеда для маркетлейсов</a></li>
-                          <li><a class="catalog-section-inner" href="#">Утепленная одежда</a></li>
-                          <li><a class="catalog-section-inner" href="#">Утепленная одежда</a></li>
-                          <li><a class="catalog-section-inner" href="#">Утепленная одежда</a></li>
-                        </ul>
+              <div class="sidebar__container"><button class="closer" type="button" aria-label="Закрыть фильтр">
+<span class="closer__line closer__line--top"></span>
+<span class="closer__line closer__line--bottom"></span>
+</button>
+                <div class="sidebar__filter">
+                  <div class="catalog-filter">
+                    <div class="catalog-filter__section">
+                      <div class="catalog-filter__section-header active">Категории товаров</div>
+                      <div class="catalog-filter__section-content">
+                        <div class="catalog-filter-section catalog-filter-section--sections"><a class="catalog-section-main active" href="#">Одежда для маркетлейсов</a>
+                          <ul>
+                            <li><a class="catalog-section-inner" href="#">Одежда для маркетлейсов</a></li>
+                            <li><a class="catalog-section-inner" href="#">Утепленная Оджеда для маркетлейсов</a></li>
+                            <li><a class="catalog-section-inner" href="#">Утепленная одежда</a></li>
+                            <li><a class="catalog-section-inner current" href="#">Утепленная одежда</a></li>
+                            <li><a class="catalog-section-inner" href="#">Утепленная одежда</a></li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="catalog-filter__section">
-                    <div class="catalog-filter__section-header">Цена</div>
-                  </div>
-                  <div class="catalog-filter__section">
-                    <div class="catalog-filter__section-header">Размер</div>
+                    <div class="catalog-filter__section">
+                      <div class="catalog-filter__section-header active">Цена</div>
+                      <div class="catalog-filter__section-content">
+                        <div class="catalog-filter-section catalog-filter-section--range"><div class="range-slider">
+<div class="range-slider__input-container">
+<input class="range-slider__price" type="number" name="arrFilter_P1_MIN" id="arrFilter_P1_MIN" value="5000" size="5" onkeyup="smartFilter.keyup(this)">
+<div class="range-slider__input-between"></div>
+<input class="range-slider__price" type="number" name="arrFilter_P1_MAX" id="arrFilter_P1_MAX" value="15000" size="5" onkeyup="smartFilter.keyup(this)">
+</div>
+<div class="range-slider__track">
+<div class="range-slider__track-outer" id="drag_track_c4ca4238a0b923820dcc509a6f75849b">
+<div class="range-slider__track-inner" id="drag_tracker_c4ca4238a0b923820dcc509a6f75849b">
+<button class="range-slider__handle range-slider__handle--left" id="left_slider_c4ca4238a0b923820dcc509a6f75849b"></button>
+<button class="range-slider__handle range-slider__handle--right" id="right_slider_c4ca4238a0b923820dcc509a6f75849b"></button>
+</div>
+</div>
+</div>
+</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="catalog-filter__section">
+                      <div class="catalog-filter__section-header active">Размер</div>
+                      <div class="catalog-filter__section-content">
+                        <div class="catalog-filter-section catalog-filter-section--sizes">
+                          <div class="rounded-button">
+                            <input type="checkbox" id="size_44">
+                            <label for="size_44">44</label>
+                          </div>
+                          <div class="rounded-button">
+                            <input type="checkbox" id="size_46">
+                            <label for="size_46">46</label>
+                          </div>
+                          <div class="rounded-button">
+                            <input type="checkbox" id="size_48">
+                            <label for="size_48">48</label>
+                          </div>
+                          <div class="rounded-button">
+                            <input type="checkbox" id="size_50">
+                            <label for="size_50">50</label>
+                          </div>
+                          <div class="rounded-button">
+                            <input type="checkbox" id="size_52">
+                            <label for="size_52">52</label>
+                          </div>
+                          <div class="rounded-button">
+                            <input type="checkbox" id="size_54">
+                            <label for="size_54">54</label>
+                          </div>
+                          <div class="rounded-button">
+                            <input type="checkbox" id="size_58">
+                            <label for="size_58">58</label>
+                          </div>
+                          <div class="rounded-button">
+                            <input type="checkbox" id="size_62">
+                            <label for="size_62">62</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="catalog-filter__section">
+                      <div class="catalog-filter__section-header active">Цвет</div>
+                      <div class="catalog-filter__section-content">
+                        <div class="catalog-filter-section catalog-filter-section--checkboxes">
+                          <div class="main-checkbox">
+                            <input type="checkbox" id="color_1231">
+                            <label for="color_1231">Фиолетовый в крапинку<small>13</small></label>
+                          </div>
+                          <div class="main-checkbox">
+                            <input type="checkbox" id="color_123">
+                            <label for="color_123">Ярко-зеленый<small>99</small></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

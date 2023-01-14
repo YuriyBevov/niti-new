@@ -1,6 +1,99 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/scripts/modules/catalog-sidebar.js":
+/*!************************************************!*\
+  !*** ./src/scripts/modules/catalog-sidebar.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+var sidebar = document.querySelector('.sidebar');
+
+if (sidebar) {
+  var filter = document.querySelector('.sidebar .catalog-filter');
+
+  if (filter) {
+    var headers = filter.querySelectorAll('.catalog-filter__section-header');
+    headers.forEach(function (header) {
+      header.addEventListener('click', function (evt) {
+        evt.target.classList.contains('active') ? evt.target.classList.remove('active') : evt.target.classList.add('active');
+      });
+    });
+    var sections = filter.querySelectorAll('.catalog-section-main');
+
+    if (sections) {
+      sections.forEach(function (section) {
+        section.addEventListener('click', function (evt) {
+          evt.target.classList.contains('active') ? evt.target.classList.remove('active') : evt.target.classList.add('active');
+        });
+      });
+    }
+  }
+
+  var sidebarBtn = document.querySelector('.catalog-section__filter-btn');
+
+  if (sidebarBtn) {
+    var closer = sidebar.querySelector('.closer');
+
+    function closeSidebar(evt) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to('.sidebar__container', {
+        x: '-110%',
+        opacity: 0,
+        duration: 0.4,
+        ease: 'ease-in'
+      });
+      setTimeout(function () {
+        sidebar.classList.remove('active');
+        document.removeEventListener('click', onOverlayClickCloseSidebar);
+        document.removeEventListener('keydown', onEscClickCloseSidebar);
+        closer.removeEventListener('click', onCloserClickCloseSidebar);
+        sidebarBtn.addEventListener('click', onClickShowSidebar);
+      }, 400);
+    }
+
+    var onClickShowSidebar = function onClickShowSidebar() {
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo('.sidebar__container', {
+        x: '-110%',
+        opacity: 0
+      }, {
+        x: 0,
+        opacity: 1,
+        duration: 0.4,
+        ease: 'ease-in'
+      });
+      sidebar.classList.add('active');
+      document.addEventListener('click', onOverlayClickCloseSidebar);
+      document.addEventListener('keydown', onEscClickCloseSidebar);
+      closer.addEventListener('click', onCloserClickCloseSidebar);
+      sidebarBtn.removeEventListener('click', onClickShowSidebar);
+    };
+
+    var onOverlayClickCloseSidebar = function onOverlayClickCloseSidebar(evt) {
+      if (evt.target === sidebar) {
+        closeSidebar();
+      }
+    };
+
+    var onCloserClickCloseSidebar = function onCloserClickCloseSidebar() {
+      closeSidebar();
+    };
+
+    var onEscClickCloseSidebar = function onEscClickCloseSidebar(evt) {
+      if (evt.key === "Escape") {
+        closeSidebar();
+      }
+    };
+
+    sidebarBtn.addEventListener('click', onClickShowSidebar);
+  }
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/favourite-btn.js":
 /*!**********************************************!*\
   !*** ./src/scripts/modules/favourite-btn.js ***!
@@ -35,7 +128,7 @@ var nav = document.querySelector('nav');
 
 if (burger && nav) {
   var timeline = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({});
-  var closer = nav.querySelector('.nav-closer');
+  var closer = nav.querySelector('.closer');
   burger.addEventListener('click', function () {
     nav.classList.toggle('mobile-opened');
     timeline.fromTo('.nav__container', {
@@ -19320,6 +19413,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/nav.js */ "./src/scripts/modules/nav.js");
 /* harmony import */ var _modules_favourite_btn_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/favourite-btn.js */ "./src/scripts/modules/favourite-btn.js");
 /* harmony import */ var _modules_favourite_btn_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_favourite_btn_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_catalog_sidebar_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/catalog-sidebar.js */ "./src/scripts/modules/catalog-sidebar.js");
+
 
 
  //import './modules/catalog-item-text-split.js';

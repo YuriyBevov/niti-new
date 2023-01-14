@@ -5,7 +5,7 @@ const nav = document.querySelector('nav');
 
 if(burger && nav) {
   const timeline = gsap.timeline({});
-  const closer = nav.querySelector('.nav-closer');
+  const closer = nav.querySelector('.closer');
 
   burger.addEventListener('click', () => {
     nav.classList.toggle('mobile-opened');

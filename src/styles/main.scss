@@ -6,6 +6,7 @@
 @import "global";
 @import "extends";
 @import "common";
+//@import "animations";
 
 /*Битрикс*/
 
@@ -15,6 +16,7 @@
 @import "./components/header";
 
 @import "./components/burger";
+@import "./components/closer";
 @import "./components/social";
 @import "./components/city";
 @import "./components/header-phones";
@@ -33,7 +35,11 @@
 @import "./components/sidebar";
 @import "./components/pagination";
 @import "./components/breadcrumbs";
+
 @import "./components/catalog-filter";
+@import "./components/range-slider";
+@import "./components/rounded-button";
+@import "./components/main-checkbox";
 /* Секции */
 
 @import "./sections/common/callback-form-section";

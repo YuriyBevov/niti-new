@@ -1,20 +1,19 @@
 .catalog-filter {
 
   &__section {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+
     &-header {
-
       font-size: 24px;
-      padding: 20px 10px;
-
-//      outline: 1px solid red;
+      padding: 10px 0;
       cursor: pointer;
 
       position: relative;
       padding-right: 40px;
+
       &::after {
         position: absolute;
-        top: 16px;
+        top: 8px;
         right: 20px;
         content: '';
         width: 30px;
@@ -22,84 +21,153 @@
         background-image: url("../assets/img/icons/catalog-filter-arrow-black.svg");
         background-size: 24px;
         background-position: center;
+
+        transition: transform var(--main-transition);
+      }
+
+      @extend .hover-opacity;
+
+      &.active {
+
+        &::after {
+          transform: rotate(90deg);
+        }
+
+        & + .catalog-filter__section-content {
+          display: block;
+          //animation: fadeIn var(--main-transition) forwards;
+        }
+      }
+    }
+
+    &:first-of-type {
+      .catalog-filter__section-content {
+        padding-right: 10px;
       }
     }
   }
 
   &__section-content {
-    //display: none;
-    &.active {
-      display: block;
+    display: none;
+    padding-right: 40px;
+
+    .catalog-filter-section {
+
+      padding: 8px 0;
+
+      &--sections {
+
+
+      }
+
+
+      &--sizes {
+        @extend .flex-wrap;
+        .rounded-button {
+          margin-right: 16px;
+          margin-bottom: 16px;
+        }
+      }
+
+      &--checkboxes {
+        .main-checkbox label small {
+          position: relative;
+          top: -4px;
+          font-size: 12px;
+          padding-left: 2px;
+        }
+      }
     }
-    .catalog-section {
-      padding: 10px;
+  }
 
-      &-main {
-        display: flex;
-        width: 100%;
-        font-size: 20px;
-        padding: 5px 0;
-        color: var(--lightgray);
+  .catalog-section {
+    &-main {
+      width: 100%;
+      font-size: 20px;
+      padding: 5px 0 15px;
+      color: var(--dark);
 
-        &:not(:last-of-type) {
-          margin-bottom: 15px;
-        }
+      display: block;
+      @extend .text-truncate;
 
-        @extend .text-truncate;
+      &:not(:last-of-type) {
+        margin-bottom: 15px;
+      }
 
-        position: relative;
-        padding-right: 40px;
+      @extend .text-truncate;
+
+      position: relative;
+      padding-right: 40px;
+
+      &::after {
+        position: absolute;
+        top: 40%;
+        right: 10px;
+        transform: translateY(-50%);
+        content: '';
+        width: 30px;
+        height: 30px;
+        background-image: url("../assets/img/icons/catalog-filter-arrow-grey.svg");
+        background-size: 24px;
+        background-position: center;
+
+        transition: transform var(--main-transition);
+      }
+
+      & + ul {
+        display: none;
+        padding-right: 20px;
+      }
+
+      &.active {
         &::after {
-          position: absolute;
-          top: 50%;
-          right: 10px;
-          transform: translateY(-50%);
-          content: '';
-          width: 30px;
-          height: 30px;
-          background-image: url("../assets/img/icons/catalog-filter-arrow-grey.svg");
-          background-size: 24px;
-          background-position: center;
+          transform: translateY(-50%) rotate(90deg);
+        }
+
+        & + ul {
+          display: block;
+          //animation: fadeIn var(--main-transition) forwards;
         }
       }
+    }
 
-      &-inner {
-        display: flex;
-        &.active {
-          display: flex;
-        }
-        position: relative;
-        font-size: 17px;
-        margin-bottom: 5px;
-        color: var(--lightgray);
+    &-inner {
+      display: block;
+      position: relative;
+      font-size: 17px;
+      color: var(--lightgray);
 
+      @extend .text-truncate;
+
+      transition: all 0.3s .1s ease-in;
+      padding: 5px 15px;
+      padding-left: 25px;
+
+      &::before {
+        position: absolute;
+        top: 13px;
+        left: 10px;
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 10px;
+        background-color: var(--lightgray);
         transition: all 0.3s .1s ease-in;
-        padding: 5px 15px;
-
-        &::before {
-          position: absolute;
-          top: 13px;
-          left: 0;
-          content: '';
-          width: 6px;
-          height: 6px;
-          border-radius: 10px;
-          background-color: var(--lightgray);
-          transition: all 0.3s .1s ease-in;
-        }
-
-        &:hover,
-        &:focus {
-          padding-left: 20px;
-          color: var(--dark);
-        }
-
-        &:hover::before {
-          width: 10px;
-          background-color: var(--dark);
-        }
       }
 
+      &:hover,
+      &:focus,
+      &.current {
+        padding-left: 35px;
+        color: var(--dark);
+      }
+
+      &:hover::before,
+      &:focus::before,
+      &.current::before {
+        width: 10px;
+        background-color: var(--dark);
+      }
     }
   }
 }

@@ -1,0 +1,22 @@
+.rounded-button {
+  input {
+    display: none;
+  }
+
+  label {
+    @extend .flex-centered-content;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    padding: 3px;
+    background-color: var(--lightgray);
+    cursor: pointer;
+
+    transition: all var(--main-transition);
+  }
+
+  input:checked + label {
+    color: var(--white);
+    background-color: var(--accent);
+  }
+}

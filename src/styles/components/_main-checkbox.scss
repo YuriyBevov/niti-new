@@ -1,0 +1,40 @@
+.main-checkbox {
+  input {
+    display: none;
+  }
+
+  label {
+    display: block;
+    position: relative;
+    color: var(--lightgray);
+    cursor: pointer;
+
+    transition: all var(--main-transition);
+
+    padding-left: 30px;
+    margin-bottom: 15px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--lightgray);
+      border-radius: 4px;
+    }
+  }
+
+  input:checked + label {
+    color: var(--accent);
+  }
+
+  input:checked + label::before {
+    background-image: url("../assets/img/icons/checkbox-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: var(--accent);
+  }
+}
