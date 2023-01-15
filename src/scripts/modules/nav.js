@@ -4,13 +4,19 @@ const burger = document.querySelector('.burger');
 const nav = document.querySelector('nav');
 
 if(burger && nav) {
-  const timeline = gsap.timeline({});
+  const openTimeline = gsap.timeline({});
   const closer = nav.querySelector('.closer');
 
   burger.addEventListener('click', () => {
     nav.classList.toggle('mobile-opened');
 
-    timeline
+    openTimeline
+    .fromTo('.nav', {opacity: 0},{
+      display: 'block',
+      opacity: 1,
+      duration: .3,
+      ease: 'linear'
+    })
     .fromTo('.nav__container', {x: '100%', opacity: 0},{
       x: 0,
       opacity: 1,
@@ -70,9 +76,27 @@ if(burger && nav) {
     }
   })
 
+  const closeTimeline = gsap.timeline({});
+
   const closeNav = () => {
-    nav.classList.remove('mobile-opened');
-    timeline.progress(1);
+    closeTimeline
+    .to('.nav__container', {
+      x: '100%',
+      opacity: 0,
+      duration: 0.4,
+      ease: 'ease-in'
+    })
+    .to('.nav', {
+      display: 'none',
+      opacity: 0,
+      duration: 0.3,
+      ease: 'linear'
+    })
+
+    setTimeout(() => {
+      nav.classList.remove('mobile-opened');
+      openTimeline.progress(1);
+    }, 750);
   }
 }
 

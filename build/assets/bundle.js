@@ -40,32 +40,33 @@ if (sidebar) {
     var closer = sidebar.querySelector('.closer');
 
     function closeSidebar(evt) {
-      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to('.sidebar__container', {
-        x: '-110%',
-        opacity: 0,
-        duration: 0.4,
-        ease: 'ease-in'
-      });
-      setTimeout(function () {
-        sidebar.classList.remove('active');
-        document.removeEventListener('click', onOverlayClickCloseSidebar);
-        document.removeEventListener('keydown', onEscClickCloseSidebar);
-        closer.removeEventListener('click', onCloserClickCloseSidebar);
-        sidebarBtn.addEventListener('click', onClickShowSidebar);
-      }, 400);
+      tl.reverse();
+      document.removeEventListener('click', onOverlayClickCloseSidebar);
+      document.removeEventListener('keydown', onEscClickCloseSidebar);
+      closer.removeEventListener('click', onCloserClickCloseSidebar);
+      sidebarBtn.addEventListener('click', onClickShowSidebar);
     }
 
+    var tl = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({}).pause();
+    tl.fromTo('.sidebar', {
+      opacity: 0
+    }, {
+      display: 'block',
+      opacity: 1,
+      duration: .3,
+      ease: 'linear'
+    }).fromTo('.sidebar__container', {
+      x: '-110%',
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1,
+      duration: 0.4,
+      ease: 'ease-in'
+    });
+
     var onClickShowSidebar = function onClickShowSidebar() {
-      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo('.sidebar__container', {
-        x: '-110%',
-        opacity: 0
-      }, {
-        x: 0,
-        opacity: 1,
-        duration: 0.4,
-        ease: 'ease-in'
-      });
-      sidebar.classList.add('active');
+      tl.play();
       document.addEventListener('click', onOverlayClickCloseSidebar);
       document.addEventListener('keydown', onEscClickCloseSidebar);
       closer.addEventListener('click', onCloserClickCloseSidebar);
@@ -127,11 +128,18 @@ var burger = document.querySelector('.burger');
 var nav = document.querySelector('nav');
 
 if (burger && nav) {
-  var timeline = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({});
+  var openTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({});
   var closer = nav.querySelector('.closer');
   burger.addEventListener('click', function () {
     nav.classList.toggle('mobile-opened');
-    timeline.fromTo('.nav__container', {
+    openTimeline.fromTo('.nav', {
+      opacity: 0
+    }, {
+      display: 'block',
+      opacity: 1,
+      duration: .3,
+      ease: 'linear'
+    }).fromTo('.nav__container', {
       x: '100%',
       opacity: 0
     }, {
@@ -185,10 +193,24 @@ if (burger && nav) {
       closeNav();
     }
   });
+  var closeTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({});
 
   var closeNav = function closeNav() {
-    nav.classList.remove('mobile-opened');
-    timeline.progress(1);
+    closeTimeline.to('.nav__container', {
+      x: '100%',
+      opacity: 0,
+      duration: 0.4,
+      ease: 'ease-in'
+    }).to('.nav', {
+      display: 'none',
+      opacity: 0,
+      duration: 0.3,
+      ease: 'linear'
+    });
+    setTimeout(function () {
+      nav.classList.remove('mobile-opened');
+      openTimeline.progress(1);
+    }, 750);
   };
 }
 

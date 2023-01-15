@@ -4,6 +4,7 @@ const sidebar = document.querySelector('.sidebar');
 
 if(sidebar) {
   const filter = document.querySelector('.sidebar .catalog-filter');
+
   if(filter) {
     const headers = filter.querySelectorAll('.catalog-filter__section-header');
 
@@ -13,7 +14,6 @@ if(sidebar) {
         evt.target.classList.remove('active') :
         evt.target.classList.add('active');
       });
-
     });
 
     const sections = filter.querySelectorAll('.catalog-section-main');
@@ -35,31 +35,33 @@ if(sidebar) {
     const closer = sidebar.querySelector('.closer');
 
     function closeSidebar(evt) {
-      gsap.to('.sidebar__container', {
-        x: '-110%',
-        opacity: 0,
-        duration: 0.4,
-        ease: 'ease-in'
-      });
+      tl.reverse();
 
-      setTimeout(() => {
-        sidebar.classList.remove('active');
-        document.removeEventListener('click', onOverlayClickCloseSidebar);
-        document.removeEventListener('keydown', onEscClickCloseSidebar);
-        closer.removeEventListener('click', onCloserClickCloseSidebar)
-        sidebarBtn.addEventListener('click', onClickShowSidebar);
-      }, 400);
+      document.removeEventListener('click', onOverlayClickCloseSidebar);
+      document.removeEventListener('keydown', onEscClickCloseSidebar);
+      closer.removeEventListener('click', onCloserClickCloseSidebar)
+      sidebarBtn.addEventListener('click', onClickShowSidebar);
     }
 
-    const onClickShowSidebar = () => {
-      gsap.fromTo('.sidebar__container', {x: '-110%', opacity: 0},{
-        x: 0,
-        opacity: 1,
-        duration: 0.4,
-        ease: 'ease-in'
-      })
+    const tl = gsap.timeline({}).pause();
 
-      sidebar.classList.add('active');
+    tl
+    .fromTo('.sidebar', {opacity: 0},{
+      display: 'block',
+      opacity: 1,
+      duration: .3,
+      ease: 'linear'
+    })
+    .fromTo('.sidebar__container', {x: '-110%', opacity: 0},{
+      x: 0,
+      opacity: 1,
+      duration: 0.4,
+      ease: 'ease-in'
+    })
+
+    const onClickShowSidebar = () => {
+      tl.play();
+
       document.addEventListener('click', onOverlayClickCloseSidebar);
       document.addEventListener('keydown', onEscClickCloseSidebar);
       closer.addEventListener('click', onCloserClickCloseSidebar)

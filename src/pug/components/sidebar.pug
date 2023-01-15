@@ -1,8 +1,7 @@
 .sidebar
   .sidebar__container
-    <button class="closer" type="button" aria-label="Закрыть фильтр">
-      <span class="closer__line closer__line--top"></span>
-      <span class="closer__line closer__line--bottom"></span>
-    </button>
+    .sidebar__header
+      span Фильтр
+      include ./closer
     .sidebar__filter
       include ./catalog-filter
