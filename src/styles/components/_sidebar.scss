@@ -18,7 +18,7 @@
   }
 
   @include m-b-up(1001px) {
-    display: flex !important;
+    display: block !important;
     opacity: 1 !important;
 
     &__container {

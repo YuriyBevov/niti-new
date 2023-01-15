@@ -2754,9 +2754,7 @@ input[type=number] {
 }
 @media (min-width: 1001px) {
   .sidebar {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: block !important;
     opacity: 1 !important;
   }
   .sidebar__container {
@@ -2916,6 +2914,9 @@ input[type=number] {
   position: relative;
   font-weight: 500;
   padding-right: 15px;
+}
+.breadcrumbs a > span {
+  color: var(--dark);
 }
 .breadcrumbs a:not(:first-child) {
   padding-left: 5px;
