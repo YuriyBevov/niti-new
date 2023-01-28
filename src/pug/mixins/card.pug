@@ -1,0 +1,20 @@
+mixin card(data)
+  .card
+    include ../components/favourite-btn
+    a(href="catalog-element.html")
+      .card__preview
+        img(src= `./assets/img/${data.img}.png` alt= data.title width="235" height="300")
+        if data.isSale
+          .badge.badge--sale
+            span= data.discount
+          .badge.badge--new
+            span New
+          .badge.badge--top
+            span Top
+
+      .card__footer
+        h3= data.title
+        .card__price
+          span.card__price-current= data.price
+          span.card__price-old= data.oldPrice
+

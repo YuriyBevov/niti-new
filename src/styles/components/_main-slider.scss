@@ -1,6 +1,6 @@
 .main-slider {
     .swiper-slide {
-      @extend .mini-card-width;
+      @extend .card-width;
     }
     &-button-next,
     &-button-prev {

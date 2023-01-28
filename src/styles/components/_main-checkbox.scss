@@ -12,7 +12,6 @@
     transition: all var(--main-transition);
 
     padding-left: 30px;
-    margin-bottom: 15px;
 
     &::before {
       position: absolute;
@@ -23,6 +22,10 @@
       height: 20px;
       border: 1px solid var(--lightgray);
       border-radius: 4px;
+    }
+
+    &.disabled {
+      opacity: .4;
     }
   }
 

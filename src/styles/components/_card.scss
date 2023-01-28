@@ -1,0 +1,109 @@
+.card {
+    @extend .card-width;
+
+    position: relative;
+
+    .favourite-btn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+    }
+
+    &__preview {
+        position: relative;
+        margin-bottom: 10px;
+        display: flex;
+        background-color: var(--card-bg);
+        overflow: hidden;
+
+        img {
+          max-height: 300px;
+          object-fit: contain;
+
+          @include m-b-down(374px) {
+            max-height: 220px;
+          }
+        }
+
+        .badge {
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          width: 60px;
+          height: 24px;
+          transform: rotate(90deg);
+          clip-path: polygon(0 50%, 10% 0, 100% 0, 90% 50%, 100% 100%, 10% 100%);
+
+            span {
+              position: relative;
+              font-size: 16px;
+              line-height: 1;
+              color: var(--white);
+            }
+
+            &--sale {
+              background-color: var(--badge-sale);
+            }
+
+            &--top {
+              background-color: var(--badge-top);
+            }
+
+            &--new {
+              background-color: var(--badge-new);
+            }
+
+            &:nth-of-type(1) {
+              top: 10px;
+              z-index: 3;
+            }
+
+            &:nth-of-type(2) {
+              top:65px;
+              z-index: 2;
+            }
+
+            &:nth-of-type(3) {
+              top:120px;
+              z-index: 1;
+            }
+        }
+    }
+
+    &__footer {
+        h3 {
+            font-weight: 400;
+            font-size: 18px;
+
+            color: var(--basic-gray);
+
+            @extend .text-truncate;
+            padding-right: 20px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__price {
+        span {
+            font-weight: 500;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        &-current {
+            font-size: 14px;
+            color: var(--dark);
+        }
+
+        &-old {
+            color: var(--discount);
+            text-decoration: line-through;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<div class="smart-filter-input-group-number range-slider">
+
+  <div class="range-slider__input-container">
+    <input class="range-slider__price min-price form-control form-control-sm" type="number"/>
+    <div class="range-slider__input-between"></div>
+    <input class="range-slider__price max-price form-control form-control-sm" type="number"/>
+  </div>
+
+  <div class="range-slider__track smart-filter-slider-track" id="drag_track_<?=$key?>">
+    <div class="range-slider__track-inner smart-filter-slider-range" id="drag_tracker_<?=$key?>"  style="left: 0; right: 0;">
+
+      <div class="smart-filter-slider-price-bar-vd" style="background-color:red;left: 0;right: 0;" id="colorUnavailableActive_<?=$key?>"></div>
+      <div class="smart-filter-slider-price-bar-vn" style="background-color:gray;left: 0;right: 0;" id="colorAvailableInactive_<?=$key?>"></div>
+      <div class="smart-filter-slider-price-bar-v"  style="background-color:red;left: 0;right: 0;" id="colorAvailableActive_<?=$key?>"></div>
+
+      <a class="range-slider__handle range-slider__handle--left"  style="z-index:81;left:0;" href="javascript:void(0)" id="left_slider_<?=$key?>"></a>
+      <a class="range-slider__handle range-slider__handle--right" style="z-index:81;right:0;" href="javascript:void(0)" id="right_slider_<?=$key?>"></a>
+    </div>
+  </div>
+</div>

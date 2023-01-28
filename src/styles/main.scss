@@ -11,6 +11,7 @@
 /*Битрикс*/
 
 @import "./components/bitrix/title-search-result";
+@import "./components/bitrix/smart-filter";
 
 /* Компоненты */
 @import "./components/header";
@@ -26,9 +27,11 @@
 @import "./components/swiper-custom";
 @import "./components/slider-section";
 @import "./components/main-slider";
-@import "./components/mini-card";
+@import "./components/card";
 @import "./components/favourite-btn";
 @import "./components/banner-slider";
+@import "./components/counter";
+@import "./components/custom-select";
 
 @import "./components/footer";
 @import "./components/developer";
@@ -40,6 +43,7 @@
 @import "./components/range-slider";
 @import "./components/rounded-button";
 @import "./components/main-checkbox";
+@import "./components/thumb-slider";
 /* Секции */
 
 @import "./sections/common/callback-form-section";
@@ -50,6 +54,5 @@
 
 @import "./sections/catalog/catalog";
 @import "./sections/catalog/catalog-section";
-/* Модальные окна */
-
+@import "./sections/catalog/catalog-element";
 

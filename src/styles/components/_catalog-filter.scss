@@ -51,6 +51,10 @@
     display: none;
     padding-right: 40px;
 
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+
     .catalog-filter-section {
 
       padding: 8px 0;
@@ -84,15 +88,12 @@
     &-main {
       width: 100%;
       font-size: 20px;
-      padding: 5px 0 15px;
+      padding: 5px 0;
       color: var(--dark);
+      cursor: pointer;
 
       display: block;
       @extend .text-truncate;
-
-      &:not(:last-of-type) {
-        margin-bottom: 15px;
-      }
 
       @extend .text-truncate;
 
@@ -126,7 +127,6 @@
 
         & + ul {
           display: block;
-          //animation: fadeIn var(--main-transition) forwards;
         }
       }
     }

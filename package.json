@@ -55,6 +55,7 @@
   },
   "homepage": "https://github.com/YuriyBevov/niti-new#readme",
   "dependencies": {
+    "custom-select": "^1.1.15",
     "gsap": "file:gsap-bonus.tgz",
     "swiper": "^8.4.5"
   }

@@ -1,6 +1,15 @@
 .range-slider {
   width: fit-content;
 
+  .smart-filter-slider-price-bar-vd,
+  .smart-filter-slider-price-bar-vn {
+    background-color: var(--lightgray);
+  }
+
+  .smart-filter-slider-price-bar-v {
+    background-color: var(--accent);
+  }
+
   &__input-container {
     display: flex;
     align-items: center;
@@ -30,22 +39,20 @@
   }
 
   &__track {
-    &-outer {
+    /*&-outer {
       position: relative;
       width: 100%;
       height: 6px;
       padding: 0 3px;
-      background-color: var(--lightgray);
-    }
+    }*/
 
     &-inner {
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       padding: 0 3px;
-      background-color: var(--accent);
     }
   }
 
@@ -54,10 +61,12 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     content: '';
     border-radius: 50%;
+    z-index: 89;
+    border: 2px solid var(--white);
 
     background-color: var(--accent);
 

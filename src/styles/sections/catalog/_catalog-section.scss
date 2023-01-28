@@ -38,6 +38,9 @@
   &__filter-btn {
     @extend .main-btn;
     display: none;
+    border: none;
+    text-decoration: underline;
+    padding-left: 0;
 
     @include m-b-down(1000px) {
       display: flex;
@@ -82,7 +85,7 @@
       grid-column-gap: 10px;
     }
 
-    @include m-b-down(420px) {
+    @include m-b-down(374px) {
       grid-template-columns: 1fr;
     }
 
@@ -92,13 +95,13 @@
         min-width: 190px;
         max-width: 320px;
 
-        @include m-b-down(420px) {
+        @include m-b-down(374px) {
           max-width: 100%;
         }
       }
 
-      @include m-b-down(420px) {
-        padding: 20px;
+      @include m-b-down(374px) {
+        //padding: 20px;
       }
     }
 

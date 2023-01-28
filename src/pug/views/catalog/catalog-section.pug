@@ -1,4 +1,4 @@
-include ../../mixins/mini-card
+include ../../mixins/card
 include ../../mock/catalog-items
 
 section.catalog-section
@@ -16,7 +16,7 @@ section.catalog-section
         ul.catalog-section__list
           each item in items
             li
-              +mini-card(item)
+              +card(item)
 
         .catalog-section__footer
           include ../../components/pagination
