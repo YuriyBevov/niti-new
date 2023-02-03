@@ -1,0 +1,32 @@
+section.main-cart.section
+  .container
+    .main-cart__header
+      h1.section-title Корзина
+      <div class="main-cart__search" data-entity="basket-filter" style="">
+          <input type="text" placeholder="Фильтр" data-entity="basket-filter-input">
+          <button class="main-cart__search-clear" data-entity="basket-filter-clear-btn" aria-label="Очистить поиск"></button>
+      </div>
+
+      span.main-cart__total-count В корзине <span>3</span> товара
+
+    .main-cart__content
+      ul.main-cart__list
+        li.main-cart__list-item
+          include ../../components/main-cart-item
+        li.main-cart__list-item
+          include ../../components/main-cart-item
+
+      .main-cart__checkout
+        .main-cart__checkout-row.main-cart__checkout-row--total
+          span Итого
+          span 10 750 ₽
+
+        .main-cart__checkout-row
+          span Товары 20 шт.
+          span 20 750 ₽
+
+        .main-cart__checkout-row
+          span Скидка
+          span 10 000 ₽
+
+        button.accent-btn Оформить

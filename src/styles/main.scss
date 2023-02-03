@@ -44,6 +44,7 @@
 @import "./components/rounded-button";
 @import "./components/main-checkbox";
 @import "./components/thumb-slider";
+@import "./components/main-cart-item";
 /* Секции */
 
 @import "./sections/common/callback-form-section";
@@ -55,4 +56,6 @@
 @import "./sections/catalog/catalog";
 @import "./sections/catalog/catalog-section";
 @import "./sections/catalog/catalog-element";
+
+@import "./sections/cart/main-cart";
 

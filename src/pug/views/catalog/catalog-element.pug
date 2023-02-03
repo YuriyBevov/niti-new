@@ -2,6 +2,24 @@
   .container
     .product-item
       .product-item__preview
+        <div class="badge badge--sale">
+          <span>-40%</span>
+        </div>
+
+        <div class="badge badge--new">
+          <span>New</span>
+        </div>
+
+        <div class="badge badge--top">
+          <span>Top</span>
+        </div>
+
+        <button class="favourite-btn" type="button" aria-label="Добавить в избранное">
+          <svg width="28" height="28">
+            <use xlink:href="./assets/sprite.svg#icon-heart"></use>
+          </svg>
+        </button>
+
         include ../../components/product-item-slider
 
       .product-item__detail
@@ -18,6 +36,11 @@
             span.old-price 122 105&nbsp;₽
 
         .product-item__detail-options
+
+          .product-item__detail-option
+            span.product-item__detail-option-name Размер
+            .product-item__detail-option-value
+              .product-item__value-container Под заказ
           .product-item__detail-option
             span.product-item__detail-option-name Размер
             .product-item__detail-option-value

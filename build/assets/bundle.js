@@ -321,11 +321,10 @@ if (productSlider) {
         spaceBetween: 5,
         slidesPerView: 3,
         direction: "vertical",
-      },
-       769: {
-         slidesPerView: 4,
-         direction: "horizontal"
       },*/
+      769: {
+        slidesPerView: 5
+      },
       634: {
         slidesPerView: 4
       }

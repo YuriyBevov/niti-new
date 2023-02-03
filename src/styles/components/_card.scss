@@ -1,6 +1,8 @@
-.card {
-    @extend .card-width;
+.slider-section .card {
+  @extend .card-width;
+}
 
+.card {
     position: relative;
 
     .favourite-btn {
@@ -20,59 +22,11 @@
         img {
           max-height: 300px;
           object-fit: contain;
+          padding: 15px 0;
 
           @include m-b-down(374px) {
             max-height: 220px;
           }
-        }
-
-        .badge {
-          position: absolute;
-          top: 0;
-          right: 0;
-
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          width: 60px;
-          height: 24px;
-          transform: rotate(90deg);
-          clip-path: polygon(0 50%, 10% 0, 100% 0, 90% 50%, 100% 100%, 10% 100%);
-
-            span {
-              position: relative;
-              font-size: 16px;
-              line-height: 1;
-              color: var(--white);
-            }
-
-            &--sale {
-              background-color: var(--badge-sale);
-            }
-
-            &--top {
-              background-color: var(--badge-top);
-            }
-
-            &--new {
-              background-color: var(--badge-new);
-            }
-
-            &:nth-of-type(1) {
-              top: 10px;
-              z-index: 3;
-            }
-
-            &:nth-of-type(2) {
-              top:65px;
-              z-index: 2;
-            }
-
-            &:nth-of-type(3) {
-              top:120px;
-              z-index: 1;
-            }
         }
     }
 
@@ -105,5 +59,54 @@
             color: var(--discount);
             text-decoration: line-through;
         }
+    }
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 24px;
+
+  z-index: 3;
+
+  transform: rotate(90deg);
+  clip-path: polygon(0 50%, 10% 0, 100% 0, 90% 50%, 100% 100%, 10% 100%);
+
+    span {
+      position: relative;
+      font-size: 16px;
+      line-height: 1;
+      color: var(--white);
+    }
+
+    &--sale {
+      background-color: var(--badge-sale);
+    }
+
+    &--top {
+      background-color: var(--badge-top);
+    }
+
+    &--new {
+      background-color: var(--badge-new);
+    }
+
+    &:nth-of-type(1) {
+      top: 10px;
+    }
+
+    &:nth-of-type(2) {
+      top:65px;
+    }
+
+    &:nth-of-type(3) {
+      top:120px;
     }
 }

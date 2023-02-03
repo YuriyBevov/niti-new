@@ -1,0 +1,147 @@
+.main-cart-item {
+  @extend .flex-wrap;
+  position: relative;
+  padding: 20px;
+  padding-right: 50px;
+
+  &--removed {
+    position: relative;
+    transition: all var(--main-transition);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      z-index: 11;
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(5px);
+    }
+
+    .main-cart-item__removed-overlay {
+      display: flex !important;
+    }
+  }
+
+  &__removed-overlay {
+    position: absolute;
+    z-index: 12;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    button {
+      @extend .button-default;
+      width: fit-content;
+      height: 40px;
+      padding: 10px;
+      padding-right: 30px;
+      background-image: url("../assets/img/icons/restore.svg");
+      background-position: right;
+      background-size: 24px;
+      background-repeat: no-repeat;
+
+      span {
+        color: #000000;
+      }
+
+      @extend .hover-opacity;
+    }
+  }
+
+  &__remove-btn {
+    @extend .button-default;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    background-image: url("../assets/img/icons/close.svg");
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  img {
+    width: 75px;
+    height: 100px;
+    margin-right: 15px;
+  }
+
+  .counter {
+    margin: 0 auto;
+  }
+
+  &__desc {
+    @extend .flex-wrap;
+    max-width: 400px;
+
+    &-header {
+      @extend .flex-wrap;
+      align-items: center;
+      margin-bottom: 10px;
+      width: 100%;
+
+      h2 {
+        font-size: 18px;
+        font-weight: 400;
+        margin-right: 20px;
+      }
+
+      span {
+        font-size: 14px;
+        color: var(--basic-gray);
+
+        & > span {
+          color: var(--dark);
+        }
+      }
+    }
+
+    &-prop {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+
+      font-size: 14px;
+      color: var(--basic-gray);
+    }
+  }
+
+  &__discount-badge {
+    @extend .flex-centered-content;
+    width: 60px;
+    height: 24px;
+    margin: 0 15px;
+    margin-left: 30px;
+    background-color: var(--dark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 10% 50%);
+
+    span {
+      font-size: 14px;
+      color: var(--white);
+    }
+  }
+
+  &__price {
+    @extend .flex-column;
+    align-items: flex-end;
+    margin: 0 15px;
+
+    &-current {
+      font-size: 24px;
+    }
+
+    &-old {
+      font-size: 18px;
+      text-decoration: line-through;
+      color: var(--lightgray);
+    }
+  }
+}
