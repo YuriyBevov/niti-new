@@ -74,12 +74,17 @@
               </svg>
             </button>
           </form>
-          <div class="personal"><a class="personal__field" href="#">
+          <div class="personal">
+            <div class="personal__field personal__field--profile" tabindex="0">
               <div class="personal__field-icon">
                 <svg width="24" height="24">
                   <use xlink:href="./assets/sprite.svg#icon-user"></use>
                 </svg>
-              </div><span>Войти</span></a><a class="personal__field" href="#">
+              </div><span>Войти</span>
+              <div class="personal-field-profile-inner"><a class="" href="/personal/">Личный кабинет</a>
+<a style="margin-right: 0;" href="?logout=yes&amp;">Выйти</a>
+              </div>
+            </div><a class="personal__field" href="#">
               <div class="personal__field-icon">
                 <svg width="24" height="24">
                   <use xlink:href="./assets/sprite.svg#icon-heart"></use>
@@ -89,7 +94,8 @@
                 <svg width="24" height="24">
                   <use xlink:href="./assets/sprite.svg#icon-cart"></use>
                 </svg><span class="count-badge">99</span>
-              </div><span>Корзина</span></a></div>
+              </div><span>Корзина</span></a>
+          </div>
         </div><div class="title-search-result" style=" position: absolute; top: 131px; left: 709px; width: 480px;">
 <div class="search-title">
 <a href="#" class="search-title-result-item еуые">
@@ -142,11 +148,12 @@
 <div class="badge badge--top">
 <span>Top</span>
 </div>
-<button class="favourite-btn" type="button" aria-label="Добавить в избранное">
-<svg width="28" height="28">
-<use xlink:href="./assets/sprite.svg#icon-heart"></use>
-</svg>
-</button><div class="product-slider">
+              <div class="favourite-btn">
+                <svg width="28" height="28">
+                  <use xlink:href="./assets/sprite.svg#icon-heart"></use>
+                </svg>
+                <input type="hidden">
+              </div><div class="product-slider">
 <div class="swiper-wrapper">
 <div class="swiper-slide">
 <img src="https://swiperjs.com/demos/images/nature-1.jpg" />

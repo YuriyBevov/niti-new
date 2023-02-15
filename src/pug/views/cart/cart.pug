@@ -10,11 +10,10 @@ section.main-cart.section
       span.main-cart__total-count В корзине <span>3</span> товара
 
     .main-cart__content
-      ul.main-cart__list
-        li.main-cart__list-item
-          include ../../components/main-cart-item
-        li.main-cart__list-item
-          include ../../components/main-cart-item
+      .main-cart__items-container
+        .main-cart__list
+          .main-cart__items-wrapper
+            include ../../components/main-cart-item
 
       .main-cart__checkout
         .main-cart__checkout-row.main-cart__checkout-row--total

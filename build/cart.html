@@ -74,12 +74,17 @@
               </svg>
             </button>
           </form>
-          <div class="personal"><a class="personal__field" href="#">
+          <div class="personal">
+            <div class="personal__field personal__field--profile" tabindex="0">
               <div class="personal__field-icon">
                 <svg width="24" height="24">
                   <use xlink:href="./assets/sprite.svg#icon-user"></use>
                 </svg>
-              </div><span>Войти</span></a><a class="personal__field" href="#">
+              </div><span>Войти</span>
+              <div class="personal-field-profile-inner"><a class="" href="/personal/">Личный кабинет</a>
+<a style="margin-right: 0;" href="?logout=yes&amp;">Выйти</a>
+              </div>
+            </div><a class="personal__field" href="#">
               <div class="personal__field-icon">
                 <svg width="24" height="24">
                   <use xlink:href="./assets/sprite.svg#icon-heart"></use>
@@ -89,7 +94,8 @@
                 <svg width="24" height="24">
                   <use xlink:href="./assets/sprite.svg#icon-cart"></use>
                 </svg><span class="count-badge">99</span>
-              </div><span>Корзина</span></a></div>
+              </div><span>Корзина</span></a>
+          </div>
         </div><div class="title-search-result" style=" position: absolute; top: 131px; left: 709px; width: 480px;">
 <div class="search-title">
 <a href="#" class="search-title-result-item еуые">
@@ -139,80 +145,153 @@
 </div><span class="main-cart__total-count">В корзине <span>3</span> товара</span>
           </div>
           <div class="main-cart__content">
-            <ul class="main-cart__list">
-              <li class="main-cart__list-item">
-                <div class="main-cart-item main-cart-item--removed">
-                  <div class="main-cart-item__removed-overlay">
-                    <button class="main-cart-item__restore-btn" aria-label="Вернуть товар в корзину"><span>Восстановить</span></button>
+            <div class="main-cart__items-container">
+              <div class="main-cart__list">
+                <div class="main-cart__items-wrapper">
+                  <!--.cart-item.cart-item--removed
+                  .cart-item__removed-overlay
+                    button(aria-label="Вернуть товар в корзину").cart-item__restore-btn
+                      span Восстановить
+                  button(aria-label="Удалить товар из корзины").cart-item__remove-btn
+                  img(src="./assets/img/slider-item-2.png" alt="")
+                  .cart-item__desc
+                    .cart-item__desc-header
+                      h2.cart-item-title Куртка "Пилот"
+                      span.cart-item-artnumber Артикул: <span>Куртка "Пилот"</span>
+                  
+                    .cart-item__desc-prop
+                      .cart-item__desc-prop-name Материал:
+                      .cart-item__desc-prop-value 35%
+                    .cart-item__desc-prop
+                      .cart-item__desc-prop-name Мате:
+                      .cart-item__desc-prop-value 35%ХЛ 65%ПЭ
+                    .cart-item__desc-prop
+                      .cart-item__desc-prop-name Материал:
+                      .cart-item__desc-prop-value 35%ХЛ 65%ПЭ
+                    .cart-item__desc-prop
+                      .cart-item__desc-prop-name Материал:
+                      .cart-item__desc-prop-value Васильково-оранжевый
+                  
+                  include ./counter
+                  
+                  .cart-item__price
+                    span.cart-item__price-current 11 390 ₽
+                    span.cart-item__price-old 18 390 ₽
+                  
+                  -->
+                  <!--.cart-item
+                  .cart-item__removed-overlay
+                    button(aria-label="Вернуть товар в корзину").cart-item__restore-btn
+                      span Восстановить
+                  button(aria-label="Удалить товар из корзины").cart-item__remove-btn
+                  img(src="./assets/img/slider-item-2.png" alt="")
+                  .cart-item__desc
+                    .cart-item__desc-header
+                      h2.cart-item-title Куртка "Пилот"
+                      span.cart-item-artnumber Артикул: <span>Куртка "Пилот"</span>
+                  
+                    .cart-item__desc-prop
+                      .cart-item__desc-prop-name Материал:
+                      .cart-item__desc-prop-value 35%
+                    .cart-item__desc-prop
+                      .cart-item__desc-prop-name Мате:
+                      .cart-item__desc-prop-value 35%ХЛ 65%ПЭ
+                    .cart-item__desc-prop
+                      .cart-item__desc-prop-name Материал:
+                      .cart-item__desc-prop-value 35%ХЛ 65%ПЭ
+                  
+                  include ./counter
+                  
+                  .cart-item__price
+                    span.cart-item__price-current 11 390 ₽
+                    span.cart-item__price-old 18 390 ₽
+                  
+                  -->
+                  <!--.cart-item
+                  .cart-item__removed-overlay
+                    button(aria-label="Вернуть товар в корзину").cart-item__restore-btn
+                      span Восстановить
+                  button(aria-label="Удалить товар из корзины").cart-item__remove-btn
+                  
+                  img(src="./assets/img/slider-item-2.png" alt="")
+                  
+                  .cart-item__side
+                    .cart-item__desc-header
+                      h2.cart-item-title Куртка <span class="cart-item-highlighted">"Пи</span>лот"
+                      span.cart-item-artnumber Артикул: <span>Куртка "Пилот"</span>
+                  
+                    .cart-item__desc-prop
+                      .cart-item__desc-prop-name Материал:
+                      .cart-item__desc-prop-value 35%
+                    .cart-item__desc-prop
+                      .cart-item__desc-prop-name Мате:
+                      .cart-item__desc-prop-value 35%ХЛ 65%ПЭ
+                    .cart-item__desc-prop
+                      .cart-item__desc-prop-name Материал:
+                      .cart-item__desc-prop-value 35%ХЛ 65%ПЭ
+                    .cart-item__desc-prop
+                      .cart-item__desc-prop-name Материал:
+                      .cart-item__desc-prop-value Васильково-оранжевый
+                  
+                  .cart-item__side
+                    include ./counter
+                  
+                    .cart-item__buy-discount-badge
+                      span -40%
+                  
+                    .cart-item__buy-price
+                      span.cart-item__buy-price-current 1 111 390 ₽
+                      span.cart-item__buy-price-old 1 390 ₽
+                  
+                  -->
+                  <div class="cart-item cart-item--remove_d">
+                    <div class="cart-item__overlay">
+                      <button class="cart-item__restore" aria-label="Вернуть товар в корзину"><span>Восстановить</span></button>
+                    </div>
+                    <button class="cart-item__remove" aria-label="Удалить товар из корзины"></button>
+                    <div class="cart-item-section cart-item-section--image"><img src="./assets/img/slider-item-2.png" alt=""></div>
+                    <div class="cart-item-section cart-item-section--desc">
+                      <div class="cart-item-product"><span class="cart-item-product__artnumber">Артикул: <span>Куртка Васильковый-фиолетовый "Пилот"</span></span>
+                        <h2 class="cart-item-product__title">Васильковый-фиолетовый <span class="cart-item-highlighted">"Пи</span>лот"</h2>
+                      </div>
+                      <div class="cart-item-props">
+                        <div class="cart-item-prop">
+                          <div class="cart-item-prop__name">Материал:</div>
+                          <div class="cart-item-prop__value">35%</div>
+                        </div>
+                        <div class="cart-item-prop">
+                          <div class="cart-item-prop__name">Материал:</div>
+                          <div class="cart-item-prop__value">35%</div>
+                        </div>
+                        <div class="cart-item-prop">
+                          <div class="cart-item-prop__name">Материал:</div>
+                          <div class="cart-item-prop__value">35%</div>
+                        </div>
+                        <div class="cart-item-prop">
+                          <div class="cart-item-prop__name">Мате:</div>
+                          <div class="cart-item-prop__value">35%</div>
+                        </div>
+                        <div class="cart-item-prop">
+                          <div class="cart-item-prop__name">Материал:</div>
+                          <div class="cart-item-prop__value">Васильковый-фиолетовый</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-item-section cart-item-section--buy">
+                      <div class="counter">
+                        <button class="counter__btn counter__btn--dec"></button>
+                        <input class="counter__value" type="number" value="1">
+                        <button class="counter__btn counter__btn--inc"></button>
+                      </div>
+                      <div class="cart-item-price">
+                        <div class="cart-item-discount"><span>-40%</span></div>
+                        <div class="cart-item-total"><span class="cart-item-total__current-price">1 111 390 ₽</span><span class="cart-item-total__old-price">1 390 ₽</span></div>
+                      </div>
+                    </div>
                   </div>
-                  <button class="main-cart-item__remove-btn" aria-label="Удалить товар из корзины"></button><img src="./assets/img/slider-item-2.png" alt="">
-                  <div class="main-cart-item__desc">
-                    <div class="main-cart-item__desc-header">
-                      <h2 class="main-cart-item__title">Куртка "Пилот"</h2><span>Артикул: <span>Куртка "Пилот"</span></span>
-                    </div>
-                    <div class="main-cart-item__desc-prop">
-                      <div class="main-cart-item__desc-prop-name">Материал:</div>
-                      <div class="main-cart-item__desc-prop-value">35%</div>
-                    </div>
-                    <div class="main-cart-item__desc-prop">
-                      <div class="main-cart-item__desc-prop-name">Мате:</div>
-                      <div class="main-cart-item__desc-prop-value">35%ХЛ 65%ПЭ</div>
-                    </div>
-                    <div class="main-cart-item__desc-prop">
-                      <div class="main-cart-item__desc-prop-name">Материал:</div>
-                      <div class="main-cart-item__desc-prop-value">35%ХЛ 65%ПЭ</div>
-                    </div>
-                    <div class="main-cart-item__desc-prop">
-                      <div class="main-cart-item__desc-prop-name">Материал:</div>
-                      <div class="main-cart-item__desc-prop-value">Васильково-оранжевый</div>
-                    </div>
-                  </div>
-                  <div class="counter">
-                    <button class="counter__btn counter__btn--dec"></button>
-                    <input class="counter__value" type="number" value="1">
-                    <button class="counter__btn counter__btn--inc"></button>
-                  </div>
-                  <div class="main-cart-item__discount-badge"><span>-40%</span></div>
-                  <div class="main-cart-item__price"><span class="main-cart-item__price-current">11 390 ₽</span><span class="main-cart-item__price-old">18 390 ₽</span></div>
                 </div>
-              </li>
-              <li class="main-cart__list-item">
-                <div class="main-cart-item main-cart-item--removed">
-                  <div class="main-cart-item__removed-overlay">
-                    <button class="main-cart-item__restore-btn" aria-label="Вернуть товар в корзину"><span>Восстановить</span></button>
-                  </div>
-                  <button class="main-cart-item__remove-btn" aria-label="Удалить товар из корзины"></button><img src="./assets/img/slider-item-2.png" alt="">
-                  <div class="main-cart-item__desc">
-                    <div class="main-cart-item__desc-header">
-                      <h2 class="main-cart-item__title">Куртка "Пилот"</h2><span>Артикул: <span>Куртка "Пилот"</span></span>
-                    </div>
-                    <div class="main-cart-item__desc-prop">
-                      <div class="main-cart-item__desc-prop-name">Материал:</div>
-                      <div class="main-cart-item__desc-prop-value">35%</div>
-                    </div>
-                    <div class="main-cart-item__desc-prop">
-                      <div class="main-cart-item__desc-prop-name">Мате:</div>
-                      <div class="main-cart-item__desc-prop-value">35%ХЛ 65%ПЭ</div>
-                    </div>
-                    <div class="main-cart-item__desc-prop">
-                      <div class="main-cart-item__desc-prop-name">Материал:</div>
-                      <div class="main-cart-item__desc-prop-value">35%ХЛ 65%ПЭ</div>
-                    </div>
-                    <div class="main-cart-item__desc-prop">
-                      <div class="main-cart-item__desc-prop-name">Материал:</div>
-                      <div class="main-cart-item__desc-prop-value">Васильково-оранжевый</div>
-                    </div>
-                  </div>
-                  <div class="counter">
-                    <button class="counter__btn counter__btn--dec"></button>
-                    <input class="counter__value" type="number" value="1">
-                    <button class="counter__btn counter__btn--inc"></button>
-                  </div>
-                  <div class="main-cart-item__discount-badge"><span>-40%</span></div>
-                  <div class="main-cart-item__price"><span class="main-cart-item__price-current">11 390 ₽</span><span class="main-cart-item__price-old">18 390 ₽</span></div>
-                </div>
-              </li>
-            </ul>
+              </div>
+            </div>
             <div class="main-cart__checkout">
               <div class="main-cart__checkout-row main-cart__checkout-row--total"><span>Итого</span><span>10 750 ₽</span></div>
               <div class="main-cart__checkout-row"><span>Товары 20 шт.</span><span>20 750 ₽</span></div>

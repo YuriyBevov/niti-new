@@ -1,9 +1,14 @@
 .personal
-  a(href="#").personal__field
+  .personal__field.personal__field--profile(tabindex="0")
     .personal__field-icon
       svg(width="24" height="24")
         use(xlink:href="./assets/sprite.svg#icon-user")
     span Войти
+
+    .personal-field-profile-inner
+      <a class="" href="/personal/">Личный кабинет</a>
+      <a style="margin-right: 0;" href="?logout=yes&amp;">Выйти</a>
+
   a(href="#").personal__field
     .personal__field-icon
       svg(width="24" height="24")

@@ -78,15 +78,16 @@ if(burger && nav) {
 
   const closeTimeline = gsap.timeline({});
 
+  //ПРОВКРИТЬ КОНУЛИКТ ПРИ ESC !!!
   const closeNav = () => {
     closeTimeline
-    .to('.nav__container', {
+    .to('.nav.mobile-opened .nav__container', {
       x: '100%',
       opacity: 0,
       duration: 0.4,
       ease: 'ease-in'
     })
-    .to('.nav', {
+    .to('.nav.mobile-opened', {
       display: 'none',
       opacity: 0,
       duration: 0.3,
