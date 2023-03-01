@@ -1,135 +1,28 @@
-//.cart-item.cart-item--removed
-  .cart-item__removed-overlay
-    button(aria-label="Вернуть товар в корзину").cart-item__restore-btn
-      span Восстановить
-  button(aria-label="Удалить товар из корзины").cart-item__remove-btn
-  img(src="./assets/img/slider-item-2.png" alt="")
-  .cart-item__desc
-    .cart-item__desc-header
-      h2.cart-item-title Куртка "Пилот"
-      span.cart-item-artnumber Артикул: <span>Куртка "Пилот"</span>
-
-    .cart-item__desc-prop
-      .cart-item__desc-prop-name Материал:
-      .cart-item__desc-prop-value 35%
-    .cart-item__desc-prop
-      .cart-item__desc-prop-name Мате:
-      .cart-item__desc-prop-value 35%ХЛ 65%ПЭ
-    .cart-item__desc-prop
-      .cart-item__desc-prop-name Материал:
-      .cart-item__desc-prop-value 35%ХЛ 65%ПЭ
-    .cart-item__desc-prop
-      .cart-item__desc-prop-name Материал:
-      .cart-item__desc-prop-value Васильково-оранжевый
-
-  include ./counter
-
-  .cart-item__price
-    span.cart-item__price-current 11 390 ₽
-    span.cart-item__price-old 18 390 ₽
-
-//.cart-item
-  .cart-item__removed-overlay
-    button(aria-label="Вернуть товар в корзину").cart-item__restore-btn
-      span Восстановить
-  button(aria-label="Удалить товар из корзины").cart-item__remove-btn
-  img(src="./assets/img/slider-item-2.png" alt="")
-  .cart-item__desc
-    .cart-item__desc-header
-      h2.cart-item-title Куртка "Пилот"
-      span.cart-item-artnumber Артикул: <span>Куртка "Пилот"</span>
-
-    .cart-item__desc-prop
-      .cart-item__desc-prop-name Материал:
-      .cart-item__desc-prop-value 35%
-    .cart-item__desc-prop
-      .cart-item__desc-prop-name Мате:
-      .cart-item__desc-prop-value 35%ХЛ 65%ПЭ
-    .cart-item__desc-prop
-      .cart-item__desc-prop-name Материал:
-      .cart-item__desc-prop-value 35%ХЛ 65%ПЭ
-
-  include ./counter
-
-  .cart-item__price
-    span.cart-item__price-current 11 390 ₽
-    span.cart-item__price-old 18 390 ₽
-
-//.cart-item
-  .cart-item__removed-overlay
-    button(aria-label="Вернуть товар в корзину").cart-item__restore-btn
-      span Восстановить
-  button(aria-label="Удалить товар из корзины").cart-item__remove-btn
-
-  img(src="./assets/img/slider-item-2.png" alt="")
-
-  .cart-item__side
-    .cart-item__desc-header
-      h2.cart-item-title Куртка <span class="cart-item-highlighted">"Пи</span>лот"
-      span.cart-item-artnumber Артикул: <span>Куртка "Пилот"</span>
-
-    .cart-item__desc-prop
-      .cart-item__desc-prop-name Материал:
-      .cart-item__desc-prop-value 35%
-    .cart-item__desc-prop
-      .cart-item__desc-prop-name Мате:
-      .cart-item__desc-prop-value 35%ХЛ 65%ПЭ
-    .cart-item__desc-prop
-      .cart-item__desc-prop-name Материал:
-      .cart-item__desc-prop-value 35%ХЛ 65%ПЭ
-    .cart-item__desc-prop
-      .cart-item__desc-prop-name Материал:
-      .cart-item__desc-prop-value Васильково-оранжевый
-
-  .cart-item__side
-    include ./counter
-
-    .cart-item__buy-discount-badge
-      span -40%
-
-    .cart-item__buy-price
-      span.cart-item__buy-price-current 1 111 390 ₽
-      span.cart-item__buy-price-old 1 390 ₽
-
-.cart-item.cart-item--remove_d
+.cart-item.product.cart-item--remove-d
   .cart-item__overlay
     button(aria-label="Вернуть товар в корзину").cart-item__restore
       span Восстановить
   button(aria-label="Удалить товар из корзины").cart-item__remove
 
-  .cart-item-section.cart-item-section--image
-    img(src="./assets/img/slider-item-2.png" alt="")
+  .cart-item__content
+    .cart-item-section.cart-item-section--image
+      .product-image
+        img(src="./assets/img/slider-item-2.png" alt="")
+      .product-discount
+        span -40%
+    .cart-item-section.cart-item-section--desc
+      .product-title
+        span.product-artnumber Артикул: <span>Куртка Васильковый-фиолетовый "Пилот"</span>
+        h2 Васильковый-фиолетовый <span class="cart-item-highlighted">"Пи</span>лот"
+      .product-props
+        each item in [1,2,3,4]
+          .product-prop
+            .product-prop-name Материал:
+            .product-prop-value Васильковый
 
-  .cart-item-section.cart-item-section--desc
-    .cart-item-product
-      span.cart-item-product__artnumber Артикул: <span>Куртка Васильковый-фиолетовый "Пилот"</span>
-      h2.cart-item-product__title Васильковый-фиолетовый <span class="cart-item-highlighted">"Пи</span>лот"
-
-
-    .cart-item-props
-      .cart-item-prop
-        .cart-item-prop__name Материал:
-        .cart-item-prop__value 35%
-      .cart-item-prop
-        .cart-item-prop__name Материал:
-        .cart-item-prop__value 35%
-      .cart-item-prop
-        .cart-item-prop__name Материал:
-        .cart-item-prop__value 35%
-      .cart-item-prop
-        .cart-item-prop__name Мате:
-        .cart-item-prop__value 35%
-      .cart-item-prop
-        .cart-item-prop__name Материал:
-        .cart-item-prop__value Васильковый-фиолетовый
-
-  .cart-item-section.cart-item-section--buy
+  .cart-item__footer
     include ./counter
 
-    .cart-item-price
-      .cart-item-discount
-        span -40%
-
-      .cart-item-total
-        span.cart-item-total__current-price 1 111 390 ₽
-        span.cart-item-total__old-price 1 390 ₽
+    .product-price
+        span.product-price-current 1 111 390 ₽
+        span.product-price-old 1 390 ₽

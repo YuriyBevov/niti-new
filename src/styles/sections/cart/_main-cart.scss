@@ -4,7 +4,7 @@
     @extend .flex-wrap;
     align-items: center;
     margin-bottom: 25px;
-    max-width: 1440px;
+    max-width: 1200px;
 
     h1 {
       width: 100%;
@@ -63,30 +63,25 @@
 
   &__total-count {
     font-size: 14px;
-    margin-left: auto;
     color: var(--basic-gray);
-
-    @include m-b-mobile-lg-down {
-      order: 2;
-    }
   }
 
   &__content {
     display: grid;
     grid-template-columns: auto 360px;
     grid-column-gap: 30px;
-    max-width: 1440px;
+    max-width: 1200px;
 
-    @include m-b-down(1240px) {
+    @include m-b-tablet-lg-down {
       grid-template-columns: 1fr;
     }
   }
 
   &__list {
-    @extend .flex-column; //!
+    @extend .flex-column;
     height: fit-content;
 
-    @include m-b-down(1240px) {
+    @include m-b-tablet-lg-down {
       margin-bottom: 30px;
     }
   }
