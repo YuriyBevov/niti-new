@@ -1,0 +1,45 @@
+include ../mixins/order-form-fieldset
+include ../mixins/order-form-switch-box
+
+.order-payment-block
+  +order-form-switch-box({
+    name: 'user-payment-type',
+    controls: [
+      {
+        label: 'Наличными в момент получения',
+        id: 'cash',
+      },
+
+      {
+        label: 'Банковская карта',
+        id: 'card'
+      },
+      {
+        label: 'Терминал',
+        id: 'terminal'
+      },
+      {
+        label: 'ЮMoney',
+        id: 'umoney'
+      },
+      {
+        label: 'Наложенный платёж',
+        id: 'pay'
+      },
+      {
+        label: 'Отделение Сбербанка',
+        id: 'sberbank'
+      }
+    ]
+  })
+
+  .form-description-box
+    .form-description-image
+      img(src="./assets/img/sberbank.png" alt="Оплата наличными" width="150" height="75")
+    .form-description-text
+      span.form-description-title Оплата наличными в момент получения
+      span Оплата производится наличными деньгами, в момент получения заказа. <br/>Подтверждением вашей оплаты является фискальный кассовый чек, вручаемый во время получения и оплаты заказа.
+
+  .order-block-footer
+    a(href="#").accent-btn.order-block-btn Оформить заказ
+    span *Нажимая кнопку «Оформить заказ», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных

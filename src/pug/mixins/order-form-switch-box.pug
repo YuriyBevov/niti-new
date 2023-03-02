@@ -1,0 +1,6 @@
+mixin order-form-switch-box(data)
+  .order-form-switch-box
+    each control in data.controls
+      .order-form-switch
+        input(type="radio" name= data.name id= control.id)
+        label(for= control.id)!= control.label

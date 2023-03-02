@@ -1,0 +1,67 @@
+include ../mixins/order-form-fieldset
+include ../mixins/order-form-switch-box
+
+.order-delivery-block
+  +order-form-switch-box({
+    name: 'user-type',
+    controls: [
+      {
+        label: 'Курьером',
+        id: '1',
+      },
+
+      {
+        label: 'Самовывоз',
+        id: '2'
+      },
+
+      {
+        label: 'Почта России(Воздушный транспорт)',
+        id: '3',
+      },
+
+      {
+        label: 'Почта России(Наземный транспорт)',
+        id: '4'
+      }
+    ]
+  })
+
+  .form-field-box
+    .form-field-box-section
+      +order-form-fieldset({
+        label: 'Город',
+        isRequired: true,
+        control: {
+          id: 'user-name',
+          type: 'text'
+        }
+      })
+
+      +order-form-fieldset({
+        label: 'Улица, дом',
+        isRequired: true,
+        control: {
+          id: 'user-mail',
+          type: 'text'
+        }
+      })
+
+      +order-form-fieldset({
+        label: 'Квартира/офис',
+        isRequired: true,
+        control: {
+          id: 'user-phone',
+          type: 'text'
+        }
+      })
+
+    .form-field-box-section
+      .form-description-text
+        span.form-description-title Доставка курьером
+        span Доставка осуществляется в течение дня в удобное для вас время.
+        span Стоимость: 500 ₽
+
+  .order-block-footer
+    button(type="button").accent-btn.order-block-btn.order-block-btn-next Далее
+    span * Поля, обязательные для заполнения

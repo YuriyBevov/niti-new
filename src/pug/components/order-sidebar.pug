@@ -1,0 +1,35 @@
+.order__sidebar
+  .order__sidebar-header
+    span Ваш заказ
+    a(href="cart.html") Редактировать
+
+  .order__sidebar-body
+    each item in [1,2]
+      .product
+        .product-image
+          img(src="./assets/img/slider-item-2.png" alt="" height="100" width="75")
+
+        .product-info
+          h2.product-title Васильковый-фиолетовый <span class="cart-item-highlighted">"Пи</span>лот"
+
+          .product-props
+            each item in [1,2]
+              .product-prop
+                .product-prop-name Материал:
+                .product-prop-value Васильковый
+        .product-price
+          span.product-price-current 1 111 390 ₽
+          span.product-price-old 1 390 ₽
+
+  .order__sidebar-footer
+    .order__sidebar-footer-row
+      span Итого
+      span 10 750 ₽
+
+    .order__sidebar-footer-row
+      span Товары 20 шт.
+      span 20 750 ₽
+
+    .order__sidebar-footer-row
+      span Скидка
+      span 10 000 ₽

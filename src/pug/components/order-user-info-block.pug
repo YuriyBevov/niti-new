@@ -1,0 +1,61 @@
+include ../mixins/order-form-fieldset
+include ../mixins/order-form-switch-box
+
+.order-user-info-block
+  +order-form-switch-box({
+    name: 'user-type',
+    controls: [
+      {
+        label: 'Физическое лицо',
+        id: 'individual',
+      },
+
+      {
+        label: 'Юридическое лицо',
+        id: 'legal'
+      }
+    ]
+  })
+
+  .form-field-box
+    .form-field-box-section
+      +order-form-fieldset({
+        label: 'Имя',
+        isRequired: true,
+        control: {
+          id: 'user-name',
+          type: 'text'
+        }
+      })
+
+      +order-form-fieldset({
+        label: 'E-mail',
+        isRequired: true,
+        control: {
+          id: 'user-mail',
+          type: 'text'
+        }
+      })
+
+      +order-form-fieldset({
+        label: 'Телефон',
+        isRequired: true,
+        control: {
+          id: 'user-phone',
+          type: 'text'
+        }
+      })
+
+    .form-field-box-section
+      +order-form-fieldset({
+        label: 'Комментарий к заказу',
+        isRequired: false,
+        control: {
+          id: 'user-comment',
+          type: 'textarea'
+        }
+      })
+
+  .order-block-footer
+    button(type="button").accent-btn.order-block-btn.order-block-btn-next Далее
+    span * Поля, обязательные для заполнения

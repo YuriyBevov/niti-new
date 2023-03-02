@@ -1,0 +1,26 @@
+mixin order-form-fieldset(data)
+  if data.control.type == 'text'
+    fieldset
+      label(
+        for= data.control.id
+        class= data.isRequired ? 'required' : null
+      )!= data.label
+
+      input(
+        type= data.control.type
+        id= data.control.id
+        required= data.isRequired ? true : false
+      )
+
+  if data.control.type == 'textarea'
+    fieldset.textarea-container
+      label(
+        for= data.control.id
+        class= data.isRequired ? 'required' : null
+      )!= data.label
+
+      textarea(
+        type= data.control.type
+        id= data.control.id
+        required= data.isRequired ? true : false
+      )

@@ -1,0 +1,29 @@
+section.order
+  form(action="#").order-form
+    .container.order__container
+      .order__content
+        h1.title-md.order__title Оформление заказа
+
+        .order-accordeon
+          .order-accordeon-item
+            .order-accordeon-item-header
+              span Контактные данные
+              button Редактировать
+            .order-accordeon-item-body
+              include ../../components/order-user-info-block
+
+          .order-accordeon-item.active
+            .order-accordeon-item-header
+              span Способ доставки
+              button Редактировать
+            .order-accordeon-item-body
+              include ../../components/order-delivery-block
+
+          .order-accordeon-item
+            .order-accordeon-item-header
+              span Оплата
+              button Редактировать
+            .order-accordeon-item-body
+              include ../../components/order-payment-block
+
+      include ../../components/order-sidebar

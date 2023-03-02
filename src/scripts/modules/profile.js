@@ -3,7 +3,7 @@ const profile = document.querySelector('.personal__field--profile');
 if(profile) {
 
   const inner = profile.querySelector('.personal-field-profile-inner');
-  console.log(inner);
+  //console.log(inner);
 
   function closeProfile() {
     console.log('close');
@@ -27,7 +27,6 @@ if(profile) {
 
   const onClickOutsideCloseProfile = (evt) => {
     console.log(evt.target);
-
   }
 
   const onClickByEscCloseProfile = (evt) => {

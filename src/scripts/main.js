@@ -5,3 +5,4 @@ import './modules/catalog-sidebar.js';
 import './modules/custom-select.js';
 //import './modules/catalog-item-text-split.js';
 import './modules/profile.js';
+import './modules/order.js';

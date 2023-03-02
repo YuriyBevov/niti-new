@@ -217,6 +217,45 @@ if (burger && nav) {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/order.js":
+/*!**************************************!*\
+  !*** ./src/scripts/modules/order.js ***!
+  \**************************************/
+/***/ (() => {
+
+var accordeon = document.querySelector('.order-accordeon');
+
+if (accordeon) {
+  var items = accordeon.querySelectorAll('.order-accordeon-item-header button');
+  var nextBtns = accordeon.querySelectorAll('.order-block-btn-next');
+  var active = accordeon.querySelector('.order-accordeon-item.active');
+
+  var setActive = function setActive(elem) {
+    active.classList.remove('active');
+    active = elem;
+    active.classList.add('active');
+  };
+
+  var onClickHandler = function onClickHandler(evt) {
+    evt.preventDefault();
+    setActive(evt.target.parentNode.parentNode);
+  };
+
+  var onNextBtnClickHandler = function onNextBtnClickHandler(evt) {
+    evt.preventDefault();
+    setActive(active.nextElementSibling);
+  };
+
+  items.forEach(function (item) {
+    item.addEventListener('click', onClickHandler);
+  });
+  nextBtns.forEach(function (btn) {
+    btn.addEventListener('click', onNextBtnClickHandler);
+  });
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/profile.js":
 /*!****************************************!*\
   !*** ./src/scripts/modules/profile.js ***!
@@ -226,8 +265,7 @@ if (burger && nav) {
 var profile = document.querySelector('.personal__field--profile');
 
 if (profile) {
-  var inner = profile.querySelector('.personal-field-profile-inner');
-  console.log(inner);
+  var inner = profile.querySelector('.personal-field-profile-inner'); //console.log(inner);
 
   function closeProfile() {
     console.log('close');
@@ -20245,11 +20283,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_custom_select_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/custom-select.js */ "./src/scripts/modules/custom-select.js");
 /* harmony import */ var _modules_profile_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/profile.js */ "./src/scripts/modules/profile.js");
 /* harmony import */ var _modules_profile_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_profile_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _modules_order_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/order.js */ "./src/scripts/modules/order.js");
+/* harmony import */ var _modules_order_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_order_js__WEBPACK_IMPORTED_MODULE_5__);
 
  //import './modules/favourite-btn.js';
 
 
  //import './modules/catalog-item-text-split.js';
+
 
 
 })();
