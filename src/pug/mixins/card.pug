@@ -3,7 +3,7 @@ mixin card(data)
     include ../components/favourite-btn
     a(href="catalog-element.html")
       .card__preview
-        img(src= `./assets/img/${data.img}.png` alt= data.title width="235" height="300")
+        img(src= `./assets/img/${data.img}` alt= data.title width="235" height="300")
         if data.isSale
           .badge.badge--sale
             span= data.discount

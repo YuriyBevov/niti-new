@@ -20,12 +20,12 @@
         overflow: hidden;
 
         img {
-          max-height: 300px;
-          object-fit: contain;
-          padding: 15px 0;
+          //max-height: 300px;
+          //object-fit: contain;
+          //padding: 15px 0;
 
           @include m-b-down(374px) {
-            max-height: 220px;
+            //max-height: 220px;
           }
         }
     }
