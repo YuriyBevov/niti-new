@@ -140,7 +140,7 @@
       &-footer {
         @extend .flex-wrap;
         align-items: center;
-        margin-top: auto;
+        //margin-top: auto;
 
         @include m-b-laptop-down {
           flex-direction: column;
