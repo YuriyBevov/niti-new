@@ -353,27 +353,13 @@ if (productSlider) {
     slidesPerView: 'auto',
     watchOverflow: true,
     watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    //direction: 'horizontal',
-
-    breakpoints: {
-      /*961: {
-        spaceBetween: 5,
-        slidesPerView: 3,
-        direction: "vertical",
-      },*/
-
-      769: {
-        slidesPerView: 5
-      },
-      634: {
-        slidesPerView: 4
-      }
-
-      /*400: {
-        direction: "vertical",
-      }*/
-    }
+    watchSlidesProgress: true
+    /*direction: 'vertical',
+     breakpoints: {
+       534: {
+         direction: 'horizontal',
+       },
+    },*/
   });
 
   let slider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-slider", {

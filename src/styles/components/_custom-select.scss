@@ -1,11 +1,16 @@
 
 $max-width: 240px;
+$max-width-mobile: 204px;
 
 .custom-select-container {
   position: relative;
   box-sizing: border-box;;
   width: 100%;
   max-width: $max-width;
+
+  @include m-b-down(492px) {
+    max-width: $max-width-mobile;
+  }
 }
 .custom-select-container * {
   box-sizing: border-box;
@@ -41,6 +46,14 @@ $max-width: 240px;
     width: 24px;
     height: 24px;
     background-image: url("../assets/img/icons/select-arrow.svg");
+  }
+
+  @include m-b-down(492px) {
+    font-size: 16px;
+    padding: 5px;
+    padding-right: 40px;
+
+    max-width: $max-width-mobile;
   }
 }
 

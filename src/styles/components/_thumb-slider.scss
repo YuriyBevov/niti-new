@@ -18,22 +18,37 @@
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 10;
+
+    @include m-b-tablet-lg-down {
+      bottom: 10px;
+      left: 10px;
+    }
+
+    @include m-b-down(492px) {
+      width: 51px;
+      height: 37px;
+      bottom: 5px;
+      left: 5px;
+    }
+
+    @include m-b-down(420px) {
+      width: 76px;
+      height: 56px;
+      bottom: 10px;
+      left: 10px;
+    }
   }
 }
 
 .product-slider-thumbs {
-  /*width: 100%;*/
-
+  overflow: hidden;
   .swiper-slide {
-    width: 70px !important;
-    height: 105px;
+    max-width: 70px;
     opacity: .5;
-    border: 2px solid var(--white);
-    transition: opacity var(--main-transition), border var(--main-transition);
+    transition: opacity var(--main-transition);
   }
 
   .swiper-slide-thumb-active {
-    border-color: var(--accent);
     opacity: 1;
   }
 }
@@ -45,7 +60,7 @@
 
     img {
       display: flex;
-      height: auto;
+      height: 100%;
       object-fit: cover;
       aspect-ratio: 2/3;
     }
@@ -70,74 +85,25 @@
   right: 0;
   left: initial;
   transform: translateY(-50%);
+
+  @include m-b-tablet-lg-down {
+    right: -10px;
+  }
+
+  @include m-b-tablet-down {
+    display: none;
+  }
 }
 .product-slider-button-prev {
   @extend .main-slider-button-prev;
   left: 0;
   transform: translateY(-50%) rotate(180deg);
-}
 
-
-/*
-
-.thumb-slider {
-  position: relative;
-
-  margin-bottom: 5px;
-
-  &-container {
-    outline: 1px solid red;
-    width: 400px;
-    overflow: hidden;
-    user-select: none;
+  @include m-b-tablet-lg-down {
+    left: -10px;
   }
 
-  &-thumbs {
-    width: 70px;
-    height: 105px;
-
-    .swiper-slide {
-      opacity: .6;
-      border: 1px solid transparent;
-
-      &-active {
-        opacity: 1;
-      }
-    }
-
-
-  }
-
-  img {
-    display: flex;
-    aspect-ratio: 2/3;
-    object-fit: contain;
+  @include m-b-tablet-down {
+    display: none;
   }
 }
-
-.thumb-slider-button-next,
-.thumb-slider-button-prev {
-  position: absolute;
-  top: 50%;
-  background-color: transparent;
-
-  &::before {
-    width: 36px;
-    height: 36px;
-    background-size: cover;
-  }
-}
-
-.thumb-slider-button-next {
-  @extend .main-slider-button-next;
-  right: 0;
-  left: initial;
-  transform: translateY(-50%);
-}
-.thumb-slider-button-prev {
-  @extend .main-slider-button-prev;
-  left: 0;
-  transform: translateY(-50%) rotate(180deg);
-}
-
-*/

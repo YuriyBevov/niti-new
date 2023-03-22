@@ -75,27 +75,13 @@ if(productSlider) {
      watchOverflow: true,
      watchSlidesVisibility: true,
      watchSlidesProgress: true,
-     //direction: 'horizontal',
+     /*direction: 'vertical',
 
      breakpoints: {
-        /*961: {
-          spaceBetween: 5,
-          slidesPerView: 3,
-          direction: "vertical",
-        },*/
-
-        769: {
-           slidesPerView: 5,
+        534: {
+          direction: 'horizontal',
         },
-
-        634: {
-           slidesPerView: 4,
-        },
-
-        /*400: {
-          direction: "vertical",
-        }*/
-     },
+     },*/
   });
 
   let slider = new Swiper(".product-slider", {
