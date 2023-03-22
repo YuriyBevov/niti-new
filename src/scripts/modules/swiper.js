@@ -1,6 +1,6 @@
-import Swiper, { Navigation, Thumbs, EffectFade, Pagination } from 'swiper';
+import Swiper, { Navigation, Thumbs, EffectFade, Pagination, Controller } from 'swiper';
 
-Swiper.use([Thumbs, EffectFade, Navigation, Pagination]);
+Swiper.use([Thumbs, EffectFade, Navigation, Pagination, Controller]);
 
 const mainSliders = document.querySelectorAll('.main-slider');
 
@@ -71,11 +71,10 @@ const productSlider = document.querySelector('.product-slider');
 
 if(productSlider) {
   let sliderThumbs = new Swiper(".product-slider-thumbs", {
-     slidesPerView: 3,
+     slidesPerView: 'auto',
      watchOverflow: true,
      watchSlidesVisibility: true,
      watchSlidesProgress: true,
-     spaceBetween: 10,
      //direction: 'horizontal',
 
      breakpoints: {
@@ -105,6 +104,7 @@ if(productSlider) {
      watchSlidesProgress: true,
      //preventInteractionOnTransition: true,
      //allowTouchMove: false,
+     grabCursor: true,
 
      navigation: {
         nextEl: '.swiper-button-next',
@@ -119,13 +119,34 @@ if(productSlider) {
      thumbs: {
         swiper: sliderThumbs
      },
-
-     /*on: {
-        slideChange: function() {
-           zoomedArray.forEach(el => {
-              el.reset();
-           })
-        }
-     },*/
   });
 }
+
+/*
+const thumbSlider = document.querySelector('.thumb-slider');
+if(thumbSlider) {
+	const thumbs = new Swiper(".thumb-slider-thumbs", {
+		spaceBetween: 5,
+		centeredSlides: true,
+		touchRatio: 0.2,
+		slideToClickedSlide: true,
+    grabCursor: true,
+    watchOverflow: true,
+	});
+
+  const main = new Swiper(".thumb-slider", {
+
+		spaceBetween: 10,
+		touchRatio: 0.2,
+    grabCursor: true,
+
+    navigation: {
+      nextEl: '.thumb-slider-button-next',
+      prevEl: '.thumb-slider-button-prev',
+    },
+	});
+
+	main.controller.control = thumbs;
+	thumbs.controller.control = main;
+}
+*/

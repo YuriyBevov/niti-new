@@ -1,23 +1,36 @@
 .catalog-element {
   @include m-b-down(600px) {
-    padding-top: 40px;
+    padding-top: 20px;
   }
 
   .product-item {
-    margin-bottom: 30px;
     display: grid;
-    //grid-template-columns: 480px 1fr;
-    grid-template-columns: 450px 1fr;
+    grid-template-columns: 400px 1fr;
     grid-column-gap: 60px;
+    margin-bottom: 30px;
 
-    @include m-b-tablet-lg-down {
-      grid-template-columns: repeat(2, 1fr);
+    @include m-b-desktop-down {
+      grid-column-gap: 40px;
+    }
+
+    @include m-b-laptop-down {
       grid-column-gap: 30px;
     }
 
-    @include m-b-down(600px) {
+    @include m-b-tablet-lg-down {
+      grid-template-columns: 280px 1fr;
+      grid-gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    @include m-b-tablet-down {
+      grid-template-columns: 240px 1fr;
+      grid-gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    @include m-b-down(535px) {
       grid-template-columns: 1fr;
-      grid-row-gap: 30px;
     }
 
     .favourite-btn {
@@ -40,11 +53,7 @@
     }
 
     &__preview {
-      height: 100%;
-      //max-height: 600px;
-      min-height: 800px;
       overflow: hidden;
-
       position: relative;
 
       .badge {
@@ -62,6 +71,7 @@
         width: 100%;
         max-width: 800px;
         margin-bottom: 7px;
+        @extend .flex-column;
 
         h1 {
           font-size: 24px;
@@ -71,14 +81,18 @@
         }
 
         span {
-          font-size: 16px;
-          padding-left: 30px;
+          font-size: 14px;
+          @extend .text-truncate;
           color: var(--basic-gray);
         }
       }
 
       &-availability {
         margin-bottom: 25px;
+
+        @include m-b-tablet-lg-down {
+          margin-bottom: 10px;
+        }
         span {
           position: relative;
           padding-left: 12px;
@@ -110,6 +124,10 @@
         align-items: flex-end;
         margin-bottom: 20px;
 
+        @include m-b-tablet-lg-down {
+          margin-bottom: 10px;
+        }
+
         span {
           display: inline-block;
           font-size: 24px;
@@ -125,6 +143,10 @@
 
       &-options {
         margin-bottom: 30px;
+
+        @include m-b-tablet-lg-down {
+          margin-bottom: 10px;
+        }
       }
 
       &-option {
@@ -140,7 +162,8 @@
       &-footer {
         @extend .flex-wrap;
         align-items: center;
-        //margin-top: auto;
+        margin-top: auto;
+        margin-bottom: 2px;
 
         @include m-b-laptop-down {
           flex-direction: column;
@@ -163,15 +186,29 @@
         }
 
         &-btn {
-          max-width: 250px;
+          max-width: 240px;
           max-height: 44px;
         }
       }
 
       &-note {
         display: block;
-        padding-top: 30px;
         color: var(--dark);
+
+        &--top {
+          padding-top: 30px;
+
+          @include m-b-tablet-lg-down {
+            display: none;
+          }
+        }
+
+        &--bottom {
+          display: none;
+          @include m-b-tablet-lg-down {
+            display: block;
+          }
+        }
 
         p {
           font-size: 20px;
@@ -180,6 +217,14 @@
             text-decoration: underline;
             font-weight: 500;
             color: var(--accent);
+          }
+
+          @include m-b-tablet-lg-down {
+            font-size: 18px;
+          }
+
+          @include m-b-tablet-down {
+            font-size: 16px;
           }
         }
       }

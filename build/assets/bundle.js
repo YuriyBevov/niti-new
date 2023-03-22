@@ -11,34 +11,28 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 
-var sidebar = document.querySelector('.sidebar');
-
+const sidebar = document.querySelector('.sidebar');
 if (sidebar) {
-  var filter = document.querySelector('.sidebar .catalog-filter');
-
+  const filter = document.querySelector('.sidebar .catalog-filter');
   if (filter) {
-    var headers = filter.querySelectorAll('.catalog-filter__section-header');
-    headers.forEach(function (header) {
-      header.addEventListener('click', function (evt) {
+    const headers = filter.querySelectorAll('.catalog-filter__section-header');
+    headers.forEach(header => {
+      header.addEventListener('click', evt => {
         evt.target.classList.contains('active') ? evt.target.classList.remove('active') : evt.target.classList.add('active');
       });
     });
-    var sections = filter.querySelectorAll('.catalog-section-main');
-
+    const sections = filter.querySelectorAll('.catalog-section-main');
     if (sections) {
-      sections.forEach(function (section) {
-        section.addEventListener('click', function (evt) {
+      sections.forEach(section => {
+        section.addEventListener('click', evt => {
           evt.target.classList.contains('active') ? evt.target.classList.remove('active') : evt.target.classList.add('active');
         });
       });
     }
   }
-
-  var sidebarBtn = document.querySelector('.catalog-section__filter-btn');
-
+  const sidebarBtn = document.querySelector('.catalog-section__filter-btn');
   if (sidebarBtn) {
-    var closer = sidebar.querySelector('.closer');
-
+    const closer = sidebar.querySelector('.closer');
     function closeSidebar(evt) {
       tl.reverse();
       document.removeEventListener('click', onOverlayClickCloseSidebar);
@@ -46,8 +40,7 @@ if (sidebar) {
       closer.removeEventListener('click', onCloserClickCloseSidebar);
       sidebarBtn.addEventListener('click', onClickShowSidebar);
     }
-
-    var tl = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({}).pause();
+    const tl = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({}).pause();
     tl.fromTo('.sidebar', {
       opacity: 0
     }, {
@@ -64,31 +57,26 @@ if (sidebar) {
       duration: 0.4,
       ease: 'ease-in'
     });
-
-    var onClickShowSidebar = function onClickShowSidebar() {
+    const onClickShowSidebar = () => {
       tl.play();
       document.addEventListener('click', onOverlayClickCloseSidebar);
       document.addEventListener('keydown', onEscClickCloseSidebar);
       closer.addEventListener('click', onCloserClickCloseSidebar);
       sidebarBtn.removeEventListener('click', onClickShowSidebar);
     };
-
-    var onOverlayClickCloseSidebar = function onOverlayClickCloseSidebar(evt) {
+    const onOverlayClickCloseSidebar = evt => {
       if (evt.target === sidebar) {
         closeSidebar();
       }
     };
-
-    var onCloserClickCloseSidebar = function onCloserClickCloseSidebar() {
+    const onCloserClickCloseSidebar = () => {
       closeSidebar();
     };
-
-    var onEscClickCloseSidebar = function onEscClickCloseSidebar(evt) {
+    const onEscClickCloseSidebar = evt => {
       if (evt.key === "Escape") {
         closeSidebar();
       }
     };
-
     sidebarBtn.addEventListener('click', onClickShowSidebar);
   }
 }
@@ -105,10 +93,9 @@ if (sidebar) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var custom_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! custom-select */ "./node_modules/custom-select/build/index.js");
 
-var items = document.querySelectorAll('.custom-select');
-
+const items = document.querySelectorAll('.custom-select');
 if (items) {
-  items.forEach(function (item) {
+  items.forEach(item => {
     (0,custom_select__WEBPACK_IMPORTED_MODULE_0__["default"])(item);
   });
 }
@@ -125,13 +112,12 @@ if (items) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 
-var burger = document.querySelector('.burger');
-var nav = document.querySelector('nav');
-
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('nav');
 if (burger && nav) {
-  var openTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({});
-  var closer = nav.querySelector('.closer');
-  burger.addEventListener('click', function () {
+  const openTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({});
+  const closer = nav.querySelector('.closer');
+  burger.addEventListener('click', () => {
     nav.classList.toggle('mobile-opened');
     openTimeline.fromTo('.nav', {
       opacity: 0
@@ -181,22 +167,23 @@ if (burger && nav) {
       ease: 'linear'
     }, "-=.4");
   });
-  closer.addEventListener('click', function () {
+  closer.addEventListener('click', () => {
     closeNav();
   });
-  document.addEventListener('keydown', function (evt) {
+  document.addEventListener('keydown', evt => {
     if (evt.key === 'Escape') {
       closeNav();
     }
   });
-  nav.addEventListener('click', function (evt) {
+  nav.addEventListener('click', evt => {
     if (evt.target === nav) {
       closeNav();
     }
   });
-  var closeTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({}); //ПРОВКРИТЬ КОНУЛИКТ ПРИ ESC !!!
+  const closeTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({});
 
-  var closeNav = function closeNav() {
+  //ПРОВКРИТЬ КОНУЛИКТ ПРИ ESC !!!
+  const closeNav = () => {
     closeTimeline.to('.nav.mobile-opened .nav__container', {
       x: '100%',
       opacity: 0,
@@ -208,7 +195,7 @@ if (burger && nav) {
       duration: 0.3,
       ease: 'linear'
     });
-    setTimeout(function () {
+    setTimeout(() => {
       nav.classList.remove('mobile-opened');
       openTimeline.progress(1);
     }, 750);
@@ -223,33 +210,28 @@ if (burger && nav) {
   \**************************************/
 /***/ (() => {
 
-var accordeon = document.querySelector('.order-accordeon');
-
+const accordeon = document.querySelector('.order-accordeon');
 if (accordeon) {
-  var items = accordeon.querySelectorAll('.order-accordeon-item-header button');
-  var nextBtns = accordeon.querySelectorAll('.order-block-btn-next');
-  var active = accordeon.querySelector('.order-accordeon-item.active');
-
-  var setActive = function setActive(elem) {
+  const items = accordeon.querySelectorAll('.order-accordeon-item-header button');
+  const nextBtns = accordeon.querySelectorAll('.order-block-btn-next');
+  let active = accordeon.querySelector('.order-accordeon-item.active');
+  const setActive = elem => {
     active.classList.remove('active');
     active = elem;
     active.classList.add('active');
   };
-
-  var onClickHandler = function onClickHandler(evt) {
+  const onClickHandler = evt => {
     evt.preventDefault();
     setActive(evt.target.parentNode.parentNode);
   };
-
-  var onNextBtnClickHandler = function onNextBtnClickHandler(evt) {
+  const onNextBtnClickHandler = evt => {
     evt.preventDefault();
     setActive(active.nextElementSibling);
   };
-
-  items.forEach(function (item) {
+  items.forEach(item => {
     item.addEventListener('click', onClickHandler);
   });
-  nextBtns.forEach(function (btn) {
+  nextBtns.forEach(btn => {
     btn.addEventListener('click', onNextBtnClickHandler);
   });
 }
@@ -262,10 +244,10 @@ if (accordeon) {
   \****************************************/
 /***/ (() => {
 
-var profile = document.querySelector('.personal__field--profile');
-
+const profile = document.querySelector('.personal__field--profile');
 if (profile) {
-  var inner = profile.querySelector('.personal-field-profile-inner'); //console.log(inner);
+  const inner = profile.querySelector('.personal-field-profile-inner');
+  //console.log(inner);
 
   function closeProfile() {
     console.log('close');
@@ -273,11 +255,9 @@ if (profile) {
     document.removeEventListener('click', onClickOutsideCloseProfile);
     document.removeEventListener('keyup', onClickByEscCloseProfile);
   }
-
-  var onClickOpenProfile = function onClickOpenProfile(evt) {
+  const onClickOpenProfile = evt => {
     evt.stopPropagation();
     profile.classList.toggle('active');
-
     if (!profile.classList.contains('active')) {
       closeProfile();
     } else {
@@ -285,17 +265,14 @@ if (profile) {
       document.addEventListener('keyup', onClickByEscCloseProfile);
     }
   };
-
-  var onClickOutsideCloseProfile = function onClickOutsideCloseProfile(evt) {
+  const onClickOutsideCloseProfile = evt => {
     console.log(evt.target);
   };
-
-  var onClickByEscCloseProfile = function onClickByEscCloseProfile(evt) {
+  const onClickByEscCloseProfile = evt => {
     if (evt.key === "Escape") {
       closeProfile();
     }
   };
-
   profile.addEventListener('click', onClickOpenProfile);
 }
 
@@ -311,13 +288,12 @@ if (profile) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_0__.EffectFade, swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);
-var mainSliders = document.querySelectorAll('.main-slider');
-
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_0__.EffectFade, swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Controller]);
+const mainSliders = document.querySelectorAll('.main-slider');
 if (mainSliders) {
-  mainSliders.forEach(function (slider) {
-    var buttonNext = slider.parentNode.querySelector('.main-slider-button-next');
-    var buttonPrev = slider.parentNode.querySelector('.main-slider-button-prev');
+  mainSliders.forEach(slider => {
+    const buttonNext = slider.parentNode.querySelector('.main-slider-button-next');
+    const buttonPrev = slider.parentNode.querySelector('.main-slider-button-prev');
     new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
       modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],
       slidesPerView: 'auto',
@@ -329,9 +305,7 @@ if (mainSliders) {
     });
   });
 }
-
-var bannerSlider = document.querySelector('.banner-slider');
-
+const bannerSlider = document.querySelector('.banner-slider');
 if (bannerSlider) {
   new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](bannerSlider, {
     modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination],
@@ -339,17 +313,18 @@ if (bannerSlider) {
     slidesPerView: 1,
     pagination: {
       el: ".banner-slider-pagination",
-      clickable: true //dynamicBullets: true,
-
+      clickable: true
+      //dynamicBullets: true,
     },
+
     navigation: {
       nextEl: ".banner-slider-button-next",
       prevEl: ".banner-slider-button-prev"
     }
   });
 }
+const productSlider = document.querySelector('.product-slider');
 
-var productSlider = document.querySelector('.product-slider');
 /*if(productSlider) {
   var swiper = new Swiper(".product-slider-thumbs", {
     spaceBetween: 10,
@@ -374,37 +349,40 @@ var productSlider = document.querySelector('.product-slider');
 }*/
 
 if (productSlider) {
-  var sliderThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-slider-thumbs", {
-    slidesPerView: 3,
+  let sliderThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-slider-thumbs", {
+    slidesPerView: 'auto',
     watchOverflow: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
-    spaceBetween: 10,
     //direction: 'horizontal',
+
     breakpoints: {
       /*961: {
         spaceBetween: 5,
         slidesPerView: 3,
         direction: "vertical",
       },*/
+
       769: {
         slidesPerView: 5
       },
       634: {
         slidesPerView: 4
       }
+
       /*400: {
         direction: "vertical",
       }*/
-
     }
   });
-  var slider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-slider", {
+
+  let slider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-slider", {
     watchOverflow: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
     //preventInteractionOnTransition: true,
     //allowTouchMove: false,
+    grabCursor: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
@@ -416,16 +394,37 @@ if (productSlider) {
     thumbs: {
       swiper: sliderThumbs
     }
-    /*on: {
-       slideChange: function() {
-          zoomedArray.forEach(el => {
-             el.reset();
-          })
-       }
-    },*/
-
   });
 }
+
+/*
+const thumbSlider = document.querySelector('.thumb-slider');
+if(thumbSlider) {
+	const thumbs = new Swiper(".thumb-slider-thumbs", {
+		spaceBetween: 5,
+		centeredSlides: true,
+		touchRatio: 0.2,
+		slideToClickedSlide: true,
+    grabCursor: true,
+    watchOverflow: true,
+	});
+
+  const main = new Swiper(".thumb-slider", {
+
+		spaceBetween: 10,
+		touchRatio: 0.2,
+    grabCursor: true,
+
+    navigation: {
+      nextEl: '.thumb-slider-button-next',
+      prevEl: '.thumb-slider-button-prev',
+    },
+	});
+
+	main.controller.control = thumbs;
+	thumbs.controller.control = main;
+}
+*/
 
 /***/ }),
 
@@ -7337,6 +7336,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "transform": () => (/* binding */ transform),
 /* harmony export */   "transition": () => (/* binding */ transition),
 /* harmony export */   "transitionEnd": () => (/* binding */ transitionEnd),
+/* harmony export */   "transitionStart": () => (/* binding */ transitionStart),
 /* harmony export */   "trigger": () => (/* binding */ trigger),
 /* harmony export */   "val": () => (/* binding */ val),
 /* harmony export */   "value": () => (/* binding */ value),
@@ -7344,15 +7344,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var ssr_window__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ssr-window */ "./node_modules/ssr-window/ssr-window.esm.js");
 /**
- * Dom7 4.0.4
+ * Dom7 4.0.6
  * Minimalistic JavaScript library for DOM manipulation, with a jQuery-compatible API
  * https://framework7.io/docs/dom7.html
  *
- * Copyright 2022, Vladimir Kharlampidi
+ * Copyright 2023, Vladimir Kharlampidi
  *
  * Licensed under MIT
  *
- * Released on: January 11, 2022
+ * Released on: February 2, 2023
  */
 
 
@@ -7848,6 +7848,22 @@ function trigger(...args) {
         delete el.dom7EventData;
       }
     }
+  }
+
+  return this;
+}
+
+function transitionStart(callback) {
+  const dom = this;
+
+  function fireCallBack(e) {
+    if (e.target !== this) return;
+    callback.call(this, e);
+    dom.off('transitionstart', fireCallBack);
+  }
+
+  if (callback) {
+    dom.on('transitionstart', fireCallBack);
   }
 
   return this;
@@ -20162,15 +20178,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_effect_creative_effect_creative_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./modules/effect-creative/effect-creative.js */ "./node_modules/swiper/modules/effect-creative/effect-creative.js");
 /* harmony import */ var _modules_effect_cards_effect_cards_js__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./modules/effect-cards/effect-cards.js */ "./node_modules/swiper/modules/effect-cards/effect-cards.js");
 /**
- * Swiper 8.4.5
+ * Swiper 8.4.7
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
- * Copyright 2014-2022 Vladimir Kharlampidi
+ * Copyright 2014-2023 Vladimir Kharlampidi
  *
  * Released under the MIT License
  *
- * Released on: November 21, 2022
+ * Released on: January 30, 2023
  */
 
 
@@ -20286,11 +20302,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_order_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/order.js */ "./src/scripts/modules/order.js");
 /* harmony import */ var _modules_order_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_order_js__WEBPACK_IMPORTED_MODULE_5__);
 
- //import './modules/favourite-btn.js';
+
+//import './modules/favourite-btn.js';
 
 
- //import './modules/catalog-item-text-split.js';
-
+//import './modules/catalog-item-text-split.js';
 
 
 })();

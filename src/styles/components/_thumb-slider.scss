@@ -1,16 +1,12 @@
 .product-slider {
   position: relative;
-  //height: 100%;
-  height: auto;
-  max-height: 75%;
   overflow: hidden;
-  margin-bottom: 10px;
+  height: auto;
+  max-height: 600px;
+  user-select: none;
+  margin-bottom: 1px;
 
-  .swiper-wrapper {
-    height: 100%;
-  }
-
-  &::after {
+  &::before {
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -26,14 +22,11 @@
 }
 
 .product-slider-thumbs {
-  height: auto;
-  max-height: calc(25% - 10px);
-
-  .swiper-slide img {
-    max-height: 150px;
-  }
+  /*width: 100%;*/
 
   .swiper-slide {
+    width: 70px !important;
+    height: 105px;
     opacity: .5;
     border: 2px solid var(--white);
     transition: opacity var(--main-transition), border var(--main-transition);
@@ -49,23 +42,13 @@
 .product-slider-thumbs {
   .swiper-slide {
     background-color: var(--card-bg);
-    img {
-      display: block;
-      //height: 100%;
-      height: auto;
-      //object-fit: contain;
-      object-fit: cover;
-      object-position: bottom;
-    }
-  }
-}
 
-.product-slider {
-  .swiper-slide {
-    /*img {
-      padding: 20px 0;
-      height: calc(100% - 40px);
-    }*/
+    img {
+      display: flex;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 2/3;
+    }
   }
 }
 
@@ -95,3 +78,66 @@
 }
 
 
+/*
+
+.thumb-slider {
+  position: relative;
+
+  margin-bottom: 5px;
+
+  &-container {
+    outline: 1px solid red;
+    width: 400px;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  &-thumbs {
+    width: 70px;
+    height: 105px;
+
+    .swiper-slide {
+      opacity: .6;
+      border: 1px solid transparent;
+
+      &-active {
+        opacity: 1;
+      }
+    }
+
+
+  }
+
+  img {
+    display: flex;
+    aspect-ratio: 2/3;
+    object-fit: contain;
+  }
+}
+
+.thumb-slider-button-next,
+.thumb-slider-button-prev {
+  position: absolute;
+  top: 50%;
+  background-color: transparent;
+
+  &::before {
+    width: 36px;
+    height: 36px;
+    background-size: cover;
+  }
+}
+
+.thumb-slider-button-next {
+  @extend .main-slider-button-next;
+  right: 0;
+  left: initial;
+  transform: translateY(-50%);
+}
+.thumb-slider-button-prev {
+  @extend .main-slider-button-prev;
+  left: 0;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+*/
