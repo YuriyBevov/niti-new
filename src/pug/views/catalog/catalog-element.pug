@@ -1,5 +1,5 @@
 .catalog-element
-  .container
+  .container-sm
     .product-item
       .product-item__preview
         <div class="badge badge--sale">
@@ -14,13 +14,11 @@
           <span>Top</span>
         </div>
 
-        include ../../components/favourite-btn
         include ../../components/product-item-slider
 
       .product-item__detail
         .product-item__detail-header
           h1 Фартук F01
-          span <small>Артикул:</small> 12354FRT
 
         .product-item__detail-availability
           span.not-available Под заказ*
@@ -31,7 +29,7 @@
             span.old-price 122 105&nbsp;₽
 
         .product-item__detail-options
-
+          span.product-item__detail-options-title Характеристики товара:
           .product-item__detail-option
             span.product-item__detail-option-name Размер
             .product-item__detail-option-value
@@ -60,10 +58,7 @@
 
           button.accent-btn.product-item__detail-footer-btn Заказать
 
-        .product-item__detail-note.product-item__detail-note--top
-          p *Товар изготавливается под заказ. <br/>Сроки изготовления данного изделия составляют <span>7-10</span> рабочих дней с момента оформления заказа.
-
-    .product-item__detail-note.product-item__detail-note--bottom
+        .product-item__detail-note
           p *Товар изготавливается под заказ. <br/>Сроки изготовления данного изделия составляют <span>7-10</span> рабочих дней с момента оформления заказа.
 
     .product-description

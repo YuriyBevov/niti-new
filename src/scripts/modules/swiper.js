@@ -1,6 +1,39 @@
-import Swiper, { Navigation, Thumbs, EffectFade, Pagination, Controller } from 'swiper';
+import Swiper, { Navigation, Thumbs, EffectFade, Pagination, Controller, Autoplay } from 'swiper';
+Swiper.use([Thumbs, EffectFade, Navigation, Pagination, Controller, Autoplay]);
 
-Swiper.use([Thumbs, EffectFade, Navigation, Pagination, Controller]);
+const clientSlider = document.querySelector('.client-slider');
+
+if(clientSlider) {
+  let isAutoplayEnabled = false;
+  clientSlider.classList.contains('autoplay') ?
+  isAutoplayEnabled = true : isAutoplayEnabled = false;
+
+  let btnNext = clientSlider.parentNode.querySelector('.slider-section-button-next');
+  let btnPrev = clientSlider.parentNode.querySelector('.slider-section-button-prev');
+
+  let speed;
+
+  isAutoplayEnabled ? speed = 3000 : speed = 300;
+
+  new Swiper(clientSlider, {
+    slidesPerView: 'auto',
+    spaceBetween: 60,
+    centerInsufficientSlides: true,
+    speed,
+
+    navigation: {
+      nextEl: btnNext,
+      prevEl: btnPrev,
+    },
+
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+
+    autoplay: isAutoplayEnabled,
+  });
+};
 
 const mainSliders = document.querySelectorAll('.main-slider');
 
@@ -27,14 +60,12 @@ const bannerSlider = document.querySelector('.banner-slider');
 
 if(bannerSlider) {
   new Swiper(bannerSlider, {
-    modules: [Navigation, Pagination],
     spaceBetween: 30,
     slidesPerView: 1,
 
     pagination: {
       el: ".banner-slider-pagination",
       clickable: true
-      //dynamicBullets: true,
     },
 
     navigation: {
@@ -46,50 +77,34 @@ if(bannerSlider) {
 
 const productSlider = document.querySelector('.product-slider');
 
-/*if(productSlider) {
-  var swiper = new Swiper(".product-slider-thumbs", {
-    spaceBetween: 10,
-    slidesPerView: 5,
-    freeMode: true,
-    watchSlidesProgress: true,
-    watchOverflow: true,
-    slideToClickedSlide: true,
-  });
-
-  var swiper2 = new Swiper(".product-slider", {
-    spaceBetween: 10,
-    watchOverflow: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: swiper,
-    },
-  });
-}*/
-
 if(productSlider) {
   let sliderThumbs = new Swiper(".product-slider-thumbs", {
      slidesPerView: 'auto',
+     spaceBetween: 10,
      watchOverflow: true,
      watchSlidesVisibility: true,
      watchSlidesProgress: true,
-     /*direction: 'vertical',
+     direction: 'vertical',
 
      breakpoints: {
-        534: {
-          direction: 'horizontal',
-        },
-     },*/
+      534: {
+        slidesPerView: 2,
+      },
+
+      900: {
+        slidesPerView: 3,
+      },
+
+      1140: {
+        slidesPerView: 4,
+      }
+     }
   });
 
   let slider = new Swiper(".product-slider", {
      watchOverflow: true,
      watchSlidesVisibility: true,
      watchSlidesProgress: true,
-     //preventInteractionOnTransition: true,
-     //allowTouchMove: false,
      grabCursor: true,
 
      navigation: {
@@ -107,32 +122,3 @@ if(productSlider) {
      },
   });
 }
-
-/*
-const thumbSlider = document.querySelector('.thumb-slider');
-if(thumbSlider) {
-	const thumbs = new Swiper(".thumb-slider-thumbs", {
-		spaceBetween: 5,
-		centeredSlides: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-    grabCursor: true,
-    watchOverflow: true,
-	});
-
-  const main = new Swiper(".thumb-slider", {
-
-		spaceBetween: 10,
-		touchRatio: 0.2,
-    grabCursor: true,
-
-    navigation: {
-      nextEl: '.thumb-slider-button-next',
-      prevEl: '.thumb-slider-button-prev',
-    },
-	});
-
-	main.controller.control = thumbs;
-	thumbs.controller.control = main;
-}
-*/

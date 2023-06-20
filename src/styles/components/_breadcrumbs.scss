@@ -1,7 +1,7 @@
 .breadcrumbs {
   display: flex;
   align-items: center;
-  padding: 20px 0 40px;
+  padding: 20px 0;
 
   @include m-b-down(600px) {
     display: none;

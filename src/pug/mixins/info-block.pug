@@ -1,0 +1,21 @@
+mixin info-block(data)
+  .info-block(class= data.cls ? data.cls : null)
+    each item in data.items
+      .info-block-field
+        if item.title
+          span.info-block-field-title!= item.title
+
+        if item.type == 'address'
+          address!= item.text
+
+        if item.type == 'tel'
+          a(href=`tel:${item.tel}`)!= item.text
+
+        if item.type == 'mail'
+          a(href=`mailto:${item.mail}`)!= item.text
+
+        if item.type == 'link'
+          a(href=`mailto:${item.link}`)!= item.text
+
+        if item.type == 'text'
+          p!= item.text

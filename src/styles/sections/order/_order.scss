@@ -5,6 +5,10 @@
     display: grid;
     grid-template-columns: auto 360px;
     grid-column-gap: 30px;
+
+    @include m-b-tablet-lg-down {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__title {
@@ -14,6 +18,11 @@
 
   &__content {
     padding: 20px;
+
+    @include m-b-tablet-lg-down {
+      padding: 0;
+      order: 2;
+    }
   }
 
   &__sidebar {
@@ -27,6 +36,12 @@
 
     background-color: var(--white);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.07);
+
+    @include m-b-tablet-lg-down {
+      position: static;
+      order: 1;
+      margin-bottom: 30px;
+    }
 
     &-header {
       @extend .flex-wrap;
@@ -60,7 +75,7 @@
         justify-content: space-between;
         margin-bottom: 10px;
 
-        &:first-child {
+        &:last-child {
           span {
             font-size: 24px;
             font-weight: 500;
@@ -168,16 +183,16 @@
 
     &-body {
       padding-top: 20px;
-      display: none;
+      //display: none;
     }
 
     &.active {
       .order-accordeon-item-header button {
-        display: none;
+        //display: none;
       }
 
       .order-accordeon-item-body {
-        display: block;
+        //display: block;
       }
     }
   }
@@ -359,6 +374,69 @@
     font-weight: 500;
     margin-bottom: 20px;
   }
+}
 
+.order-success {
+  img {
+    max-width: 360px;
+    max-height: 240px;
+    object-fit: contain;
+    margin-bottom: 30px;
 
+    @include m-b-tablet-down {
+      max-height: 140px;
+    }
+
+    @include m-b-mobile-lg-down {
+      max-height: 100px;
+    }
+  }
+
+  span {
+    display: inline-block;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--dark);
+
+    @include m-b-tablet-down {
+      font-size: 24px;
+    }
+
+    @include m-b-mobile-lg-down {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include m-b-tablet-down {
+      font-size: 22px;
+    }
+
+    @include m-b-mobile-lg-down {
+      font-size: 18px;
+    }
+  }
+
+  a {
+    font-size: 22px;
+    color: var(--accent);
+
+    @include m-b-tablet-down {
+      font-size: 20px;
+    }
+
+    @include m-b-mobile-lg-down {
+      font-size: 18px;
+    }
+  }
+
+  &__container {
+    @extend .flex-column;
+    @extend .flex-centered-content;
+  }
 }

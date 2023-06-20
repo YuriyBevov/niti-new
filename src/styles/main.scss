@@ -12,6 +12,9 @@
 
 @import "./components/bitrix/title-search-result";
 @import "./components/bitrix/smart-filter";
+@import "./components/bitrix/order";
+@import "./components/bitrix/popup";
+@import "./components/bitrix/common";
 
 /* Компоненты */
 @import "./components/header";
@@ -30,10 +33,13 @@
 @import "./components/card";
 @import "./components/favourite-btn";
 @import "./components/banner-slider";
+@import "./components/client-slider";
 @import "./components/counter";
 @import "./components/custom-select";
+@import "./components/empty-container";
 
 @import "./components/footer";
+@import "./components/info-block";
 @import "./components/developer";
 @import "./components/sidebar";
 @import "./components/pagination";
@@ -45,9 +51,12 @@
 @import "./components/main-checkbox";
 @import "./components/thumb-slider";
 @import "./components/main-cart-item";
+//@import "./components/modal";
+
 /* Секции */
 
 @import "./sections/common/callback-form-section";
+@import "./sections/common/clients";
 
 @import "./sections/index-page/hero";
 @import "./sections/index-page/catalog-preview";
@@ -62,3 +71,10 @@
 
 @import "./sections/order/order";
 
+@import "./sections/brending/brending";
+@import "./sections/common/info-section";
+
+@import "./sections/info-sections/delivery";
+@import "./sections/contacts/contacts";
+
+@import "./sections/about/about";

@@ -1,0 +1,30 @@
+.client-slider {
+  background-color: rgb(53, 52, 52);
+  padding: 10px 0;
+
+  .swiper-wrapper {
+    align-items: center
+  }
+
+  .swiper-slide {
+    @extend .flex-centered-content;
+    width: fit-content;
+
+    img {
+      width: fit-content;
+      max-width: 250px;
+      height: auto;
+      object-fit: contain;
+      padding: 10px 30px;
+
+      @include m-b-tablet-down {
+        padding: 10px 20px;
+        max-height: 80px;
+      }
+
+      @include m-b-mobile-lg-down {
+        padding: 10px 15px;
+      }
+    }
+  }
+}

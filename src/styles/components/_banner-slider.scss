@@ -1,7 +1,6 @@
 .banner-block {
   position: relative;
 
-
   picture {
       display: flex;
       width: 100%;
@@ -9,14 +8,14 @@
       min-height: inherit;
 
       img {
-          object-fit: contain;
+        object-fit: contain;
       }
   }
 }
 
 .banner-slider {
+  margin-bottom: 40px;
   .swiper-pagination {
-
     @include m-b-down(534px) {
       bottom: 2px;
     }
@@ -56,5 +55,9 @@
 
   &-button-next {
     background-image: url("../assets/img/icons/slider-button-next.svg");
+  }
+
+  img {
+    display: block;
   }
 }

@@ -36,6 +36,16 @@
     font-weight: 500;
     transition: opacity var(--main-transition);
 
+    &.disabled {
+      border-color: var(--lightgray);
+      opacity: .5;
+    }
+
+    &.bx-active {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
     &--prev,
     &--next {
       background-image: url("../assets/img/icons/pagination-arrow.svg");
@@ -59,8 +69,8 @@
       }
     }
 
-    &:hover:not(.pagination__control--dots),
-    &:focus:not(.pagination__control--dots) {
+    &:hover:not(.disabled):not(.active),
+    &:focus:not(.desabled):not(.active) {
       opacity: 1;
     }
 

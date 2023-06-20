@@ -1,0 +1,34 @@
+.info-block {
+  //max-width: 400px;
+
+  & * {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--white);
+  }
+
+  &-field {
+    @extend .flex-column;
+    margin-bottom: 10px;
+  }
+
+  &-field-title {
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  a {
+    font-size: 20px;
+    //color: var(--accent);
+  }
+
+  &--payment {
+    img {
+      width: 200px;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,188 @@
+.bx-selected .bx-soa-editstep {
+  display: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 18px;
+
+  margin-bottom: 10px;
+}
+.form-group input:not([type="radio"]) {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-group input[type="text"] {
+  padding: 10px;
+  color: var(--dark);
+  border-radius: 6px;
+  border: 1px solid var(--basic-gray);
+}
+
+.form-group textarea {
+  width: 100%;
+  max-width: 400px;
+  min-height: 200px;
+  padding: 10px;
+  border-radius: 6px;
+  resize: none;
+}
+
+.order {
+  padding-top: 60px;
+}
+
+.bx-soa-pp-company-selected {
+  display: flex;
+  align-items: center;
+}
+
+.bx-soa-pp-company-selected img {
+  width: fit-content !important;
+  height: 60px !important;
+  margin-right: 20px;
+  object-fit: contain;
+}
+.bx-sls .dropdown-block {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  min-height: 40px;
+  color: var(--dark);
+  border-radius: 6px;
+  border: 1px solid var(--basic-gray);
+}
+
+.bx-sls .dropdown-block .dropdown-icon {
+  position: static;
+  width: 22px;
+  height: 22px;
+}
+
+.bx-sls .bx-ui-sls-clear {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  margin-top: 0;
+}
+
+.bx-sls .bx-ui-sls-container {
+  width: calc(100% - 70px);
+  min-height: inherit;
+}
+
+.bx-sls .bx-ui-sls-fake, .bx-sls .bx-ui-sls-route {
+  min-height: inherit;
+  padding: 0 10px !important;
+}
+
+.bx-soa-tooltip {
+  margin-bottom: 10px;
+}
+
+.bx-soa-tooltip-danger {
+  color: var(--danger);
+}
+
+.radio-inline label > input[type="radio"] {
+  margin-right: 10px;
+}
+
+.alert-danger {
+  margin-bottom: 10px;
+  color: var(--danger);
+}
+
+.bx-soa-pp-price {
+  display: none;
+}
+
+.bx-soa-pp-item-container {
+  margin-bottom: 10px;
+}
+
+.bx-soa-pp-item-container .bx-soa-pp-company {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.bx-soa-pp-company-graf-container {
+  display: flex;
+}
+.bx-soa-pp-company-graf-container input {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.bx-soa-pp-delivery-cost {
+  display: none;
+}
+
+.bx-soa-pp-company-image {
+  display: none;
+}
+
+.bx-soa-pp-desc-container {
+  margin-bottom: 30px;
+}
+
+label,
+input {
+  cursor: pointer;
+}
+
+.bx-soa-pp-company,
+.bx-soa-pp-company input {
+  cursor: pointer;
+}
+
+.bx-soa-pp-desc-container .bx-soa-pp-company {
+  display: flex;
+  flex-direction: column;
+}
+
+.bx-soa-pp-desc-container .bx-soa-pp-company .bx-soa-pp-company-subTitle {
+  display: none;
+}
+
+.bx-soa-pp-desc-container .bx-soa-pp-company .bx-soa-pp-company-desc {
+  margin-bottom: 5px;
+}
+
+.bx-soa-pp-list li {
+  display: flex;
+  align-items: center;
+}
+
+.bx-soa-pp-list li .bx-soa-pp-list-termin {
+  margin-right: 10px;
+}
+
+.bx-soa-more .bx-soa-more-btn a {
+  margin-right: 20px;
+  color: var(--accent);
+}
+
+.-bx-popup-set-mode-add-loc {
+  color: var(--accent);
+}
+
+.bx-ui-sls-tree-trunk {
+  display: none;
+}
+
+.bx_soa_location {
+  margin-bottom: 30px;
+}
+
+.bx-soa-reference {
+  display: none;
+}
+

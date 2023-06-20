@@ -1,6 +1,7 @@
 
 $max-width: 240px;
 $max-width-mobile: 204px;
+$min-width: 75px;
 
 .custom-select-container {
   position: relative;
@@ -24,10 +25,11 @@ $max-width-mobile: 204px;
   display: block;
   width: 100%;
   max-width: $max-width;
-  padding: 10px;
+  min-width: $min-width;
+  padding: 5px;
   padding-right: 40px;
 
-  font-size: 20px;
+  font-size: 16px;
 
   border: 1px solid var(--gray-5);
   border-radius: 5px;
@@ -85,9 +87,9 @@ $max-width-mobile: 204px;
 .custom-select-option {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
 
-  font-size: 20px;
+  font-size: 16px;
 
   background-color: var(--white);
   cursor: pointer;

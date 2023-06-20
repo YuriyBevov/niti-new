@@ -1,0 +1,17 @@
+.bx-slst .bx-ui-combobox-toggle {
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  margin: 0;
+  background: none;
+  background-image: url(../assets/img/icons/select-arrow.svg);
+  background-position: center !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.popup-window-titlebar-text {
+  padding: 0 30px;
+}

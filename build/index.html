@@ -9,6 +9,7 @@
     <title></title>
     <link rel="stylesheet" href="./assets/main.css"/>
     <script defer="defer" src="./assets/bundle.js"></script>
+    <script async="async" src="https://api-maps.yandex.ru/2.1/?apikey=4aa8fccd-d097-4486-835a-704db2b05b2e&amp;lang=ru_RU"></script>
   </head>
   <body>
     <header class="header">
@@ -44,10 +45,10 @@
 </button>
                 <ul class="nav__list">
                   <li class="nav__list-item"><a class="active" href="catalog.html">Каталог</a></li>
-                  <li class="nav__list-item"><a href="#">Брендирование</a></li>
-                  <li class="nav__list-item"><a href="#">Доставка и оплата</a></li>
-                  <li class="nav__list-item"><a href="#">О нас</a></li>
-                  <li class="nav__list-item"><a href="#">Контакты</a></li>
+                  <li class="nav__list-item"><a href="brending.html">Брендирование</a></li>
+                  <li class="nav__list-item"><a href="delivery.html">Доставка и оплата</a></li>
+                  <li class="nav__list-item"><a href="about.html">О нас</a></li>
+                  <li class="nav__list-item"><a href="contacts.html">Контакты</a></li>
                 </ul>
                 <div class="nav__logo"><img src="./assets/img/icons/hero-logo.svg" alt="" width="120" height="80"></div>
                 <div class="social"><a href="#" aria-label="Ozon.ru" rel="noopener nofollow noreferrer">
@@ -765,8 +766,7 @@
               </div>
             </section>
       <section class="callback">
-        <div class="container">
-          <h2>Если у Вас остались вопросы, <br/>заполните форму и мы свяжемся с вами</h2>
+        <div class="container"><span class="callback__title">Если у Вас остались вопросы, <br/>заполните форму и мы свяжемся с вами</span>
           <form action="#">
             <fieldset>
               <input type="text" placeholder="Имя">
@@ -793,10 +793,10 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__list-item"><a class="active" href="catalog.html">Каталог</a></li>
-              <li class="nav__list-item"><a href="#">Брендирование</a></li>
-              <li class="nav__list-item"><a href="#">Доставка и оплата</a></li>
-              <li class="nav__list-item"><a href="#">О нас</a></li>
-              <li class="nav__list-item"><a href="#">Контакты</a></li>
+              <li class="nav__list-item"><a href="brending.html">Брендирование</a></li>
+              <li class="nav__list-item"><a href="delivery.html">Доставка и оплата</a></li>
+              <li class="nav__list-item"><a href="about.html">О нас</a></li>
+              <li class="nav__list-item"><a href="contacts.html">Контакты</a></li>
             </ul>
           </nav>
           <div class="social"><a href="#" aria-label="Ozon.ru" rel="noopener nofollow noreferrer">
@@ -814,24 +814,38 @@
               </svg></a></div>
         </div>
         <div class="footer__bottom">
+          <div class="company-info">
+            <div class="company-info__field"><span>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "НИТИ"</span></div>
+            <div class="company-info__field"><span>Юридический адрес:</span>
+              <address>196006, г. Санкт-Петербург, ул.Заставская 33ТА</address>
+            </div>
+            <div class="company-info__field"><span>ИНН/КПП:</span>
+<span>7810576331/781001001</span>
+            </div>
+            <div class="company-info__field"><span>ОГРН:</span>
+<span>1107847001822</span>
+            </div>
+            <div class="company-info__field"><span>Email:</span><a href="mailto:niti-spb@yandex.ru">niti-spb@yandex.ru</a></div>
+            <div class="company-info__field"><span>Телефоны для связи:</span>
+<a href="tel:+79219810868"> +7(921) 981 08 68</a>
+<a href="tel:+79219810868">+7(921) 981 08 68</a>
+            </div>
+            <div class="company-info__field"><span>Генеральный директор:</span>
+<span>Журавлева Людмила Викторовна</span>
+            </div>
+          </div>
           <div class="law">
             <p>Вся представленная на сайте информация, носит исключительно информационный характер и не является публичной офертой, определяемой положениями Статьи 437(2) Гражданского кодекса РФ.</p>
           </div>
-          <div class="company-info">
-            <div class="company-info__field"><span>Адрес:&nbsp;</span>
-              <address>196006, г. Санкт-Петербург, ул.Заставская 33ТА</address>
-            </div>
-            <div class="company-info__field"><span>Email:&nbsp;</span><a href="mailto:niti-spb@yandex.ru">niti-spb@yandex.ru</a></div>
-            <div class="company-info__field"><span>Телефоны:&nbsp;</span>
-<a href="tel:+79219810868"> +7(921) 981 08 68</a>,&nbsp;<a href="tel:+79219810868">+7(921) 981 08 68</a>
-            </div>
-          </div>
-        </div>
-      </div><div class="developer">
+          <div class="info-side-block">
+            <div class="payment-logo"><img src="./assets/img/payment-cards.png" alt="" width="200px" height="100"></div><div class="developer">
 <a href="https://www.littleweb.ru" rel="noopener noreferrer nofollow" aria-label="Сайт разработан - LittleWeb.ru">
 <img src="./assets/img/icons/delevoper-icon.svg" width="180" height="60" alt="LittleWeb.ru">
 </a>
 </div>
+          </div>
+        </div>
+      </div>
     </footer>
     <!--include ./modals/...-->
     <!--script(src="./js/bundle.js")-->

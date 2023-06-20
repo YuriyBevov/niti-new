@@ -17,6 +17,17 @@
     }
   }
 
+  &__content {
+    @extend .flex-column;
+    height: fit-content;
+    position: sticky;
+    top: 0;
+
+    .pagination {
+      margin-top: auto;
+    }
+  }
+
   &__header {
     display: flex;
     align-items: center;
@@ -99,13 +110,7 @@
           max-width: 100%;
         }
       }
-
-      @include m-b-down(374px) {
-        //padding: 20px;
-      }
     }
-
-
   }
 }
 

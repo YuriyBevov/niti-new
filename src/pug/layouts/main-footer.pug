@@ -11,9 +11,13 @@ footer.footer
       include ../components/social
 
     .footer__bottom
+      include ../components/company-info
+
       .law
         p Вся представленная на сайте информация, носит исключительно информационный характер и не является публичной офертой, определяемой положениями Статьи 437(2) Гражданского кодекса РФ.
 
-      include ../components/company-info
+      .info-side-block
+        .payment-logo
+          img(src="./assets/img/payment-cards.png" alt="" width="200px" height="100")
+        include ../components/developer
 
-  include ../components/developer

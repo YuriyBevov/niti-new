@@ -4,6 +4,7 @@
   @include m-b-mobile-lg-down {
     padding-bottom: 70px;
   }
+
   &__top {
     @extend .section-inner-offset;
     @extend .flex-wrap;
@@ -49,48 +50,91 @@
     }
     a {
       border: none;
+    }
+
+    a:not(:last-child) {
       margin-right: 8px;
     }
   }
 
   &__bottom {
-    @extend .flex-wrap;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 25px;
     @extend .section-inner-offset;
-    padding-top: 0 !important;
+    border-top: 1px solid var(--white);
+
+    @include m-b-laptop-down {
+      grid-template-columns: repeat(2, auto);
+    }
 
     @include m-b-tablet-down {
+      display: flex;
       flex-direction: column;
       justify-content: center;
     }
   }
 
   .law {
-    width: 50%;
-    max-width: 580px;
+    max-width: 500px;
     font-size: 14px;
-    padding: 0 15px;
     color: var(--lightgray);
-    margin-right: auto;
+    margin: 0 auto;
+
+    @include m-b-laptop-down {
+      width: 100%;
+      max-width: 100%;
+      order: 2;
+    }
   }
 
   .company-info {
-    width: 50%;
-    padding: 0 10px;
-
     &__field {
-      display: flex;
+      @extend .flex-column;
 
       a,address,span {
+        display: flex;
         font-size: 14px;
         font-style: normal;
         color: var(--lightgray);
         margin-bottom: 5px;
       }
+
+      @include m-b-tablet-down {
+        align-items: center;
+      }
     }
 
     a {
       @extend .hover-opacity;
+    }
+  }
+
+  .info-side-block {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-left: auto;
+    height: 100%;
+
+    @include m-b-laptop-down {
+      order: 1;
+    }
+
+    @include m-b-tablet-down {
+      margin: 0 auto;
+    }
+
+    .payment-logo {
+      margin-bottom: 20px;
+
+      img {
+        display: block;
+      }
+    }
+
+    .developer {
+      margin-top: auto;
     }
   }
 
@@ -109,12 +153,6 @@
 
     .law {
       order: 2;
-    }
-  }
-
-  @include m-b-mobile-lg-down {
-    .company-info span {
-      display: none;
     }
   }
 }

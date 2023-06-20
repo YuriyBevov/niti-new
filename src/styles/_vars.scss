@@ -5,9 +5,11 @@
     // base
     --font-family: "Futura", sans-serif;
     --content-width: 1590px;
-    --content-fluid-width: 1790px;
+    --content-sm-width: 1200px;
+    --content-fluid-width: 1890px;
     --container-offset: 15px;
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+    --container-sm-width: calc(var(--content-sm-width) + (var(--container-offset) * 2));
     --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
 
     // colors
