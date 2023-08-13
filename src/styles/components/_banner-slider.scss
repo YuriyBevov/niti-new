@@ -13,8 +13,16 @@
   }
 }
 
-.banner-slider {
+.banner-slider,
+.about-slider {
+  max-height: 400px;
   margin-bottom: 40px;
+
+  .swiper-wrapper,
+  .swiper-slide {
+    max-height: inherit;
+  }
+
   .swiper-pagination {
     @include m-b-down(534px) {
       bottom: 2px;
@@ -59,5 +67,6 @@
 
   img {
     display: block;
+    max-height: inherit;
   }
 }

@@ -424,6 +424,26 @@ if (bannerSlider) {
     }
   });
 }
+const aboutSlider = document.querySelector('.about-slider');
+if (aboutSlider) {
+  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](aboutSlider, {
+    spaceBetween: 30,
+    slidesPerView: 1,
+    breakpoints: {
+      534: {
+        slidesPerView: 2
+      }
+    },
+    pagination: {
+      el: ".about-slider-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".about-slider-button-next",
+      prevEl: ".about-slider-button-prev"
+    }
+  });
+}
 const productSlider = document.querySelector('.product-slider');
 if (productSlider) {
   let sliderThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-slider-thumbs", {

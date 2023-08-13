@@ -4823,29 +4823,43 @@ input {
   object-fit: contain;
 }
 
-.banner-slider {
+.banner-slider,
+.about-slider {
+  max-height: 400px;
   margin-bottom: 40px;
 }
+.banner-slider .swiper-wrapper,
+.banner-slider .swiper-slide,
+.about-slider .swiper-wrapper,
+.about-slider .swiper-slide {
+  max-height: inherit;
+}
 @media (max-width: 534px) {
-  .banner-slider .swiper-pagination {
+  .banner-slider .swiper-pagination,
+  .about-slider .swiper-pagination {
     bottom: 2px;
   }
 }
-.banner-slider .swiper-pagination-bullet {
+.banner-slider .swiper-pagination-bullet,
+.about-slider .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   border-radius: 0;
 }
-.banner-slider .swiper-pagination-bullet-active {
+.banner-slider .swiper-pagination-bullet-active,
+.about-slider .swiper-pagination-bullet-active {
   background-color: var(--dark);
 }
 @media (max-width: 534px) {
-  .banner-slider .swiper-pagination-bullet {
+  .banner-slider .swiper-pagination-bullet,
+  .about-slider .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
   }
 }
-.banner-slider-button-next, .banner-slider-button-prev {
+.banner-slider-button-next, .banner-slider-button-prev,
+.about-slider-button-next,
+.about-slider-button-prev {
   width: 40px;
   height: 40px;
   background-color: var(--dark);
@@ -4854,18 +4868,24 @@ input {
   background-position: center;
 }
 @media (max-width: 767px) {
-  .banner-slider-button-next, .banner-slider-button-prev {
+  .banner-slider-button-next, .banner-slider-button-prev,
+  .about-slider-button-next,
+  .about-slider-button-prev {
     display: none;
   }
 }
-.banner-slider-button-prev {
+.banner-slider-button-prev,
+.about-slider-button-prev {
   background-image: url("../assets/img/icons/slider-button-prev.svg");
 }
-.banner-slider-button-next {
+.banner-slider-button-next,
+.about-slider-button-next {
   background-image: url("../assets/img/icons/slider-button-next.svg");
 }
-.banner-slider img {
+.banner-slider img,
+.about-slider img {
   display: block;
+  max-height: inherit;
 }
 
 .client-slider {
